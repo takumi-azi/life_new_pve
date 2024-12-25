@@ -386,9 +386,9 @@ riru_sankutyuari_ot:
   - sudoskill{s=riru_sankutyuari_counter_sudo} @EIR{r=6;targetself=false} ?!hasaura{aura=riru_sankutyuari_charging}
 riru_sankutyuari_ot_og:
   Conditions:
-  - onground{} true
+  - onground{} false
   Skills:
-  - sudoskill{s=riru_sankutyuari_notnear_auraremove} 
+  - auraremove{aura=riru_sankutyuari}
 riru_sankutyuari_counter_sudo:
   Skills:
   - sudoskill{s=riru_sankutyuari_counter} @trigger
