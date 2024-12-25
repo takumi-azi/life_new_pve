@@ -373,7 +373,9 @@ riru_sankutyuari_notnear_auraremove:
 riru_sankutyuari_ot:
   Skills:
   - Velocity{m=SET;x=0;y=0;z=0} @self
+  - skill{s=riru_sankutyuari_ot_og} @self
   - particlering{r=6;points=12;y=0;particle=end_rod;audience=caster;a=1} @self ?!hasaura{aura=riru_sankutyuari_charging}
+  - particlering{r=6;points=12;y=0.2;particle=end_rod;audience=caster;a=1} @self ?!hasaura{aura=riru_sankutyuari_charging}
   - particlering{r=6;points=12;y=0.4;particle=end_rod;a=1} @self ?!hasaura{aura=riru_sankutyuari_charging}
   - particlering{r=6;points=12;y=0.6;particle=end_rod;a=1} @self ?!hasaura{aura=riru_sankutyuari_charging}
   - particlering{r=6;points=12;y=0.8;particle=end_rod;audience=caster;a=1} @self ?!hasaura{aura=riru_sankutyuari_charging}
@@ -382,6 +384,11 @@ riru_sankutyuari_ot:
   - particlering{r=6;points=3;y=1.4;particle=end_rod;audience=caster;a=1} @self ?!hasaura{aura=riru_sankutyuari_charging}
   - particlering{r=6;points=3;y=1.6;particle=end_rod;audience=caster;a=1} @self ?!hasaura{aura=riru_sankutyuari_charging}
   - sudoskill{s=riru_sankutyuari_counter_sudo} @EIR{r=6;targetself=false} ?!hasaura{aura=riru_sankutyuari_charging}
+riru_sankutyuari_ot_og:
+  Conditions:
+  - onground{} true
+  Skills:
+  - sudoskill{s=riru_sankutyuari_notnear_auraremove} 
 riru_sankutyuari_counter_sudo:
   Skills:
   - sudoskill{s=riru_sankutyuari_counter} @trigger
