@@ -7,7 +7,6 @@ Winchester0:
   - setvariable{var=skill.MULTISHOT;value=<caster.heldenchantlevel.MULTISHOT>} @self
   - skill{s=Winchester1}
   - skill{s=Winchester2}
-  - message{m="MCLove32"} @self
 Winchester1:
   Conditions:
   - wearing{s=HAND;m=Winchester} true
