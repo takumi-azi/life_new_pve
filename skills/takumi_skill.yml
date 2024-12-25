@@ -407,5 +407,6 @@ riru_sankutyuari_counter_knock:
   - leap{v=-800} @trigger{y=-2}
 riru_sankutyuari_oe:
   Skills:
+  - message{m="oe"}
   - auraremove{aura=riru_sankutyuari_charging} @self
   - aura{auraname=riru_sankutyuari_ct;d=40} @self
