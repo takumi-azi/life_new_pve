@@ -70,12 +70,11 @@ PVE_Weapon_zingi_kaihou_zangetu_takumi3s:
 
 PVE_Weapon_riru_sankutyuari_takumi3s:
   Id: iron_sword
-  Display: '&a&lリル・サンクチュアリ'
+  Display: '&a&l不可侵領域=リル・サンクチュアリ'
   Lore:
-  - '&8&l無属性main武器'
-  Attributes:
-    MainHand:
-      AttackSpeed: 500%
+  - '&8&l自然属性sub武器'
   Options:
     Unbreakable: true
   Skills:
+  - skill{s=riru_sankutyuari_st} @self ~onUse
+  - skill{s=riru_sankutyuari} @self ~onUse
