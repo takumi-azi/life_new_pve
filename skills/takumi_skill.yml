@@ -351,56 +351,57 @@ zingi_zangetu_kaihou_oh:
 
 riru_sankutyuari_st:
   Conditions:
+  - onground{} true
   - wearing{s=HAND;m=PVE_Weapon_riru_sankutyuari_takumi3s} true
   - hasaura{aura=riru_sankutyuari} false
   - hasaura{aura=riru_sankutyuari_ct} false
   Skills:
   - aura{auraname=riru_sankutyuari_charging;oT=riru_sankutyuari_notnear;d=20;i=1} @self
-  - aura{auraname=riru_sankutyuari;oT=riru_sankutyuari_ot;d=6;oE=riru_sankutyuari_oe} @self
+  - aura{auraname=riru_sankutyuari;oT=riru_sankutyuari_ot;d=16;oE=riru_sankutyuari_oe} @self
 riru_sankutyuari:
   Conditions:
+  - onground{} true
   - wearing{s=HAND;m=PVE_Weapon_riru_sankutyuari_takumi3s} true
   - hasaura{aura=riru_sankutyuari} true
   - hasaura{aura=riru_sankutyuari_ct} false
   Skills:
-  - skill{s=riru_sankutyuari} @EIR{r=3}
-  - aura{auraname=riru_sankutyuari;oT=riru_sankutyuari_ot;d=6} @self
+  - aura{auraname=riru_sankutyuari;oT=riru_sankutyuari_ot;d=16;oE=riru_sankutyuari_oe} @self
 riru_sankutyuari_notnear:
   Skills:
-  - sudoskill{s=riru_sankutyuari_notnear_auraremove} @EIR{r=6}
+  - sudoskill{s=riru_sankutyuari_notnear_auraremove} @EIR{r=6;targetself=false}
 riru_sankutyuari_notnear_auraremove:
   Skills:
   - auraremove{aura=riru_sankutyuari} @trigger
 riru_sankutyuari_ot:
   Skills:
   - Velocity{m=SET;x=0;y=0;z=0} @self
-  - particlering{r=6;points=12;y=0;particle=end_rod;audience=caster;a=1} @self
-  - particlering{r=6;points=12;y=0.4;particle=end_rod;a=1} @self
-  - particlering{r=6;points=12;y=0.6;particle=end_rod;a=1} @self
-  - particlering{r=6;points=12;y=0.8;particle=end_rod;audience=caster;a=1} @self
-  - particlering{r=6;points=6;y=1;particle=end_rod;audience=caster;a=1} @self
-  - particlering{r=6;points=6;y=1.2;particle=end_rod;audience=caster;a=1} @self
-  - particlering{r=6;points=3;y=1.4;particle=end_rod;audience=caster;a=1} @self
-  - particlering{r=6;points=3;y=1.6;particle=end_rod;audience=caster;a=1} @self
-  - sudoskill{r=riru_sankutyuari_counter_sudo} @EIR{r=6}
+  - particlering{r=6;points=12;y=0;particle=end_rod;audience=caster;a=1} @self ?!hasaura{aura=riru_sankutyuari_charging}
+  - particlering{r=6;points=12;y=0.4;particle=end_rod;a=1} @self ?!hasaura{aura=riru_sankutyuari_charging}
+  - particlering{r=6;points=12;y=0.6;particle=end_rod;a=1} @self ?!hasaura{aura=riru_sankutyuari_charging}
+  - particlering{r=6;points=12;y=0.8;particle=end_rod;audience=caster;a=1} @self ?!hasaura{aura=riru_sankutyuari_charging}
+  - particlering{r=6;points=6;y=1;particle=end_rod;audience=caster;a=1} @self ?!hasaura{aura=riru_sankutyuari_charging}
+  - particlering{r=6;points=6;y=1.2;particle=end_rod;audience=caster;a=1} @self ?!hasaura{aura=riru_sankutyuari_charging}
+  - particlering{r=6;points=3;y=1.4;particle=end_rod;audience=caster;a=1} @self ?!hasaura{aura=riru_sankutyuari_charging}
+  - particlering{r=6;points=3;y=1.6;particle=end_rod;audience=caster;a=1} @self ?!hasaura{aura=riru_sankutyuari_charging}
+  - sudoskill{s=riru_sankutyuari_counter_sudo} @EIR{r=6;targetself=false} ?!hasaura{aura=riru_sankutyuari_charging}
 riru_sankutyuari_counter_sudo:
   Skills:
-  - sudoskill{r=riru_sankutyuari_counter} @trigger
+  - sudoskill{s=riru_sankutyuari_counter} @trigger
 riru_sankutyuari_counter:
   Cooldown: 3
-  Conditions:
-  - hasaura{aura=riru_sankutyuari_charging} false
   Skills:
   - aura{auraname=riru_sankutyuari_ct;d=175} @self
-  - particles{y=1;particle=end_rod;a=8;s=0.7;repeat=4;repeatInterval=3} @self
+  - particles{particle=end_rod;a=8;s=0.7;y=1;repeat=4;repeatInterval=3} @EIR{r=6}
   - damage{a=3;repeat=4;repeatInterval=3;pi=true;type=wind} @EIR{r=6}
   - Velocity{m=SET;x=0;y=0;z=0;repeat=14;repeatInterval=1} @EIR{r=6}
+  - sound{s=minecraft:item.trident.hit;repeat=4;repeatInterval=3} @EIR{r=6}
   - delay 15
   - sudoskill{s=riru_sankutyuari_counter_knock} @EIR{r=6}
   - potion{type=STRENGTH;d=160;l=1} @self
+  - sound{s=minecraft:item.trident.thunder} @EIR{r=6}
 riru_sankutyuari_counter_knock:
   Skills:
-  - leap{v=400} @trigger
+  - leap{v=-800} @trigger{y=-2}
 riru_sankutyuari_oe:
   Skills:
   - auraremove{aura=riru_sankutyuari_charging} @self
