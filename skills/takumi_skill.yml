@@ -356,7 +356,6 @@ riru_sankutyuari_st:
   - hasaura{aura=riru_sankutyuari} false
   - hasaura{aura=riru_sankutyuari_ct} false
   Skills:
-  - message{m="b"}
   - aura{auraname=riru_sankutyuari_charging;oT=riru_sankutyuari_notnear;d=20;i=1} @self
   - aura{auraname=riru_sankutyuari;oT=riru_sankutyuari_ot;d=16;oE=riru_sankutyuari_oe} @self
 riru_sankutyuari:
@@ -366,14 +365,12 @@ riru_sankutyuari:
   - hasaura{aura=riru_sankutyuari} true
   - hasaura{aura=riru_sankutyuari_ct} false
   Skills:
-  - message{m="b"}
   - aura{auraname=riru_sankutyuari;oT=riru_sankutyuari_ot;d=16;oE=riru_sankutyuari_oe} @self
 riru_sankutyuari_notnear:
   Skills:
   - sudoskill{s=riru_sankutyuari_notnear_auraremove} @EIR{r=6;targetself=false}
 riru_sankutyuari_notnear_auraremove:
   Skills:
-  - message{m="a"}
   - auraremove{aura=riru_sankutyuari} @trigger
 riru_sankutyuari_ot:
   Skills:
@@ -407,6 +404,6 @@ riru_sankutyuari_counter_knock:
   - leap{v=-800} @trigger{y=-2}
 riru_sankutyuari_oe:
   Skills:
-  - message{m="oe"}
+  - message{m="riru_sankutyuari_oe"} @self
   - auraremove{aura=riru_sankutyuari_charging} @self
   - aura{auraname=riru_sankutyuari_ct;d=40} @self
