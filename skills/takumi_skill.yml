@@ -351,7 +351,7 @@ zingi_zangetu_kaihou_oh:
 
 riru_sankutyuari_st:
   Conditions:
-  #- onground{} true
+  - onground{} true
   - wearing{s=HAND;m=PVE_Weapon_riru_sankutyuari_takumi3s} true
   - hasaura{aura=riru_sankutyuari} false
   - hasaura{aura=riru_sankutyuari_ct} false
@@ -360,7 +360,7 @@ riru_sankutyuari_st:
   - aura{auraname=riru_sankutyuari;oT=riru_sankutyuari_ot;d=16;oE=riru_sankutyuari_oe} @self
 riru_sankutyuari:
   Conditions:
-  #- onground{} true
+  - onground{} true
   - wearing{s=HAND;m=PVE_Weapon_riru_sankutyuari_takumi3s} true
   - hasaura{aura=riru_sankutyuari} true
   - hasaura{aura=riru_sankutyuari_ct} false
@@ -404,6 +404,5 @@ riru_sankutyuari_counter_knock:
   - leap{v=-800} @trigger{y=-2}
 riru_sankutyuari_oe:
   Skills:
-  - message{m="riru_sankutyuari_oe"} @self
   - auraremove{aura=riru_sankutyuari_charging} @self
   - aura{auraname=riru_sankutyuari_ct;d=40} @self
