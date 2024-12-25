@@ -356,14 +356,14 @@ riru_sankutyuari_st:
   - hasaura{aura=riru_sankutyuari_ct} false
   Skills:
   - aura{auraname=riru_sankutyuari_charging;oT=riru_sankutyuari_notnear;d=30;i=1} @self
-  - aura{auraname=riru_sankutyuari;oT=riru_sankutyuari_ot;d=20;oE=riru_sankutyuari_oe} @self
+  - aura{auraname=riru_sankutyuari;oT=riru_sankutyuari_ot;d=10;oE=riru_sankutyuari_oe} @self
 riru_sankutyuari:
   Conditions:
   - wearing{s=HAND;m=PVE_Weapon_riru_sankutyuari_takumi3s} true
   - hasaura{aura=riru_sankutyuari} true
   - hasaura{aura=riru_sankutyuari_ct} false
   Skills:
-  - aura{auraname=riru_sankutyuari;oT=riru_sankutyuari_ot;d=20;oE=riru_sankutyuari_oe} @self
+  - aura{auraname=riru_sankutyuari;oT=riru_sankutyuari_ot;d=10;oE=riru_sankutyuari_oe} @self
 riru_sankutyuari_notnear:
   Skills:
   - sudoskill{s=riru_sankutyuari_notnear_auraremove} @EIR{r=6;targetself=false}
