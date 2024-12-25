@@ -1,0 +1,445 @@
+cancelevent:
+  Skills:
+  - CancelEvent
+
+Winchester0:
+  Skills:
+  - setvariable{var=skill.MULTISHOT;value=<caster.heldenchantlevel.MULTISHOT>} @self
+  - skill{s=Winchester1}
+  - skill{s=Winchester2}
+Winchester1:
+  Conditions:
+  - wearing{s=HAND;m=Winchester} true
+  - variableInRange{var=skill.MULTISHOT;value=>0} false
+  Skills:
+  - delay 1
+#  - sound{s=shoot1;p=0.5;v=0.2} @self
+  - raytrace{eskill=Winchester1_1;lskill=Winchester_ls;md=50;ac=0.995;syo=1.75;hsm=1.5} @forward{f=10;y=1.75}
+  - recoil{r=-1;pitch=1to8} @self
+Winchester1_1:
+  Skills:
+  - damage{a=4;pi=true;type=none}
+Winchester2:
+  Conditions:
+  - wearing{s=HAND;m=Winchester} true
+  - variableInRange{var=skill.MULTISHOT;value=>0} true
+  Skills:
+#  - sound{s=shoot4;p=1.3;v=0.3} @self
+  - raytrace{eskill=Winchester2_1;lskill=Winchester_ls;md=10;ac=0.94;syo=1.5;hsm=1.1} @forward{f=10;y=1.75}
+  - raytrace{eskill=Winchester2_1;lskill=Winchester_ls;md=10;ac=0.94;syo=1.5;hsm=1.1} @forward{f=10;y=1.75}
+  - raytrace{eskill=Winchester2_1;lskill=Winchester_ls;md=10;ac=0.94;syo=1.5;hsm=1.1} @forward{f=10;y=1.75}
+  - raytrace{eskill=Winchester2_1;lskill=Winchester_ls;md=10;ac=0.94;syo=1.5;hsm=1.1} @forward{f=10;y=1.75}
+  - raytrace{eskill=Winchester2_1;lskill=Winchester_ls;md=10;ac=0.94;syo=1.5;hsm=1.1} @forward{f=10;y=1.75}
+  - raytrace{eskill=Winchester2_1;lskill=Winchester_ls;md=10;ac=0.94;syo=1.5;hsm=1.1} @forward{f=10;y=1.75}
+  - recoil{r=-1;pitch=1to8} @self
+Winchester2_1:
+  Skills:
+  - damage{a=1.3;pi=true;type=none}
+Winchester_ls:
+  Skills:
+  - particleline{db=0.2;p=crit;a=1;syo=1.75}
+
+
+bite_masic1:
+  Conditions:
+  - wearing{s=HAND;m=bite_masic} true
+  - hasaura{n=bite_masic} false
+  - hasaura{n=bite_masic_ct} false
+  Skills:
+  - setvariable{var=caster.bite_masic;value=0;type=FLOAT} @self
+  - aura{auraname=bite_masic;d=8;oT=bite_masic3;oE=bite_masic4;i=1} @self
+bite_masic2:
+  Conditions:
+  - wearing{s=HAND;m=bite_masic} true
+  - hasaura{n=bite_masic} true
+  Skills:
+  - aura{auraname=bite_masic;d=8;oT=bite_masic3;oE=bite_masic4;i=1} @self
+bite_masic3:
+  Skills:
+  - setvariable{var=caster.bite_masic;value=<caster.var.bite_masic|0>+1;type=FLOAT} @self
+  - particles{c=#0B610B;hS=0.2;vS=0.2;audience=caster} @forward{f=<caster.var.bite_masic|0>*0.5+3}
+  - particles{c=#0B610B;hS=0;vS=1;audience=caster} @forward{f=<caster.var.bite_masic|0>*0.5+3}
+bite_masic4:
+  Skills:
+  - totem{oE=bite_masic5;hnp=true;d=1;y=0} @forward{f=<caster.var.bite_masic|0>*0.5+3}
+bite_masic5:
+  Skills:
+  - aura{auraName=bite_masic_ct;d=60;rd=true} @self
+  - particlering{p=end_rod;r=1;a=1;points=20;d=true;directionReversed=true;dir=0,10,0;s=0.4} @origin{y=0.1}
+  - delay 15
+  - particlesphere{c=#0B610B;r=5;hS=0;vS=0;points=160;repeat=9;repeatInterval=1} @origin{y=0.1}
+  - delay 10
+  - particlering{p=crit;r=4;a=1;points=40;d=true;directionReversed=false;dir=0,10,0;s=3} @origin{y=-1}
+  - particlering{p=crit;r=5;a=1;points=50;d=true;directionReversed=false;dir=0,10,0;s=4} @origin{y=0}
+  - particlering{p=crit;r=4;a=1;points=40;d=true;directionReversed=false;dir=0,10,0;s=3} @origin{y=1}
+  - damage{a=5;pi=true;type=sizen} @entitiesnearorigin{r=5}
+
+#ここから下はまだ。
+battou0:
+  Skills:
+  - sudoskill{s=battou0_1} @trigger
+  - sudoskill{s=battou0_2} @trigger
+battou0_1:
+  Cooldown: 0.1
+  Skills:
+  - setvariable{var=caster.battou;value=<caster.var.battou|0>+10} @self
+battou0_2:
+  Skills:
+  - setvariable{var=caster.battou;value=<caster.var.battou|0>+1} @self
+battou02:
+  Skills:
+  - sudoskill{s=battou0_1} @trigger
+  - sudoskill{s=battou0_2} @trigger
+battou02_1:
+  Cooldown: 0.1
+  Skills:
+  - setvariable{var=caster.battou;value=<caster.var.battou|0>+20} @self
+battou02_2:
+  Skills:
+  - setvariable{var=caster.battou;value=<caster.var.battou|0>+2} @self
+battou1:
+  Skills:
+  - skill{s=battou1_1}
+  - aura{auraname=battou;d=200;oT=battou1_2;i=2} @self
+battou1_1:
+  Conditions:
+  - hasaura{n=battou} false
+  Skills:
+  - setvariable{var=caster.battou;value=20} @self
+battou1_2:
+  Skills:
+  - setvariable{var=caster.battou;value=<caster.var.battou|0>-1} @self
+  - skill{s=battou1_3} @self
+  - skill{s=battou1_4} @self
+  - sendtitle{title="";st="                                     &c&o<caster.var.battou>";d=20} @self
+battou1_3:
+  Conditions:
+  - variableInRange{var=caster.battou;value=>0} false
+  Skills:
+  - setvariable{var=caster.battou;value=0} @self
+  - auraremove{aura=battou} @self
+battou1_4:
+  Conditions:
+  - variableInRange{var=caster.battou;value=>140} true
+  Skills:
+  - setvariable{var=caster.battou;value=140} @self
+
+kokutou_souen1:
+  Cooldown: 0.4
+  Conditions:
+  - wearing{s=HAND;m=kokutou_souen} true
+  - hasaura{n=silent} false
+  Skills:
+  - skill{s=battou1} @self
+  - delay 1
+  - skill{s=kokutou_souen1_1} @self
+  - skill{s=kokutou_souen1_2} @self
+  - skill{s=kokutou_souen1_3} @self
+  - skill{s=kokutou_souen1_0} @self
+  - aura{auraname=kokutou_souen0;d=30;oE=kokutou_souen1_4} @self
+kokutou_souen0_1:
+  Skills:
+  - particles{p=soul_fire_flame;a=3;hS=0.1} @origin
+  - particles{p=crit;a=1} @origin
+kokutou_souen1_0:
+  Conditions:
+  - wearing{s=HAND;m=kokutou_souen} true
+  - hasaura{n=kokutou_souen0} false
+  Skills:
+  - aura{auraName=silent;d=6;rd=true} @self
+  - command{c='macm 11';asOP=true;asCaster=true} @self
+  - setvariable{var=caster.fuka;value=<caster.var.fuka|0>+1000} @self
+  - skill{s=fuka} @self
+  - setvariable{var=skill.zokusei;value=honoo;type=STRING} @self
+  - setvariable{var=skill.damage;value=8*(1+<caster.var.battou|0>/280);type=FLOAT} @self
+  - skill{s=damage} @self
+  - orbital{oT=kokutou_souen0_1;hp=true;hnp=true;i=1;p=18;sE=false;d=6;r=3;roty=((<caster.l.yaw>+59)/-180)*3.14;rotx=-0.4;oy=0.14} @self
+  - orbital{oT=kokutou_souen0_1;hp=true;hnp=true;i=1;p=18;sE=false;d=6;r=3;roty=((<caster.l.yaw>+63)/-180)*3.14;rotx=-0.4;oy=0.18} @self
+  - orbital{oT=kokutou_souen0_1;hp=true;hnp=true;i=1;p=18;sE=false;d=6;r=3;roty=((<caster.l.yaw>+67)/-180)*3.14;rotx=-0.4;oy=0.22} @self
+  - orbital{oT=kokutou_souen0_1;hp=true;hnp=true;i=1;p=18;sE=false;d=6;r=3;roty=((<caster.l.yaw>+71)/-180)*3.14;rotx=-0.4;oy=0.26} @self
+  - delay 3
+  - damage{a=<skill.var.damage>;pi=true;type=honoo} @EIC{r=4;a=120}
+  - sudoskill{s=battou0} @EIC{r=4;a=120}
+kokutou_souen1_1:
+  Conditions:
+  - wearing{s=HAND;m=kokutou_souen} true
+  - hasaura{n=kokutou_souen1} false
+  - hasaura{n=kokutou_souen2} false
+  - hasaura{n=kokutou_souen0} true
+  Skills:
+  - aura{auraName=silent;d=4;rd=true} @self
+  - command{c='macm 12';asOP=true;asCaster=true} @self
+  - setvariable{var=caster.fuka;value=<caster.var.fuka|0>+200} @self
+  - skill{s=fuka} @self
+  - setvariable{var=skill.zokusei;value=honoo;type=STRING} @self
+  - setvariable{var=skill.damage;value=4*(1+<caster.var.battou|0>/280);type=FLOAT} @self
+  - skill{s=damage} @self
+  - orbital{oT=kokutou_souen0_1;hp=true;hnp=true;i=1;p=18;sE=false;d=6;r=3;roty=((<caster.l.yaw>+121)/-180)*3.14;rotx=3.14;oy=1} @self
+  - orbital{oT=kokutou_souen0_1;hp=true;hnp=true;i=1;p=18;sE=false;d=6;r=3;roty=((<caster.l.yaw>+125)/-180)*3.14;rotx=3.14;oy=1} @self
+  - orbital{oT=kokutou_souen0_1;hp=true;hnp=true;i=1;p=18;sE=false;d=6;r=3;roty=((<caster.l.yaw>+129)/-180)*3.14;rotx=3.14;oy=1} @self
+  - orbital{oT=kokutou_souen0_1;hp=true;hnp=true;i=1;p=18;sE=false;d=6;r=3;roty=((<caster.l.yaw>+133)/-180)*3.14;rotx=3.14;oy=1} @self
+  - delay 1
+  - aura{auraname=kokutou_souen1;d=30} @self
+  - delay 2
+  - damage{a=<skill.var.damage>;pi=true;type=honoo} @EIC{r=4;a=120}
+  - sudoskill{s=battou0} @EIC{r=4;a=120}
+kokutou_souen1_2:
+  Conditions:
+  - wearing{s=HAND;m=kokutou_souen} true
+  - hasaura{n=kokutou_souen1} true
+  - hasaura{n=kokutou_souen2} false
+  - hasaura{n=kokutou_souen0} true
+  Skills:
+  - command{c='macm 11';asOP=true;asCaster=true} @self
+  - aura{auraName=silent;d=14;rd=true} @self
+  - setvariable{var=caster.fuka;value=<caster.var.fuka|0>+500} @self
+  - skill{s=fuka} @self
+  - setvariable{var=skill.zokusei;value=honoo;type=STRING} @self
+  - setvariable{var=skill.damage;value=2.5*(1+<caster.var.battou|0>/280);type=FLOAT} @self
+  - skill{s=damage} @self
+  - potion{type=SLOW;l=5;d=18} @self
+  - delay 1
+  - orbital{oT=kokutou_souen0_1;hp=true;hnp=true;i=1;p=18;sE=false;d=6;r=3;roty=((<caster.l.yaw>+59)/-180)*3.14;rotx=-0.4;oy=0.14} @self
+  - orbital{oT=kokutou_souen0_1;hp=true;hnp=true;i=1;p=18;sE=false;d=6;r=3;roty=((<caster.l.yaw>+63)/-180)*3.14;rotx=-0.4;oy=0.18} @self
+  - orbital{oT=kokutou_souen0_1;hp=true;hnp=true;i=1;p=18;sE=false;d=6;r=3;roty=((<caster.l.yaw>+67)/-180)*3.14;rotx=-0.4;oy=0.22} @self
+  - orbital{oT=kokutou_souen0_1;hp=true;hnp=true;i=1;p=18;sE=false;d=6;r=3;roty=((<caster.l.yaw>+71)/-180)*3.14;rotx=-0.4;oy=0.26} @self
+  - delay 2
+  - orbital{oT=kokutou_souen0_1;hp=true;hnp=true;i=1;p=18;sE=false;d=6;r=3;roty=((<caster.l.yaw>+121)/-180)*3.14;rotx=3.14;oy=1} @self
+  - orbital{oT=kokutou_souen0_1;hp=true;hnp=true;i=1;p=18;sE=false;d=6;r=3;roty=((<caster.l.yaw>+125)/-180)*3.14;rotx=3.14;oy=1} @self
+  - orbital{oT=kokutou_souen0_1;hp=true;hnp=true;i=1;p=18;sE=false;d=6;r=3;roty=((<caster.l.yaw>+129)/-180)*3.14;rotx=3.14;oy=1} @self
+  - orbital{oT=kokutou_souen0_1;hp=true;hnp=true;i=1;p=18;sE=false;d=6;r=3;roty=((<caster.l.yaw>+133)/-180)*3.14;rotx=3.14;oy=1} @self
+  - delay 1
+  - auraremove{aura=kokutou_souen1} @self
+  - aura{auraname=kokutou_souen2;d=30} @self
+  - command{c='macm 13';asOP=true;asCaster=true} @self ?wearing{s=HAND;m=kokutou_souen}
+  - Velocity{m=SET;x=0;y=0;z=0} @self
+  - delay 1
+  - orbital{oT=kokutou_souen0_1;hp=true;hnp=true;i=1;p=25;sE=false;d=6;r=4;roty=((<caster.l.yaw>+90)/-180)*3.14;rotx=-1.57;oy=0.25} @self
+  - orbital{oT=kokutou_souen0_1;hp=true;hnp=true;i=1;p=25;sE=false;d=6;r=4;roty=((<caster.l.yaw>+90)/-180)*3.14;rotx=-1.57;oy=0.5} @self
+  - orbital{oT=kokutou_souen0_1;hp=true;hnp=true;i=1;p=25;sE=false;d=6;r=4;roty=((<caster.l.yaw>+90)/-180)*3.14;rotx=-1.57;oy=0.65} @self
+  - orbital{oT=kokutou_souen0_1;hp=true;hnp=true;i=1;p=25;sE=false;d=6;r=4;roty=((<caster.l.yaw>+90)/-180)*3.14;rotx=-1.57;oy=0.8} @self
+  - delay 1
+  - damage{a=<skill.var.damage>;pi=true;type=honoo} @EIC{r=4;a=120}
+  - sudoskill{s=battou0} @EIC{r=4;a=120}
+  - delay 2
+  - damage{a=<skill.var.damage>;pi=true;type=honoo} @EIC{r=4;a=120}
+  - sudoskill{s=battou0} @EIC{r=4;a=120}
+  - delay 2
+  - damage{a=<skill.var.damage>;pi=true;type=honoo} @EIC{r=4;a=120}
+  - sudoskill{s=battou0} @EIC{r=4;a=120}
+kokutou_souen1_3:
+  Conditions:
+  - wearing{s=HAND;m=kokutou_souen} true
+  - hasaura{n=kokutou_souen1} false
+  - hasaura{n=kokutou_souen2} true
+  - hasaura{n=kokutou_souen0} true
+  Skills:
+  - aura{auraName=silent;d=12;rd=true} @self
+  - command{c='macm 11';asOP=true;asCaster=true} @self
+  - setvariable{var=caster.fuka;value=<caster.var.fuka|0>+500} @self
+  - skill{s=fuka} @self
+  - setvariable{var=skill.zokusei;value=honoo;type=STRING} @self
+  - setvariable{var=skill.damage;value=4*(1+<caster.var.battou|0>/280);type=FLOAT} @self
+  - skill{s=damage} @self
+  - orbital{oT=kokutou_souen0_1;hp=true;hnp=true;i=1;p=18;sE=false;d=6;r=3;roty=((<caster.l.yaw>+59)/-180)*3.14;rotx=0.5;oy=2.38} @self
+  - orbital{oT=kokutou_souen0_1;hp=true;hnp=true;i=1;p=18;sE=false;d=6;r=3;roty=((<caster.l.yaw>+63)/-180)*3.14;rotx=0.5;oy=2.30} @self
+  - orbital{oT=kokutou_souen0_1;hp=true;hnp=true;i=1;p=18;sE=false;d=6;r=3;roty=((<caster.l.yaw>+67)/-180)*3.14;rotx=0.5;oy=2.22} @self
+  - orbital{oT=kokutou_souen0_1;hp=true;hnp=true;i=1;p=18;sE=false;d=6;r=3;roty=((<caster.l.yaw>+71)/-180)*3.14;rotx=0.5;oy=2.14} @self
+  - delay 1
+  - auraremove{aura=kokutou_souen2} @self
+  - delay 2
+  - Velocity{m=SET;x=0;y=0;z=0} @self
+  - damage{a=<skill.var.damage>;pi=true;type=honoo} @EIC{r=4;a=120}
+  - sudoskill{s=battou0} @EIC{r=4;a=120}
+kokutou_souen1_4:
+  Conditions:
+  - wearing{s=HAND;m=kokutou_souen} true
+  - hasaura{n=kokutou_souen_2} false
+  Skills:
+  - aura{auraName=silent;d=4;rd=true} @self
+  - command{c='macm 10';asOP=true;asCaster=true} @self
+  - potion{type=speed;l=1;d=60} @self
+kokutou_souen2:
+  Conditions:
+  - wearing{s=HAND;m=kokutou_souen} true
+  - hasaura{n=silent} false
+  - hasaura{n=kokutou_souen2_ct} false
+  - onground{} true
+  Skills:
+  - auraremove{aura=kokutou_souen0} @self
+  - aura{auraName=silent;d=4;rd=true} @self
+  - command{c='macm 14';asOP=true;asCaster=true} @self
+  - aura{auraname=kokutou_souen_2;oT=kokutou_souen2_1;oE=kokutou_souen2_2;d=10;i=1} @self
+kokutou_souen2_0:
+  Conditions:
+  - wearing{s=HAND;m=kokutou_souen} true
+  - hasaura{n=silent} true
+  - hasaura{n=kokutou_souen_2} true
+  - hasaura{n=kokutou_souen2_ct} false
+  Skills:
+  - aura{auraName=silent;d=4;rd=true} @self
+  - setvariable{var=caster.fuka;value=<caster.var.fuka|0>+300} @self
+  - skill{s=fuka} @self
+  - aura{auraname=kokutou_souen_2;oT=kokutou_souen2_1;oE=kokutou_souen2_2;d=10;i=1} @self
+kokutou_souen2_1:
+  Skills:
+  - setvariable{var=caster.fuka;value=<caster.var.fuka|0>+30} @self
+  - skill{s=fuka} @self
+  - aura{auraName=silent;d=4;rd=true} @self
+  - potion{type=DAMAGE_RESISTANCE;l=5;d=4} @self
+kokutou_souen2_2:
+  Conditions:
+  - wearing{s=HAND;m=kokutou_souen} true
+  Skills:
+  - command{c='macm 10';asOP=true;asCaster=true} @self
+kokutou_souen3:
+  Conditions:
+  - wearing{s=HAND;m=kokutou_souen} true
+  - hasaura{n=kokutou_souen_2} true
+  Skills:
+  - auraremove{aura=kokutou_souen_2} @self
+  - aura{auraName=silent;d=15;rd=true} @self
+  - aura{auraName=kokutou_souen2_ct;d=280;rd=true} @self
+  - command{c='macm 11';asOP=true;asCaster=true} @self
+  - aura{auraName=kokutou_souen_3;oT=kokutou_souen3_1;oE=kokutou_souen3_4;i=1;d=25;rd=true} @self
+kokutou_souen3_1:
+  Skills:
+  - leap{v=600} @forward{f=5;y=-6}
+  - particles{p=soul_fire_flame;s=1;a=5;y=1} @self
+  - particles{p=lava;s=1;a=3;y=0} @self
+  - sudoskill{s=kokutou_souen3_2} @EIR{r=3}
+  - skill{s=kokutou_souen3_3} @self
+kokutou_souen3_2:
+  Skills:
+  - aura{auraName=kokutou_souen_31;d=2} @EIR{r=3}
+kokutou_souen3_3:
+  Conditions:
+  - hasaura{n=kokutou_souen_31} true
+  Skills:
+  - auraremove{aura=kokutou_souen_3} @self
+kokutou_souen3_4:
+  Skills:
+  - damage{a=<skill.var.damage>;pi=true;type=honoo} @EIR{r=4}
+  - sudoskill{s=battou0} @EIR{r=4}
+  - sudoskill{s=battou0} @EIR{r=4}
+  - particlering{p=soul_fire_flame;r=4;a=1;points=50;y=1} @self
+  - particles{p=lava;s=1;a=30;y=0;s=2} @self
+  - leap{v=2000} @forward{f=5;y=-6}
+  - delay 3
+  - Velocity{m=SET;x=0;y=0;z=0} @self
+  - command{c='macm 10';asOP=true;asCaster=true} @self ?wearing{s=HAND;m=kokutou_souen}
+
+#神器系統の共通スキル。
+zingi_tenkai_ot:
+  Skills:
+  - skill{s=zingi_kaihou_mu} @self ?hasaura{n=zingi_kaihou_mu}
+  - skill{s=zingi_zangetu_kaihou} @self ?hasaura{n=zingi_kaihou_zangetu}
+
+zingi_tenkai_mu_use1:
+  Conditions:
+  - wearing{s=HAND;m=PVE_Weapon_zingi_tenkai_mu_takumi3s} true
+  - hasaura{n=zingi_tenkai_mu} false
+  - hasaura{n=zingi_tenkai_mu_ct} false
+  - hasMana{a=>10} true
+  Skills:
+  - modifyMana{a=-10} @self
+  - setvariable{var=caster.zingi_tenkai_mu;value=0;type=FLOAT} @self
+  - aura{auraname=zingi_tenkai_mu;d=16;oT=zingi_tenkai_mu3;oE=zingi_tenkai_mu4;i=1} @self
+zingi_tenkai_mu_use2:
+  Conditions:
+  - wearing{s=HAND;m=PVE_Weapon_zingi_tenkai_mu_takumi3s} true
+  - hasaura{n=zingi_tenkai_mu} true
+  Skills:
+  - aura{auraname=zingi_tenkai_mu;d=16;oT=zingi_tenkai_mu3;oE=zingi_tenkai_mu4;i=1} @self
+zingi_tenkai_mu3:
+  Conditions:
+  - hasMana{a=>1} true
+  - variableInRange{var=caster.zingi_tenkai_mu;value=>70} false
+  Skills:
+  - modifyMana{a=-1} @self
+  - setvariable{var=caster.zingi_tenkai_mu;value="<caster.var.zingi_tenkai_mu|0>+1";type=FLOAT} @self
+  - particlering{c=#00000;r="<caster.var.zingi_tenkai_mu|0>*0.2+3";audience=caster;points=<caster.var.zingi_tenkai_mu|0>;y=0} @self
+  - particlering{c=#00000;r="<caster.var.zingi_tenkai_mu|0>*0.2+3";audience=caster;points=<caster.var.zingi_tenkai_mu|0>;y=1} @self
+  - particlering{c=#00000;r="<caster.var.zingi_tenkai_mu|0>*0.2+3";audience=caster;points=<caster.var.zingi_tenkai_mu|0>;y=2} @self
+zingi_tenkai_mu4:
+  Skills:
+  - totem{os=zingi_tenkai_mu4_os;d=1;yo=5;repeat="floor(<caster.var.zingi_tenkai_mu|0>*1.2)+1";repeatInterval=0} @forward{f=(<caster.var.zingi_tenkai_mu|0>*0.3+2)*<random.0to100>/100;rot=<random.0to360>;lockpitch=true}
+  - totem{oT=zingi_tenkai_mu_ot;i=10;d="<caster.var.zingi_tenkai_mu|0>*4"} @selfLocation
+  - delay 0
+  - setvariable{var=skill.zingi_tenkai_mu;value=0;type=FLOAT} @self
+  - aura{auraname=zingi_tenkai_mu_ct;d=<caster.var.zingi_tenkai_mu|0>*2+40}
+  - skill{s=zingi_tenkai_mu4_roop;repeat="floor(<caster.var.zingi_tenkai_mu|0>)+1";repeatInterval=0} @self
+zingi_tenkai_mu4_os:
+  Skills:
+  - projectile{ot=zingi_tenkai_mu4_ot;oe=zingi_tenkai_mu4_oe;se=false;fo=true;origin=@origin{y=2};mr=10;sfo=0;v=18} @origin
+zingi_tenkai_mu4_ot:
+  Skills:
+  - particles{p=crit;a=3;vS=0.05}
+zingi_tenkai_mu4_oe:
+  Skills:
+  - totem{bullet=DISPLAY;
+          ot=zingi_tenkai_ot;i=1;
+          model=0;
+          mat=IRON_SWORD;
+          scale=1.5,1.5,1.5;
+          tx=0;tz=0;
+          d="<caster.var.zingi_tenkai_mu|0>*4";
+          yaw=<random.0to100>;pitch="3.14+(<random.-30to30>*0.01)";roll="0.785+(<random.-30to30>*0.01)";
+          yo=1.2} @origin
+zingi_tenkai_mu4_roop:
+  Skills:
+  - setvariable{var=skill.zingi_tenkai_mu;value="<skill.var.zingi_tenkai_mu|0>+1";type=FLOAT} @self
+  - totem{bullet=DISPLAY;
+          model=0;
+          mat=IRON_SWORD;
+          scale=4,4,4;
+          tx=0;tz=0;
+          d="<caster.var.zingi_tenkai_mu|0>*4";
+          yaw="(6.28/<caster.var.zingi_tenkai_mu|0>)*<skill.var.zingi_tenkai_mu|0>+0.85";
+          pitch=3.14;roll=0.785;
+          yo=4} @origin{zo="(<caster.var.zingi_tenkai_mu|0>*0.2+12)*sin(6.28/floor(<caster.var.zingi_tenkai_mu|0>*1)*<skill.var.zingi_tenkai_mu|0>)";xo="(<caster.var.zingi_tenkai_mu|0>*0.2+12)*cos(6.28/floor(<caster.var.zingi_tenkai_mu|0>*1)*<skill.var.zingi_tenkai_mu|0>)"}
+zingi_tenkai_mu_ot:
+  Skills:
+  - potion{type=STRENGTH;d=10;l=1} @PlayersNearOrigin{r="<caster.var.zingi_tenkai_mu|0>*0.2+3";target=self,player}
+zingi_kaihou_mu:
+  Conditions:
+  - hasaura{aura=zingi_kaihou_mu} true
+  Skills:
+  - endprojectile{}
+  - delay <random.0to20>
+  - damage{a=2.5;pi=true} @ENO{r=5}
+  - particles{p=explosion_emitter;a=3} @origin
+
+zingi_zangetu_swing:
+  Cooldown: 0.5
+  Conditions:
+  - wearing{s=HAND;m=PVE_Weapon_zingi_kaihou_zangetu_takumi3s} true
+  Skills:
+  - setvariable{var=skill.zangetux;value=<caster.l.x.double>-3*sin((<caster.l.yaw>)/180*pi);type=FLOAT} @self
+  - setvariable{var=skill.zangetuy;value=<caster.l.y.double>-3*sin((<caster.l.pitch>)/180*pi);type=FLOAT} @self
+  - setvariable{var=skill.zangetuz;value=<caster.l.z.double>+3*cos((<caster.l.yaw>)/180*pi);type=FLOAT} @self
+  - delay 3
+  - projectile{i=1;fo=true;sfo=0;syo=1;tyo=0;
+               origin=@location{c=<skill.var.zangetux>,<skill.var.zangetuy>,<skill.var.zangetuz>};
+               v=10;oT=zangetu_ot;oH=zangetu_oh;sE=false;hnp=true;mr=5;md=9;hR=1.4;vR=1.4} @forward{f=3;y=1}
+zangetu_ot:
+  Skills:
+  - particles{p=crit;a=6;hS=0.08;vS=0.08}
+zangetu_oh:
+  Skills:
+  - damage{a=5;pi=true;type=koori}
+
+zingi_zangetu_kaihou:
+  Conditions:
+  - wearing{s=HAND;m=PVE_Weapon_zingi_kaihou_zangetu_takumi3s} true
+  Skills:
+  - endprojectile{}
+  - projectile{v=10;mr=<random.3to8>;sB=false;sE=false;oT=zangetu_ot;sfo=0;fo=true;syo=0} @origin{y=10}
+  - delay <random.10to30>
+  #- sound{s=} @origin
+  - projectile{v=18;mr=30;sB=true;hnp=true;hp=false;oT=zangetu_ot;oH=zingi_zangetu_kaihou_oh;
+               bullet=DISPLAY;sfo=0;fo=true;syo=5;model=0;mat=IRON_SWORD;scale=1,1,1;
+               tx=0;tz=0;pitch=1.57;roll=0.785} @EIC{r=25;a=160;limit=1;sort=RANDOM}
+zingi_zangetu_kaihou_oh:
+  Skills:
+  - damage{a=2.5;pi=true} @ENO{r=5}

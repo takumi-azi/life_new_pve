@@ -1,0 +1,21 @@
+takumi_slot1:
+  Type: zombie
+  Display: ''
+  Health: 10000
+  Damage: 0
+  Equipment:
+  - chest head
+  Options:
+    KnockbackResistance: 1
+    Collidable: false
+    NoGravity: false
+    PreventSunburn: true
+    Silent: true
+    NoAI: true
+  Equipment:
+  - heart_of_the_sea HEAD
+  - diamond_chestplate CHEST
+  Skills:
+  - heal{a=999999} @self ~onDamaged
+  - skill{s=takumi_slot_stop1} @self ~onDamaged
+  - skill{s=takumi_slot_roll_start} @self ~onDamaged

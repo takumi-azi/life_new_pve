@@ -1,0 +1,125 @@
+takumi_slot_stop1:
+  Cooldown: 1
+  Conditions:
+  - hasaura{aura=takumi_slot_roll1} true
+  Skills:
+  - delay 1
+  - auraremove{aura=takumi_slot_roll1} @self
+  - randomskill{s=takumi_slot_roll_red 10,
+                  takumi_slot_roll_yellow 20,
+                  takumi_slot_roll_green 1} @self
+  - aura{auraname=takumi_slot_stoped;d=600;oE=takumi_slot_stoped} @self
+  - setvariable{var=skill.slot_stop;value=0} @self
+  - sudoskill{s=takumi_slot_stop2} @EIR{r=3}
+  - skill{s=takumi_slot_stop3} @self
+takumi_slot_stop2:
+  Conditions:
+  - wearing{slot=CHEST;m=diamond_chestplate} true
+  - hasaura{auraname=takumi_slot_roll1} false
+  - hasaura{auraname=takumi_slot_stoped} true
+  Skills:
+  - variableadd{var=skill.slot_stop;value=1} @self
+takumi_slot_stop3:
+  Conditions:
+  - variableInRange{var=skill.slot_stop;value=2} true
+  Skills:
+  - skill{s=takumi_slot_stop_red} @self
+  - skill{s=takumi_slot_stop_yellow} @self
+  - skill{s=takumi_slot_stop_green} @self
+  - sudoskill{s=takumi_slot_roll} @EIR{r=3}
+  - sudoskill{s=takumi_slot_roll} @self
+takumi_slot_roll:
+  Conditions:
+  - wearing{slot=CHEST;m=diamond_chestplate} true
+  - hasaura{aura=takumi_slot_stoped} true
+  Skills:
+  - auraremove{aura=takumi_slot_stoped} @self
+  - aura{auraname=takumi_slot_roll1;d=2000;i=4;oT=takumi_slot_roll_ot} @self
+takumi_slot_roll_start:
+  Conditions:
+  - wearing{slot=CHEST;m=diamond_chestplate} true
+  - hasaura{aura=takumi_slot_roll1} false
+  - hasaura{aura=takumi_slot_stoped} false
+  Skills:
+  - sudoskill{s=takumi_slot_roll_start1} @EIR{r=3}
+  - skill{s=takumi_slot_roll_start1} @self
+takumi_slot_roll_start1:
+  Conditions:
+  - wearing{slot=CHEST;m=diamond_chestplate} true
+  - hasaura{aura=takumi_slot_roll1} false
+  - hasaura{aura=takumi_slot_stoped} false
+  Skills:
+  - aura{auraname=takumi_slot_roll1;d=2000;i=4;oT=takumi_slot_roll_ot} @self
+takumi_slot_stoped:
+  Skills:
+  - equip{item=heart_of_the_sea HEAD} @self
+
+takumi_slot_roll_ot:
+  Skills:
+  - randomskill{s=takumi_slot_roll_red 10,takumi_slot_roll_yellow 20,takumi_slot_roll_green 1} @self
+takumi_slot_roll_red:
+  Skills:
+  - equip{item=red_dye HEAD} @self
+takumi_slot_roll_yellow:
+  Skills:
+  - equip{item=yellow_dye HEAD} @self
+takumi_slot_roll_green:
+  Skills:
+  - equip{item=green_dye HEAD} @self
+
+takumi_slot_stop_red:
+  Conditions:
+  - wearing{slot=HEAD;m=red_dye} true
+  Skills:
+  - setvariable{var=skill.slot_score;value=0} @self
+  - sudoskill{s=takumi_slot_stop_red_1} @EIR{r=3}
+  - skill{s=takumi_slot_stop_red_2} @self
+takumi_slot_stop_red_1:
+  Conditions:
+  - wearing{slot=CHEST;m=diamond_chestplate} true
+  - wearing{slot=HEAD;m=red_dye} true
+  Skills:
+  - variableadd{var=skill.slot_score;value=1} @self
+takumi_slot_stop_red_2:
+  Conditions:
+  - variableInRange{var=skill.slot_score;value=2} true
+  Skills:
+  - message{m="&4REDあたり。いえーーーい。"} @trigger
+
+takumi_slot_stop_yellow:
+  Conditions:
+  - wearing{slot=HEAD;m=yellow_dye} true
+  Skills:
+  - setvariable{var=skill.slot_score;value=0} @self
+  - sudoskill{s=takumi_slot_stop_yellow_1} @EIR{r=3}
+  - skill{s=takumi_slot_stop_yellow_2} @self
+takumi_slot_stop_yellow_1:
+  Conditions:
+  - wearing{slot=CHEST;m=diamond_chestplate} true
+  - wearing{slot=HEAD;m=yellow_dye} true
+  Skills:
+  - variableadd{var=skill.slot_score;value=1} @self
+takumi_slot_stop_yellow_2:
+  Conditions:
+  - variableInRange{var=skill.slot_score;value=2} true
+  Skills:
+  - message{m="&6YELLOWあたり。いえーーーい。"} @trigger
+
+takumi_slot_stop_green:
+  Conditions:
+  - wearing{slot=HEAD;m=green_dye} true
+  Skills:
+  - setvariable{var=skill.slot_score;value=0} @self
+  - sudoskill{s=takumi_slot_stop_green_1} @EIR{r=3}
+  - skill{s=takumi_slot_stop_green_2} @self
+takumi_slot_stop_green_1:
+  Conditions:
+  - wearing{slot=CHEST;m=diamond_chestplate} true
+  - wearing{slot=HEAD;m=green_dye} true
+  Skills:
+  - variableadd{var=skill.slot_score;value=1} @self
+takumi_slot_stop_green_2:
+  Conditions:
+  - variableInRange{var=skill.slot_score;value=2} true
+  Skills:
+  - message{m="&aGREENあたり。いえーーーい。"} @trigger
