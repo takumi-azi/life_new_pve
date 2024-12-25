@@ -125,7 +125,7 @@ kokutou_souen1_2:
   - hasaura{n=kokutou_souen0} true
   Skills:
   - command{c='macm 11';asOP=true;asCaster=true} @self
-  - potion{type=SLOW;l=5;d=18} @self
+  - potion{type=SLOWNESS;l=5;d=18} @self
   - delay 1
   - orbital{oT=kokutou_souen0_1;hp=true;hnp=true;i=1;p=18;sE=false;d=6;r=3;roty=((<caster.l.yaw>+59)/-180)*3.14;rotx=-0.4;oy=0.14} @self
   - orbital{oT=kokutou_souen0_1;hp=true;hnp=true;i=1;p=18;sE=false;d=6;r=3;roty=((<caster.l.yaw>+63)/-180)*3.14;rotx=-0.4;oy=0.18} @self
