@@ -372,7 +372,7 @@ riru_sankutyuari_notnear_auraremove:
   - auraremove{aura=riru_sankutyuari} @trigger
 riru_sankutyuari_ot:
   Skills:
-  - potion{type=SLOW;d=20;l=6} @self
+  - potion{type=SLOWNESS;d=20;l=6} @self
   - Velocity{m=SET;x=0;y=-1;z=0} @self
   #- skill{s=riru_sankutyuari_ot_og} @self
   - particlering{r=6;points=12;y=0;particle=end_rod;audience=caster;a=1} @self ?!hasaura{aura=riru_sankutyuari_charging}
