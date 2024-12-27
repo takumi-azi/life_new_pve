@@ -482,3 +482,17 @@ kuraisisu_sankutyuari_swing3:
 kuraisisu_sankutyuari_swing_nb:
   Skills:
   - leap{v=-300} @trigger{y=-2}
+
+kuraisisu_sankutyuari_buff:
+  Conditions:
+  - wearing{s=HAND;m=PVE_Weapon_kuraisisu_of_sankutyuari_takumi3s} true
+  Skills:
+  - jump{v=1} @self ?!onground{}
+  - jump{v=2} @self ?onground{}
+  - potion{type=STRENGTH;d=160;l=1} @self
+  - potion{type=SLOWFALLING;d=20;l=1} @self
+  - aura{auraname=kuraisisu_sankutyuari_kyouka;d=200} @self
+  - delay 10
+  - Velocity{m=SET;x=0;y=0;z=0} @self
+  - delay 4
+  - leap{v=200} @targetLocation

@@ -92,5 +92,5 @@ PVE_Weapon_kuraisisu_of_sankutyuari_takumi3s:
     Unbreakable: true
   Skills:
   - skill{s=kuraisisu_sankutyuari_swing} @self ~onSwing
-  - skill{s=kuraisisu_sankutyuari} @self ~onUse
+  - skill{s=kuraisisu_sankutyuari_buff} @self ~onUse
 
