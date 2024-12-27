@@ -72,7 +72,7 @@ bite_masic5:
   - particlering{p=crit;r=4;a=1;points=40;d=true;directionReversed=false;dir=0,10,0;s=3} @origin{y=-1}
   - particlering{p=crit;r=5;a=1;points=50;d=true;directionReversed=false;dir=0,10,0;s=4} @origin{y=0}
   - particlering{p=crit;r=4;a=1;points=40;d=true;directionReversed=false;dir=0,10,0;s=3} @origin{y=1}
-  - damage{a=5;pi=true;type=sizen} @entitiesnearorigin{r=5}
+  - damage{a=5;pi=true;type=sizen} @entitiesnearorigin{r=5;targetself=true}
 
 kokutou_souen1:
   Cooldown: 0.4
@@ -413,3 +413,48 @@ riru_sankutyuari_oe:
   - auraremove{aura=riru_sankutyuari_charging} @self
   - aura{auraname=riru_sankutyuari_ct;d=40} @self
 
+kuraisisu_sankutyuari_swing:
+  Conditions:
+  - wearing{s=HAND;m=PVE_Weapon_kuraisisu_of_sankutyuari_takumi3s} true
+  Skills:
+  - skill{s=kuraisisu_sankutyuari_swing1} @self
+  - skill{s=kuraisisu_sankutyuari_swing2} @self
+  - skill{s=kuraisisu_sankutyuari_swing3} @self
+kuraisisu_sankutyuari_swing1:
+  Conditions:
+  - hasaura{aura=sankutyuari_2danme} false
+  - hasaura{aura=sankutyuari_3danme} false
+  - hasaura{aura=kuraisisu_sankutyuari_ct} false
+  Skills:
+  - aura{auraname=sankutyuari_2danme;d=40} @self
+  - aura{auraname=kuraisisu_sankutyuari_ct;d=10} @self
+  - slash{y=1;w=4;h=4;mpd=true;a=60;radius=4;roll=-60to60;fo=1;duration=10;
+      oP=[ - particles{p=end_rod;a=1} ];
+      oH=[ - damage{a=3} ]
+      } @self
+kuraisisu_sankutyuari_swing2:
+  Conditions:
+  - hasaura{aura=sankutyuari_2danme} true
+  - hasaura{aura=sankutyuari_3danme} false
+  - hasaura{aura=kuraisisu_sankutyuari_ct} false
+  Skills:
+  - auraremove{aura=sankutyuari_2danme} @self
+  - aura{auraname=sankutyuari_3danme;d=40} @self
+  - aura{auraname=kuraisisu_sankutyuari_ct;d=10} @self
+  - slash{y=1;w=4;h=4;mpd=true;a=120;radius=4;roll=-30to30;fo=1;duration=10;
+      oP=[ - particles{p=end_rod;a=1} ];
+      oH=[ - damage{a=3} ]
+      } @self
+kuraisisu_sankutyuari_swing3:
+  Conditions:
+  - hasaura{aura=sankutyuari_2danme} false
+  - hasaura{aura=sankutyuari_3danme} true
+  - hasaura{aura=kuraisisu_sankutyuari_ct} false
+  Skills:
+  - auraremove{aura=sankutyuari_3danme} @self
+  - aura{auraname=kuraisisu_sankutyuari_ct;d=20} @self
+  - slash{y=1;w=4;h=4;mpd=true;a=45;radius=4;roll=-30to30;fo=1;duration=10;
+      oP=[ - particles{p=end_rod;a=1} ];
+      oH=[ - damage{a=3} ]
+      } @self
+  

@@ -78,3 +78,19 @@ PVE_Weapon_riru_sankutyuari_takumi3s:
   Skills:
   - skill{s=riru_sankutyuari_st} @self ~onUse
   - skill{s=riru_sankutyuari} @self ~onUse
+
+PVE_Weapon_kuraisisu_of_sankutyuari_takumi3s:
+  Id: iron_sword
+  Display: '&a&l侵略の大鎌=クライシス・オブ・サンクチュアリ'
+  Lore:
+  - '&8&l自然属性main武器'
+  - '左クリで3段攻撃、三段目の攻撃の後に渦巻きを引き起こす。'
+  - '渦を出す効果は、右クリックの強化効果の間発動しない。'
+  - '右クリでジャンプし、左クリックの攻撃速度を強化する。'
+  - 'もう一度右クリで敵に突進する。'
+  Options:
+    Unbreakable: true
+  Skills:
+  - skill{s=kuraisisu_sankutyuari_swing} @self ~onSwing
+  - skill{s=kuraisisu_sankutyuari} @self ~onUse
+
