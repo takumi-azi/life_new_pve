@@ -427,10 +427,11 @@ kuraisisu_sankutyuari_swing1:
   - hasaura{aura=kuraisisu_sankutyuari_ct} false
   Skills:
   - aura{auraname=sankutyuari_2danme;d=40} @self
-  - aura{auraname=kuraisisu_sankutyuari_ct;d=10} @self
+  - aura{auraname=kuraisisu_sankutyuari_ct;d=10} @self ?!hasaura{aura=kuraisisu_sankutyuari_kyouka}
+  - aura{auraname=kuraisisu_sankutyuari_ct;d=5} @self ?hasaura{aura=kuraisisu_sankutyuari_kyouka}
   - slash{y=1;w=4;h=4;mpd=true;a=120;radius=1;roll=-20;fo=1;duration=10;
       oP=[ - particles{p=end_rod;a=1} ];
-      oH=[ - damage{a=3} ]
+      oH=[ - damage{a=4} ]
       } @self
 kuraisisu_sankutyuari_swing2:
   Conditions:
@@ -440,7 +441,8 @@ kuraisisu_sankutyuari_swing2:
   Skills:
   - auraremove{aura=sankutyuari_2danme} @self
   - aura{auraname=sankutyuari_3danme;d=40} @self
-  - aura{auraname=kuraisisu_sankutyuari_ct;d=10} @self
+  - aura{auraname=kuraisisu_sankutyuari_ct;d=10} @self ?!hasaura{aura=kuraisisu_sankutyuari_kyouka}
+  - aura{auraname=kuraisisu_sankutyuari_ct;d=5} @self ?hasaura{aura=kuraisisu_sankutyuari_kyouka}
   - slash{y=1;w=4;h=4;mpd=true;a=80;radius=1;roll=120;fo=1;duration=10;
       oP=[ - particles{p=end_rod;a=1} ];
       oH=[ - damage{a=3} ]
@@ -452,13 +454,27 @@ kuraisisu_sankutyuari_swing3:
   - hasaura{aura=kuraisisu_sankutyuari_ct} false
   Skills:
   - auraremove{aura=sankutyuari_3danme} @self
-  - aura{auraname=kuraisisu_sankutyuari_ct;d=20} @self
+  - aura{auraname=kuraisisu_sankutyuari_ct;d=40} @self ?!hasaura{aura=kuraisisu_sankutyuari_kyouka}
+  - aura{auraname=kuraisisu_sankutyuari_ct;d=10} @self ?hasaura{aura=kuraisisu_sankutyuari_kyouka}
   - slash{y=1;w=4;h=4;mpd=true;a=280;radius=1;roll=0;fo=1;duration=20;
       oP=[ - particles{p=end_rod;a=1} ];
-      oH=[ - damage{a=3}
+      oH=[ - damage{a=5}
            - sudoskill{s=kuraisisu_sankutyuari_swing_nb} ?!hasaura{aura=kuraisisu_sankutyuari_kyouka}
       ]
       } @self
+  - delay 5
+  - slash{y=1;w=5;h=5;mpd=true;a=720;radius=1;roll=0;fo=1;duration=30;
+      oP=[ - particles{p=end_rod;a=1;d=true;dir=0,2,0;s=0.5} ];
+      oH=[ - damage{a=1}
+           - sudoskill{s=kuraisisu_sankutyuari_swing_nb}
+      ]
+      } @self ?!hasaura{aura=kuraisisu_sankutyuari_kyouka}
+  - slash{y=1;w=5;h=5;mpd=true;a=720;radius=1;roll=0;fo=1;duration=30;Yaw=3.14;
+      oP=[ - particles{p=end_rod;a=1;d=true;dir=0,2,0;s=0.5} ];
+      oH=[ - damage{a=1}
+           - sudoskill{s=kuraisisu_sankutyuari_swing_nb}
+      ]
+      } @self ?!hasaura{aura=kuraisisu_sankutyuari_kyouka}
 kuraisisu_sankutyuari_swing_nb:
   Skills:
-  - leap{v=-200} @trigger{y=-2}
+  - leap{v=-300} @trigger{y=-2}
