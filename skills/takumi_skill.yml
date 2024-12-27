@@ -455,5 +455,10 @@ kuraisisu_sankutyuari_swing3:
   - aura{auraname=kuraisisu_sankutyuari_ct;d=20} @self
   - slash{y=1;w=4;h=4;mpd=true;a=280;radius=1;roll=0;fo=1;duration=20;
       oP=[ - particles{p=end_rod;a=1} ];
-      oH=[ - damage{a=3} ]
+      oH=[ - damage{a=3}
+           - sudoskill{s=kuraisisu_sankutyuari_swing_nb} ?!hasaura{aura=kuraisisu_sankutyuari_kyouka}
+      ]
       } @self
+kuraisisu_sankutyuari_swing_nb:
+  Skills:
+  - leap{v=-200} @trigger{y=-2}
