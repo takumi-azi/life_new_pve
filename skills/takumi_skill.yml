@@ -488,14 +488,15 @@ kuraisisu_sankutyuari_buff:
   Conditions:
   - wearing{s=HAND;m=PVE_Weapon_kuraisisu_of_sankutyuari_takumi3s} true
   Skills:
-  - Velocity{m=SET;x=0;y=1;z=0} @self @self ?!onground{}
-  - Velocity{m=SET;x=0;y=2.5;z=0} @self @self ?onground{}
+  - Velocity{m=SET;x=0;y=1.4;z=0} @self @self ?!onground{}
+  - Velocity{m=SET;x=0;y=2;z=0} @self @self ?onground{}
   - potion{type=STRENGTH;d=160;l=1} @self
   - potion{type=SLOW_FALLING;d=25;l=1} @self
   - aura{auraname=kuraisisu_sankutyuari_kyouka;d=200} @self
-  - delay 6
+  - delay 5
   - Velocity{m=SET;x=0;y=0;z=0} @self
-  - particles{p=composter;a=6;hS=0.05;audience=caster;repeat=13;repeatInterval=1} @targetLocaiton
+  - particleline{p=endrod;db=0.3;audience=caster;a=1;repeat=13;repeatInterval=1} @target
+  - particles{p=composter;a=6;hS=0.05;audience=caster;repeat=13;repeatInterval=1} @targetLocation
   - delay 14
   - Velocity{m=SET;x=0;y=-4;z=0} @self
   - leap{v=800} @target
