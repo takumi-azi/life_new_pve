@@ -454,7 +454,7 @@ kuraisisu_sankutyuari_swing3:
   - hasaura{aura=kuraisisu_sankutyuari_ct} false
   Skills:
   - auraremove{aura=sankutyuari_3danme} @self
-  - aura{auraname=kuraisisu_sankutyuari_ct;d=40} @self ?!hasaura{aura=kuraisisu_sankutyuari_kyouka}
+  - aura{auraname=kuraisisu_sankutyuari_ct;d=80} @self ?!hasaura{aura=kuraisisu_sankutyuari_kyouka}
   - aura{auraname=kuraisisu_sankutyuari_ct;d=10} @self ?hasaura{aura=kuraisisu_sankutyuari_kyouka}
   - slash{y=1;w=4;h=4;mpd=true;a=280;radius=1;roll=0;fo=1;duration=20;
       oP=[ - particles{p=end_rod;a=1} ];
@@ -465,7 +465,7 @@ kuraisisu_sankutyuari_swing3:
   - delay 5
   - slash{y=2;w=5;h=5;mpd=true;a=720;radius=1;roll=0;fo=1;duration=60;mcd=false;
       oP=[ - particles{p=end_rod;a=1;d=true;dir=0,2,0;s=0.1;size=0.4}
-           - particles{c=#30FF30;p=reddust;a=1;d=true;size=0.5}
+           - particles{c=#30FF30;p=dust;a=1;d=true;size=0.5}
       ];
       oH=[ - damage{a=0.5}
            - sudoskill{s=kuraisisu_sankutyuari_swing_nb}
@@ -473,7 +473,7 @@ kuraisisu_sankutyuari_swing3:
       } @self ?!hasaura{aura=kuraisisu_sankutyuari_kyouka}
   - slash{y=2;w=5;h=5;mpd=true;a=720;radius=1;roll=0;fo=1;duration=60;Yaw=180;mcd=false;
       oP=[ - particles{p=end_rod;a=1;d=true;dir=0,2,0;s=0.1;size=0.4}
-           - particles{c=#30FF30;p=RED_DUST;a=1;d=true;size=0.5}
+           - particles{c=#30FF30;p=DUST;a=1;d=true;size=0.5}
       ];
       oH=[ - damage{a=0.5}
            - sudoskill{s=kuraisisu_sankutyuari_swing_nb}
