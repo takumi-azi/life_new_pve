@@ -355,7 +355,7 @@ riru_sankutyuari_st:
   - hasaura{aura=riru_sankutyuari} false
   - hasaura{aura=riru_sankutyuari_ct} false
   Skills:
-  - aura{auraname=riru_sankutyuari_charging;oT=riru_sankutyuari_notnear;d=20;i=1} @self
+  - aura{auraname=riru_sankutyuari_charging;oT=riru_sankutyuari_notnear;d=14;i=1} @self
   - aura{auraname=riru_sankutyuari;oT=riru_sankutyuari_ot;d=10;oE=riru_sankutyuari_oe} @self
 riru_sankutyuari:
   Conditions:
@@ -463,7 +463,7 @@ kuraisisu_sankutyuari_swing3:
       ]
       } @self
   - delay 5
-  - slash{y=2;w=5;h=5;mpd=true;a=720;radius=1;roll=0;fo=1;duration=40;mcd=false;
+  - slash{y=2;w=5;h=5;mpd=true;a=720;radius=1;roll=0;fo=1;duration=60;mcd=false;
       oP=[ - particles{p=end_rod;a=1;d=true;dir=0,2,0;s=0.5;size=0.4}
            - particles{c=#30FF30;p=red_dust;a=1;d=true;size=0.5}
       ];
@@ -471,7 +471,7 @@ kuraisisu_sankutyuari_swing3:
            - sudoskill{s=kuraisisu_sankutyuari_swing_nb}
       ]
       } @self ?!hasaura{aura=kuraisisu_sankutyuari_kyouka}
-  - slash{y=2;w=5;h=5;mpd=true;a=720;radius=1;roll=0;fo=1;duration=40;Yaw=180;mcd=false;
+  - slash{y=2;w=5;h=5;mpd=true;a=720;radius=1;roll=0;fo=1;duration=60;Yaw=180;mcd=false;
       oP=[ - particles{p=end_rod;a=1;d=true;dir=0,2,0;s=0.5;size=0.4}
            - particles{c=#30FF30;p=red_dust;a=1;d=true;size=0.5}
       ];
@@ -484,15 +484,16 @@ kuraisisu_sankutyuari_swing_nb:
   - leap{v=-300} @trigger{y=-2}
 
 kuraisisu_sankutyuari_buff:
+  Cooldown: 10
   Conditions:
   - wearing{s=HAND;m=PVE_Weapon_kuraisisu_of_sankutyuari_takumi3s} true
   Skills:
   - jump{v=1} @self ?!onground{}
   - jump{v=2} @self ?onground{}
   - potion{type=STRENGTH;d=160;l=1} @self
-  - potion{type=SLOW_FALLING;d=25;l=1} @self
+  - potion{type=SLOW_FALLING;d=21;l=1} @self
   - aura{auraname=kuraisisu_sankutyuari_kyouka;d=200} @self
-  - delay 10
+  - delay 6
   - Velocity{m=SET;x=0;y=0;z=0} @self
   - delay 4
   - Velocity{m=SET;x=0;y=-2;z=0} @self
