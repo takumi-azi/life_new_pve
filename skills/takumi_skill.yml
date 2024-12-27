@@ -490,7 +490,7 @@ kuraisisu_sankutyuari_buff:
   - jump{v=1} @self ?!onground{}
   - jump{v=2} @self ?onground{}
   - potion{type=STRENGTH;d=160;l=1} @self
-  - potion{type=SLOWFALLING;d=20;l=1} @self
+  - potion{type=SLOW_FALLING;d=20;l=1} @self
   - aura{auraname=kuraisisu_sankutyuari_kyouka;d=200} @self
   - delay 10
   - Velocity{m=SET;x=0;y=0;z=0} @self
