@@ -428,7 +428,7 @@ kuraisisu_sankutyuari_swing1:
   Skills:
   - aura{auraname=sankutyuari_2danme;d=40} @self
   - aura{auraname=kuraisisu_sankutyuari_ct;d=10} @self
-  - slash{y=1;w=4;h=4;mpd=true;a=120;radius=4;roll=-20;fo=1;duration=10;
+  - slash{y=1;w=4;h=4;mpd=true;a=120;radius=1;roll=-20;fo=1;duration=10;
       oP=[ - particles{p=end_rod;a=1} ];
       oH=[ - damage{a=3} ]
       } @self
@@ -441,7 +441,7 @@ kuraisisu_sankutyuari_swing2:
   - auraremove{aura=sankutyuari_2danme} @self
   - aura{auraname=sankutyuari_3danme;d=40} @self
   - aura{auraname=kuraisisu_sankutyuari_ct;d=10} @self
-  - slash{y=1;w=4;h=6;mpd=true;a=80;radius=4;roll=120;fo=1;duration=10;
+  - slash{y=1;w=4;h=4;mpd=true;a=80;radius=1;roll=120;fo=1;duration=10;
       oP=[ - particles{p=end_rod;a=1} ];
       oH=[ - damage{a=3} ]
       } @self
@@ -453,7 +453,7 @@ kuraisisu_sankutyuari_swing3:
   Skills:
   - auraremove{aura=sankutyuari_3danme} @self
   - aura{auraname=kuraisisu_sankutyuari_ct;d=20} @self
-  - slash{y=1;w=6;h=6;mpd=true;a=280;radius=4;roll=0;fo=1;duration=20;
+  - slash{y=1;w=4;h=4;mpd=true;a=280;radius=1;roll=0;fo=1;duration=20;
       oP=[ - particles{p=end_rod;a=1} ];
       oH=[ - damage{a=3} ]
       } @self
