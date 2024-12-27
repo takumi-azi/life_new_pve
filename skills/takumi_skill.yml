@@ -463,15 +463,19 @@ kuraisisu_sankutyuari_swing3:
       ]
       } @self
   - delay 5
-  - slash{y=1;w=5;h=5;mpd=true;a=720;radius=1;roll=0;fo=1;duration=30;
-      oP=[ - particles{p=end_rod;a=1;d=true;dir=0,2,0;s=0.5} ];
-      oH=[ - damage{a=1}
+  - slash{y=2;w=5;h=5;mpd=true;a=720;radius=1;roll=0;fo=1;duration=40;mcd=false;
+      oP=[ - particles{p=end_rod;a=1;d=true;dir=0,2,0;s=0.5;size=0.4}
+           - particles{c=#30FF30;a=1;d=true;size=0.5}
+      ];
+      oH=[ - damage{a=0.5}
            - sudoskill{s=kuraisisu_sankutyuari_swing_nb}
       ]
       } @self ?!hasaura{aura=kuraisisu_sankutyuari_kyouka}
-  - slash{y=1;w=5;h=5;mpd=true;a=720;radius=1;roll=0;fo=1;duration=30;Yaw=3.14;
-      oP=[ - particles{p=end_rod;a=1;d=true;dir=0,2,0;s=0.5} ];
-      oH=[ - damage{a=1}
+  - slash{y=2;w=5;h=5;mpd=true;a=720;radius=1;roll=0;fo=1;duration=40;Yaw=180;mcd=false;
+      oP=[ - particles{p=end_rod;a=1;d=true;dir=0,2,0;s=0.5;size=0.4}
+           - particles{c=#30FF30;a=1;d=true;size=0.5}
+      ];
+      oH=[ - damage{a=0.5}
            - sudoskill{s=kuraisisu_sankutyuari_swing_nb}
       ]
       } @self ?!hasaura{aura=kuraisisu_sankutyuari_kyouka}
