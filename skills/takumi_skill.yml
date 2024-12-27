@@ -347,7 +347,7 @@ zingi_zangetu_kaihou:
                tx=0;tz=0;pitch=1.57;roll=0.785} @EIC{r=25;a=160;limit=1;sort=RANDOM}
 zingi_zangetu_kaihou_oh:
   Skills:
-  - damage{a=2.5;pi=true} @ENO{r=5}
+  - damage{a=2.5;pi=true}
 
 riru_sankutyuari_st:
   Conditions:
@@ -412,3 +412,4 @@ riru_sankutyuari_oe:
   Skills:
   - auraremove{aura=riru_sankutyuari_charging} @self
   - aura{auraname=riru_sankutyuari_ct;d=40} @self
+
