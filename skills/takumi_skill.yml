@@ -481,24 +481,25 @@ kuraisisu_sankutyuari_swing3:
       } @self ?!hasaura{aura=kuraisisu_sankutyuari_kyouka}
 kuraisisu_sankutyuari_swing_nb:
   Skills:
-  - leap{v=-300} @trigger{y=-2}
+  - leap{v=-240} @trigger{y=-2}
 
 kuraisisu_sankutyuari_buff:
   Cooldown: 10
   Conditions:
   - wearing{s=HAND;m=PVE_Weapon_kuraisisu_of_sankutyuari_takumi3s} true
   Skills:
-  - jump{v=1} @self ?!onground{}
-  - jump{v=3} @self ?onground{}
+  - Velocity{m=SET;x=0;y=1;z=0} @self @self ?!onground{}
+  - Velocity{m=SET;x=0;y=2.5;z=0} @self @self ?onground{}
   - potion{type=STRENGTH;d=160;l=1} @self
   - potion{type=SLOW_FALLING;d=25;l=1} @self
   - aura{auraname=kuraisisu_sankutyuari_kyouka;d=200} @self
   - delay 6
   - Velocity{m=SET;x=0;y=0;z=0} @self
-  - delay 10
-  - Velocity{m=SET;x=0;y=-3;z=0} @self
+  - delay 14
+  - Velocity{m=SET;x=0;y=-4;z=0} @self
   - leap{v=800} @target
   - delay 7
   - Velocity{m=SET;x=0;y=0;z=0} @self
+  - sudoskill{s=kuraisisu_sankutyuari_swing_nb} @EIR{r=4}
   - damage{a=6} @EIR{r=4}
   - particlering{r=4;p=endrod;a=1;points=12} @self
