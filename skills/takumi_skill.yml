@@ -465,7 +465,7 @@ kuraisisu_sankutyuari_swing3:
   - delay 5
   - slash{y=2;w=5;h=5;mpd=true;a=720;radius=1;roll=0;fo=1;duration=60;mcd=false;
       oP=[ - particles{p=end_rod;a=1;d=true;dir=0,2,0;s=0.1;size=0.4}
-           - particles{c=#30FF30;particle=dust;a=1;d=true;size=0.5}
+           - particles{p=composter;a=1;d=true;size=0.5}
       ];
       oH=[ - damage{a=0.5}
            - sudoskill{s=kuraisisu_sankutyuari_swing_nb}
@@ -473,7 +473,7 @@ kuraisisu_sankutyuari_swing3:
       } @self ?!hasaura{aura=kuraisisu_sankutyuari_kyouka}
   - slash{y=2;w=5;h=5;mpd=true;a=720;radius=1;roll=0;fo=1;duration=60;Yaw=180;mcd=false;
       oP=[ - particles{p=end_rod;a=1;d=true;dir=0,2,0;s=0.1;size=0.4}
-           - particles{c=#30FF30;particle=DUST;a=1;d=true;size=0.5}
+           - particles{p=composter;a=1;d=true;size=0.5}
       ];
       oH=[ - damage{a=0.5}
            - sudoskill{s=kuraisisu_sankutyuari_swing_nb}
