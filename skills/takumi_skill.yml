@@ -495,6 +495,7 @@ kuraisisu_sankutyuari_buff:
   - aura{auraname=kuraisisu_sankutyuari_kyouka;d=200} @self
   - delay 6
   - Velocity{m=SET;x=0;y=0;z=0} @self
+  - particles{p=composter;a=6;hS=0.05;audience=caster;repeat=13;repeatInterval=1} @targetLocaiton
   - delay 14
   - Velocity{m=SET;x=0;y=-4;z=0} @self
   - leap{v=800} @target
