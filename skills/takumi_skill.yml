@@ -453,7 +453,7 @@ kuraisisu_sankutyuari_swing3:
   Skills:
   - auraremove{aura=sankutyuari_3danme} @self
   - aura{auraname=kuraisisu_sankutyuari_ct;d=20} @self
-  - slash{y=1;w=2;h=2;mpd=true;a=320;radius=4;roll=0;fo=1;duration=20;
+  - slash{y=1;w=6;h=6;mpd=true;a=280;radius=4;roll=0;fo=1;duration=20;
       oP=[ - particles{p=end_rod;a=1} ];
       oH=[ - damage{a=3} ]
       } @self
