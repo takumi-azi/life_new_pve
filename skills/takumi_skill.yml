@@ -534,10 +534,10 @@ pairubanka_ot_var:
   - sound{s=;p=<caster.var.pairubanka|0>/15} @self
 pairubanka_oe:
   Skills:
-  - skill{s=pairubanka_oe_t} @forward{f=4}
+  - skill{s=pairubanka_oe_t} @forward{f=4.5}
 pairubanka_oe_t:
   Skills:
-  - particleline{p=crit;a=4;hS=0.05;db=0.1;syo=1} @forward{f=4}
+  - particleline{p=crit;a=4;hS=0.05;db=0.1;syo=1.2} @forward{f=4.5;y=1.2}
   - damage{a=2+<caster.var.pairubanka>*0.2} @entitiesInLine{r=0.5}
 
 pairubanka_swing:
