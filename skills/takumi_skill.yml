@@ -537,7 +537,7 @@ pairubanka_oe:
   - skill{s=pairubanka_oe_t} @forward{f=4}
 pairubanka_oe_t:
   Skills:
-  - particleline{p=crit;a=4;hS=0.05;db=0.1}
+  - particleline{p=crit;a=4;hS=0.05;db=0.1;syo=1} @forward{f=4}
   - damage{a=2+<caster.var.pairubanka>*0.2} @entitiesInLine{r=0.5}
 
 pairubanka_swing:
