@@ -505,3 +505,47 @@ kuraisisu_sankutyuari_buff:
   - sudoskill{s=kuraisisu_sankutyuari_swing_nb} @EIR{r=4}
   - damage{a=6} @EIR{r=4}
   - particlering{r=4;p=endrod;a=1;points=12} @self
+
+
+pairubanka_use_st:
+  Conditions:
+  - wearing{s=HAND;m=PVE_Weapon_pairubanka_takumi3s} true
+  - hasaura{aura=pairubanka} false
+  - hasaura{aura=pairubanka_ct} false
+  Skills:
+  - setvariable{var=caster.pairubanka;value=0;type=FLOAT} @self
+  - aura{auraname=pairubanka;oT=pairubanka_ot;d=8;oE=pairubanka_oe;i=1} @self
+pairubanka_use:
+  Conditions:
+  - wearing{s=HAND;m=PVE_Weapon_pairubanka_takumi3s} true
+  - hasaura{aura=pairubanka} true
+  - hasaura{aura=pairubanka_ct} false
+  Skills:
+  - aura{auraname=pairubanka;oT=pairubanka_ot;d=8;oE=pairubanka_oe;i=1} @self
+pairubanka_ot:
+  Skills:
+  - potion{type=SLOW;l=4;d=2} @self
+  - skill{s=pairubanka_ot_var} @self
+pairubanka_ot_var:
+  Conditions:
+  - variableInRange{var=caster.pairubanka;value=>29} false
+  Skills:
+  - setvariable{var=caster.pairubanka;value=<caster.var.pairubanka>+1;type=FLOAT} @self
+  - sound{s=;p=<caster.var.pairubanka>/15} @self
+pairubanka_oe:
+  Skills:
+  - projectile{v=10;mr=4;sfo=0.5;sE=false;hp=false;hnp=true;oT=pairubanka_p_ot;oH=pairubanka_p_oh} @targetLocaiton
+pairubanka_p_ot:
+  Skills:
+  - particles{p=crit;a=5}
+pairubanka_p_oh:
+  Skills:
+  - damage{a=2+<caster.var.pairubanka>*0.2}
+pairubanka_swing:
+  Conditions:
+  - wearing{s=HAND;m=PVE_Weapon_pairubanka_takumi3s} true
+  - onground{} true
+  Skills:
+  - potion{type=SLOW;l=2;d=20} @self
+  - delay 20
+  - leap{v=4000;repeat=9;repeatInterval=1} @forward{f=5;y=-6}

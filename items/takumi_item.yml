@@ -94,3 +94,17 @@ PVE_Weapon_kuraisisu_of_sankutyuari_takumi3s:
   - skill{s=kuraisisu_sankutyuari_swing} @self ~onSwing
   - skill{s=kuraisisu_sankutyuari_buff} @self ~onUse
 
+PVE_Weapon_pairubanka_takumi3s:
+  Id: iron_sword
+  Display: '&c&lパイルバンカー'
+  Lore:
+  - '&8&l炎属性main武器'
+  - '右クリックでチャージし、とても狭い範囲に大ダメージをあたえる。'
+  - '少しのためのあと、左クリックで突進する。'
+  Options:
+    Unbreakable: true
+  Skills:
+  - skill{s=pairubanka_use} @self ~onUse
+  - skill{s=pairubanka_use_st} @self ~onUse
+  - skill{s=pairubanka_swing} @self ~onSwing
+  
