@@ -534,13 +534,11 @@ pairubanka_ot_var:
   - sound{s=;p=<caster.var.pairubanka|0>/15} @self
 pairubanka_oe:
   Skills:
-  - projectile{v=10;mr=4;sfo=0.5;sE=false;hp=false;hnp=true;oT=pairubanka_p_ot;oH=pairubanka_p_oh;i=1} @targetLocation
-pairubanka_p_ot:
+  - skill{s=pairubanka_oe_t} @forward{f=4}
+pairubanka_oe_t:
   Skills:
-  - particles{p=crit;a=5}
-pairubanka_p_oh:
-  Skills:
-  - damage{a=2+<caster.var.pairubanka>*0.2}
+  - particleline{p=crit;a=4;hS=0.05;db=0.1}
+  - damage{a=2+<caster.var.pairubanka>*0.2} @entitiesInLine{r=0.5}
 
 pairubanka_swing:
   Cooldonw: 2
