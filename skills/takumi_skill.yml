@@ -534,8 +534,7 @@ pairubanka_ot_var:
   - sound{s=;p=<caster.var.pairubanka|0>/15} @self
 pairubanka_oe:
   Skills:
-  - message{m="<caster.var.pairubanka|0>"} @self
-  - projectile{v=10;mr=4;sfo=0.5;sE=false;hp=false;hnp=true;oT=pairubanka_p_ot;oH=pairubanka_p_oh;i=1} @targetLocaiton
+  - projectile{v=10;mr=4;sfo=0.5;sE=false;hp=false;hnp=true;oT=pairubanka_p_ot;oH=pairubanka_p_oh;i=1} @targetLocation
 pairubanka_p_ot:
   Skills:
   - particles{p=crit;a=5}
