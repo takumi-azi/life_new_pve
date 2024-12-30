@@ -534,7 +534,8 @@ pairubanka_ot_var:
   - sound{s=;p=<caster.var.pairubanka>/15} @self
 pairubanka_oe:
   Skills:
-  - projectile{v=10;mr=4;sfo=0.5;sE=false;hp=false;hnp=true;oT=pairubanka_p_ot;oH=pairubanka_p_oh} @targetLocaiton
+  - message{m="<caster.var.pairubanka>"} @self
+  - projectile{v=10;mr=4;sfo=0.5;sE=false;hp=false;hnp=true;oT=pairubanka_p_ot;oH=pairubanka_p_oh;i=1} @targetLocaiton
 pairubanka_p_ot:
   Skills:
   - particles{p=crit;a=5}
@@ -548,4 +549,4 @@ pairubanka_swing:
   Skills:
   - potion{type=SLOW;l=2;d=20} @self
   - delay 20
-  - leap{v=4000;repeat=9;repeatInterval=1} @forward{f=5;y=-6}
+  - leap{v=4000;repeat=4;repeatInterval=1} @forward{f=5;y=-6}
