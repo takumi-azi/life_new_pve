@@ -524,7 +524,7 @@ pairubanka_use:
   - aura{auraname=pairubanka;oT=pairubanka_ot;d=8;oE=pairubanka_oe;i=1} @self
 pairubanka_ot:
   Skills:
-  - potion{type=SLOW;l=4;d=2} @self
+  - potion{type=SLOW;l=3;d=2} @self
   - skill{s=pairubanka_ot_var} @self
 pairubanka_ot_var:
   Conditions:
@@ -537,6 +537,9 @@ pairubanka_oe:
   - skill{s=pairubanka_oe_t} @forward{f=4.5}
 pairubanka_oe_t:
   Skills:
+  - sound{s=minecraft:block.anvil.place;p=1} @self
+  - potion{type=SLOW;l=6;d=8} @self
+  - delay 5
   - sound{s=minecraft:block.anvil.place;p=<caster.var.pairubanka|0>/15;repeat=2;repeatInterval=1} @self
   - particleline{p=crit;a=4;hS=0.05;db=0.1;syo=1.2} @forward{f=4.5;y=1.2}
   - damage{a=2+<caster.var.pairubanka>*0.2} @entitiesInLine{r=0.5}
