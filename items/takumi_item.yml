@@ -101,6 +101,7 @@ PVE_Weapon_pairubanka_takumi3s:
   - '&8&l炎属性main武器'
   - '右クリックでチャージし、とても狭い範囲に大ダメージをあたえる。'
   - '少しのためのあと、左クリックで突進する。'
+  - 'コンボの始動役として優秀'
   Options:
     Unbreakable: true
   Skills:

@@ -542,6 +542,12 @@ pairubanka_oe_t:
   - sound{s=minecraft:block.anvil.place;p=<caster.var.pairubanka|0>/15;repeat=2;repeatInterval=1} @self
   - particleline{p=crit;a=4;hS=0.05;db=0.1;syo=1.2} @forward{f=4.5;y=1.2}
   - damage{a=2+<caster.var.pairubanka>*0.2} @entitiesInLine{r=1}
+  - sudoskill{s=pairubanka_oe_hit;repeatcount=<caster.var.pairubanka|0>} @entitiesInLine{r=1}
+pairubanka_oe_hit:
+  Skills:
+  - message{m="<skill.repeatcount>"} @trigger
+  - Velocity{m=SET;x=0;y=0;z=0;repeat=<skill.repeatcount>;repaetInterval=1} @self
+  - potion{type=SLOW;l=6;d=<skill.repeatcount>} @self
 
 pairubanka_swing:
   Cooldown: 2
