@@ -214,11 +214,11 @@ kokutou_souen3_1:
   - leap{v=600} @forward{f=5;y=-6}
   - particles{p=soul_fire_flame;s=1;a=5;y=1} @self
   - particles{p=lava;s=1;a=3;y=0} @self
-  - sudoskill{s=kokutou_souen3_2} @EIR{r=3}
+  - sudoskill{s=kokutou_souen3_2} @EIR{r=3;targetself=false}
   - skill{s=kokutou_souen3_3} @self
 kokutou_souen3_2:
   Skills:
-  - aura{auraName=kokutou_souen_31;d=2} @EIR{r=3}
+  - aura{auraName=kokutou_souen_31;d=2} @EIR{r=3;targetself=false}
 kokutou_souen3_3:
   Conditions:
   - hasaura{n=kokutou_souen_31} true
@@ -226,7 +226,7 @@ kokutou_souen3_3:
   - auraremove{aura=kokutou_souen_3} @self
 kokutou_souen3_4:
   Skills:
-  - damage{a=6;pi=true;type=honoo} @EIR{r=4}
+  - damage{a=6;pi=true;type=honoo} @EIR{r=4;targetself=false}
   - particlering{p=soul_fire_flame;r=4;a=1;points=50;y=1} @self
   - particles{p=lava;s=1;a=30;y=0;s=2} @self
   - leap{v=2000} @forward{f=5;y=-6}
@@ -397,14 +397,14 @@ riru_sankutyuari_counter:
   Cooldown: 3
   Skills:
   - aura{auraname=riru_sankutyuari_ct;d=175} @self
-  - particles{particle=end_rod;a=8;s=0.7;y=1;repeat=4;repeatInterval=3} @EIR{r=6}
-  - damage{a=3;repeat=4;repeatInterval=3;pi=true;type=wind} @EIR{r=6}
-  - Velocity{m=SET;x=0;y=0;z=0;repeat=14;repeatInterval=1} @EIR{r=6}
-  - sound{s=minecraft:item.trident.hit;repeat=4;repeatInterval=3} @EIR{r=6}
+  - particles{particle=end_rod;a=8;s=0.7;y=1;repeat=4;repeatInterval=3} @EIR{r=6;targetself=false}
+  - damage{a=3;repeat=4;repeatInterval=3;pi=true;type=wind} @EIR{r=6;targetself=false}
+  - Velocity{m=SET;x=0;y=0;z=0;repeat=14;repeatInterval=1} @EIR{r=6;targetself=false}
+  - sound{s=minecraft:item.trident.hit;repeat=4;repeatInterval=3} @EIR{r=6;targetself=false}
   - delay 15
-  - sudoskill{s=riru_sankutyuari_counter_knock} @EIR{r=6}
+  - sudoskill{s=riru_sankutyuari_counter_knock} @EIR{r=6;targetself=false}
   - potion{type=STRENGTH;d=160;l=1} @self
-  - sound{s=minecraft:item.trident.thunder} @EIR{r=6}
+  - sound{s=minecraft:item.trident.thunder} @EIR{r=6;targetself=false}
 riru_sankutyuari_counter_knock:
   Skills:
   - leap{v=-500} @trigger{y=-2}
@@ -502,8 +502,8 @@ kuraisisu_sankutyuari_buff:
   - leap{v=800} @target
   - delay 7
   - Velocity{m=SET;x=0;y=0;z=0} @self
-  - sudoskill{s=kuraisisu_sankutyuari_swing_nb} @EIR{r=4}
-  - damage{a=6} @EIR{r=4}
+  - sudoskill{s=kuraisisu_sankutyuari_swing_nb} @EIR{r=4;targetself=false}
+  - damage{a=6} @EIR{r=4;targetself=false}
   - particlering{r=4;p=endrod;a=1;points=12} @self
 
 
