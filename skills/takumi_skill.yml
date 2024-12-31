@@ -533,6 +533,7 @@ pairubanka_ot_var:
   - setvariable{var=caster.pairubanka;value=<caster.var.pairubanka|0>+1;type=FLOAT} @self
   - sound{s=minecraft:block.iron_trapdoor.open;p=<caster.var.pairubanka|0>/15} @self
 pairubanka_oe:
+  Cooldown: 0.2
   Skills:
   - potion{type=SLOW;l=6;d=8} @self
   - skill{s=pairubanka_oe_leap} @target
