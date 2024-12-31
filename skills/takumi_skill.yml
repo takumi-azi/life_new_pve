@@ -547,7 +547,13 @@ pairubanka_swing:
   - onground{} true
   Skills:
   - potion{type=SLOW;l=2;d=20} @self
-  - delay 10
-  - leap{v=4000;repeat=3;repeatInterval=1} @forward{f=5;y=-6}
+  - totem{ot=pairubanka_swing_ot;d=10;oe=pairubanka_swing_oe;i=1;yo=0} @forward{f=8}
+pairubanka_swing_ot:
+  Skills:
+  - particles{p=crit;a=20;audience=caster;vs=2;hs=0} @origin
+  - leap{v=-200} @origin{y=9}
+pairubanka_swing_oe:
+  Skills:
+  - leap{v=4000;repeat=3;repeatInterval=1} @origin{y=-9}
   - delay 4
   - Velocity{m=SET;x=0;y=0;z=0} @self
