@@ -547,11 +547,11 @@ pairubanka_swing:
   - onground{} true
   Skills:
   - potion{type=SLOW;l=2;d=20} @self
-  - totem{ot=pairubanka_swing_ot;d=10;oe=pairubanka_swing_oe;i=1;yo=0} @forward{f=8}
+  - totem{ot=pairubanka_swing_ot;d=10;oe=pairubanka_swing_oe;i=1;yo=0;sB=false} @forward{f=8;lockpitch=true}
 pairubanka_swing_ot:
   Skills:
-  - particles{p=crit;a=20;audience=caster;vs=2;hs=0} @origin
-  - leap{v=-200} @origin{y=9}
+  - particles{p=crit;a=20;audience=caster;vs=1;hs=0} @origin
+  - leap{v=-50} @origin{y=9}
 pairubanka_swing_oe:
   Skills:
   - leap{v=4000;repeat=3;repeatInterval=1} @origin{y=-9}
