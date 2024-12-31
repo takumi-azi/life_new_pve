@@ -531,7 +531,7 @@ pairubanka_ot_var:
   - variableInRange{var=caster.pairubanka;value=>29} false
   Skills:
   - setvariable{var=caster.pairubanka;value=<caster.var.pairubanka|0>+1;type=FLOAT} @self
-  - sound{s=minecraft:iron_trapdoor.open;p=<caster.var.pairubanka|0>/15} @self
+  - sound{s=minecraft:block.iron_trapdoor.open;p=<caster.var.pairubanka|0>/15} @self
 pairubanka_oe:
   Skills:
   - skill{s=pairubanka_oe_t} @forward{f=4.5}
