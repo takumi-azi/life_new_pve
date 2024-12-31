@@ -534,9 +534,6 @@ pairubanka_ot_var:
   - sound{s=minecraft:block.iron_trapdoor.open;p=<caster.var.pairubanka|0>/15} @self
 pairubanka_oe:
   Skills:
-  - skill{s=pairubanka_oe_t} @self
-pairubanka_oe_t:
-  Skills:
   - potion{type=SLOW;l=6;d=8} @self
   - skill{s=pairubanka_oe_leap} @target
   - delay 3
