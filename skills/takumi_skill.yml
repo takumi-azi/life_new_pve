@@ -595,7 +595,7 @@ tyeennsou_swing_ot_hasmana:
   - hasaura{aura=tyeennsou_boost} false
   Skills:
   - modifyMana{a=-4} @self
-  - slash{y=1;w=2;h=2;mpd=true;p=180;a=180;radius=1;roll=-90;fo=2;duration=5;mcd=true;
+  - slash{y=1;w=1;h=1;mpd=true;p=20;a=180;radius=1;roll=-90;fo=2;duration=5;mcd=true;
       oP=[ - particles{p=end_rod;a=1;size=0.4}
       ];
       oH=[ - damage{a=2}
@@ -613,7 +613,7 @@ tyeennsou_swing_ot_hasmana_boost:
   - hasaura{aura=tyeennsou_boost} true
   Skills:
   - modifyMana{a=-8} @self
-  - slash{y=1;w=3;h=3;mpd=true;p=180;a=180;radius=1;roll=-90;fo=1;duration=5;mcd=true;
+  - slash{y=1;w=1.5;h=1.5;mpd=true;p=20;a=180;radius=1;roll=-90;fo=2;duration=5;mcd=true;
       oP=[ - particles{p=end_rod;a=1;size=0.8}
       ];
       oH=[ - damage{a=3}
