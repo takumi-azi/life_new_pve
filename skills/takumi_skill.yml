@@ -595,6 +595,11 @@ tyeennsou_swing_ot_hasmana:
   - hasaura{aura=tyeennsou_boost} false
   Skills:
   - modifyMana{a=-4} @self
+  - skill{s=tyeennsou_swing_ot_hasmana_haveitem} @self
+tyeennsou_swing_ot_hasmana_haveitem:
+  Conditions:
+  - wearing{s=HAND;m=PVE_Weapon_tyeennsou_takumi3s} true
+  Skills:
   - slash{y=1.2;w=0.3;h=0.9;mpd=true;p=20;a=230;radius=1;roll=-90;fo=1.8;duration=4;mcd=true;
       oP=[ - particles{c=#FFFF00;a=1;size=0.4}
            - particles{c=#111111;a=1;size=0.2}
@@ -602,7 +607,8 @@ tyeennsou_swing_ot_hasmana:
       oH=[ - damage{a=2}
            - particles{p=block_crack;material=REDSTONE_BLOCK;a=2;size=0.3;y=1}
       ]
-      } @self
+      } @self ?wearing{s=HAND;m=PVE_Weapon_tyeennsou_takumi3s}
+  - skill{s=tyeennsou_swing_ot_dash} @self
 tyeennsou_swing_ot_nomana:
   Conditions:
   - hasMana{a=>4} false
@@ -615,6 +621,11 @@ tyeennsou_swing_ot_hasmana_boost:
   - hasaura{aura=tyeennsou_boost} true
   Skills:
   - modifyMana{a=-8} @self
+  - skill{s=tyeennsou_swing_ot_hasmana_boost_haveitem} @self
+tyeennsou_swing_ot_hasmana_boost_haveitem:
+  Conditions:
+  - wearing{s=HAND;m=PVE_Weapon_tyeennsou_takumi3s} true
+  Skills:
   - slash{y=1.2;w=0.5;h=1.5;mpd=true;p=20;a=230;radius=1;roll=-90;fo=1.8;duration=4;mcd=true;
       oP=[ - particles{c=#FFFF00;a=1;size=0.6}
            - particles{c=#111111;a=1;size=0.3}
@@ -623,9 +634,16 @@ tyeennsou_swing_ot_hasmana_boost:
            - particles{p=block_crack;material=REDSTONE_BLOCK;a=4;size=0.3;y=1}
       ]
       } @self
+  - skill{s=tyeennsou_swing_ot_dash} @self
 tyeennsou_swing_ot_nomana_boost:
   Conditions:
   - hasMana{a=>8} false
   - hasaura{aura=tyeennsou_boost} true
   Skills:
   - auraremove{aura=tyeennsou} @self
+tyeennsou_swing_ot_dash:
+  Conditions:
+  - onground{} true
+  - pitch{p=90to75} true
+  Skills:
+  - leap{v=2000} @foward{f=6;y=-1;lockpitch=true}
