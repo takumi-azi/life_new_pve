@@ -568,7 +568,7 @@ tyeennsou_swing_on:
   - hasaura{aura=tyeennsou_c_ct} false
   Skills:
   - aura{auraname=tyeennsou_c_ct;d=1} @self
-  - aura{auraname=tyeennsou;d=800;oT=tyeennsou_swing_ot;i=5} @self
+  - aura{auraname=tyeennsou;d=800;oT=tyeennsou_swing_ot;i=3} @self
 tyeennsou_swing_off:
   Cooldown: 2
   Conditions:
@@ -595,10 +595,12 @@ tyeennsou_swing_ot_hasmana:
   - hasaura{aura=tyeennsou_boost} false
   Skills:
   - modifyMana{a=-4} @self
-  - slash{y=1.2;w=0.3;h=0.6;mpd=true;p=20;a=230;radius=1;roll=-90;fo=1.4;duration=5;mcd=true;
-      oP=[ - particles{p=end_rod;a=1;size=0.4}
+  - slash{y=1.2;w=0.3;h=0.9;mpd=true;p=20;a=230;radius=1;roll=-90;fo=1.4;duration=4;mcd=true;
+      oP=[ - particles{c=#FFFF00;a=1;size=0.4}
+           - particles{c=#111111;a=1;size=0.2}
       ];
       oH=[ - damage{a=2}
+           - particles{p=block_dust;mat=RED_STONE;a=4;size=0.3}
       ]
       } @self
 tyeennsou_swing_ot_nomana:
@@ -613,10 +615,12 @@ tyeennsou_swing_ot_hasmana_boost:
   - hasaura{aura=tyeennsou_boost} true
   Skills:
   - modifyMana{a=-8} @self
-  - slash{y=1.2;w=0.6;h=1.2;mpd=true;p=20;a=230;radius=1;roll=-90;fo=1.4;duration=5;mcd=true;
-      oP=[ - particles{p=end_rod;a=1;size=0.8}
+  - slash{y=1.2;w=0.4;h=1.2;mpd=true;p=20;a=230;radius=1;roll=-90;fo=1.4;duration=4;mcd=true;
+      oP=[ - particles{c=#FFFF00;a=1;size=0.6}
+           - particles{c=#111111;a=1;size=0.3}
       ];
       oH=[ - damage{a=3}
+           - particles{p=block_dust;mat=RED_STONE;a=4;size=0.3}
       ]
       } @self
 tyeennsou_swing_ot_nomana_boost:
