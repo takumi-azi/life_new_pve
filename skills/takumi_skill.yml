@@ -604,7 +604,7 @@ tyeennsou_swing_ot_hasmana_haveitem:
       oP=[ - particles{c=#FFFF00;a=1;size=0.4}
            - particles{c=#111111;a=1;size=0.2}
       ];
-      oH=[ - damage{a=2}
+      oH=[ - damage{a=1.25}
            - particles{p=block_crack;material=REDSTONE_BLOCK;a=2;size=0.3;y=1}
       ]
       } @self ?wearing{s=HAND;m=PVE_Weapon_tyeennsou_takumi3s}
@@ -630,7 +630,7 @@ tyeennsou_swing_ot_hasmana_boost_haveitem:
       oP=[ - particles{c=#FFFF00;a=1;size=0.6}
            - particles{c=#111111;a=1;size=0.3}
       ];
-      oH=[ - damage{a=3}
+      oH=[ - damage{a=2}
            - particles{p=block_crack;material=REDSTONE_BLOCK;a=4;size=0.3;y=1}
       ]
       } @self
