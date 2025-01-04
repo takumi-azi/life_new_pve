@@ -646,4 +646,4 @@ tyeennsou_swing_ot_dash:
   - onground{} true
   - pitch{p=90to60} true
   Skills:
-  - leap{v=2000} @forward{f=6;y=-1;lockpitch=true}
+  - leap{v=400} @forward{f=6;y=-1;lockpitch=true}
