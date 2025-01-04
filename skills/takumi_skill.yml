@@ -559,3 +559,65 @@ pairubanka_swing:
   - leap{v=4000;repeat=4;repeatInterval=1} @forward{f=5;y=-6}
   - delay 5
   - Velocity{m=SET;x=0;y=0;z=0} @self
+
+tyeennsou_swing_on:
+  Cooldown: 12
+  Conditions:
+  - wearing{s=HAND;m=PVE_Weapon_tyeennsou_takumi3s} true
+  - hasaura{aura=tyeennsou} false
+  - hasaura{aura=tyeennsou_c_ct} false
+  Skills:
+  - aura{auraname=tyeennsou_c_ct;d=1} @self
+  - aura{auraname=tyeennsou;d=800;oT=tyeennsou_swing_ot;i=5} @self
+tyeennsou_swing_off:
+  Cooldown: 2
+  Conditions:
+  - wearing{s=HAND;m=PVE_Weapon_tyeennsou_takumi3s} true
+  - hasaura{aura=tyeennsou} true
+  - hasaura{aura=tyeennsou_c_ct} false
+  Skills:
+  - aura{auraname=tyeennsou_c_ct;d=1} @self
+  - auraramove{aura=tyeennsou} @self
+tyeennsou_swing_boost:
+  Conditions:
+  - wearing{s=HAND;m=PVE_Weapon_tyeennsou_takumi3s} true
+  Skills:
+  - aura{auraname=tyeennsou_boost;d=10} @self
+tyeennsou_swing_ot:
+  Skills:
+  - skill{s=tyeennsou_swing_ot_hasmana} @self
+  - skill{s=tyeennsou_swing_ot_nomana} @self
+  - skill{s=tyeennsou_swing_ot_hasmana_boost} @self
+  - skill{s=tyeennsou_swing_ot_nomana_boost} @self
+tyeennsou_swing_ot_hasmana:
+  Conditions:
+  - hasMana{a=>4} true
+  Skills:
+  - modifyMana{a=-4} @self
+  - slash{y=1;w=0.5;h=0.5;mpd=true;p=30;a=15;radius=1;roll=90;fo=1;duration=5;mcd=true;
+      oP=[ - particles{p=end_rod;a=1;size=0.4}
+      ];
+      oH=[ - damage{a=2}
+      ]
+      } @self
+tyeennsou_swing_ot_nomana:
+  Conditions:
+  - hasMana{a=>4} false
+  Skills:
+  - auraramove{aura=tyeennsou} @self
+tyeennsou_swing_ot_hasmana_boost:
+  Conditions:
+  - hasMana{a=>8} true
+  Skills:
+  - modifyMana{a=-8} @self
+  - slash{y=1;w=0.8;h=0.8;mpd=true;p=30;a=15;radius=1;roll=90;fo=1;duration=5;mcd=true;
+      oP=[ - particles{p=end_rod;a=1;size=0.8}
+      ];
+      oH=[ - damage{a=3}
+      ]
+      } @self
+tyeennsou_swing_ot_nomana_boost:
+  Conditions:
+  - hasMana{a=>8} false
+  Skills:
+  - auraramove{aura=tyeennsou} @self

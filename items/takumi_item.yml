@@ -109,3 +109,19 @@ PVE_Weapon_pairubanka_takumi3s:
   - skill{s=pairubanka_use_st} @self ~onUse
   - skill{s=pairubanka_swing} @self ~onSwing
   
+PVE_Weapon_tyeennsou_takumi3s:
+  Id: iron_sword
+  Display: '&c&lチェーンソー'
+  Lore:
+  - '&8&l雷属性main武器'
+  - '左クリックでオン/オフ切り替え、マナを消費しながら前方に攻撃し続ける。'
+  - '持ち変えてもマナ消費は続くが、攻撃がでない。攻撃で吸血スタックを獲得する。'
+  - '地面にいるときに視点を下にすると、チェーンソーの回転力で移動する。'
+  - ''
+  Options:
+    Unbreakable: true
+  Skills:
+  - skill{s=tyeennsou_swing_on} @self ~onSwing
+  - skill{s=tyeennsou_swing_off} @self ~onSwing
+  - skill{s=tyeennsou_swing_boost} @self ~onUse
+  
