@@ -570,8 +570,8 @@ tyeennsou_swing_on:
   Skills:
   - modifyMana{a=-50} @self
   - aura{auraname=tyeennsou_c_ct;d=1} @self
-  - potion{type=SLOW;l=2;d=10}
-  - delay 10
+  - potion{type=SLOW;l=2;d=30}
+  - delay 30
   - aura{auraname=tyeennsou;d=800;oT=tyeennsou_swing_ot;i=3} @self
 tyeennsou_swing_off:
   Cooldown: 2
@@ -648,7 +648,7 @@ tyeennsou_swing_ot_nomana_boost:
 tyeennsou_swing_ot_dash:
   Conditions:
   - onground{} true
-  - pitch{p=90to60} true
+  - pitch{p=90to45} true
   Skills:
   - leap{v=200} @forward{f=6;y=-1;lockpitch=true} ?!hasaura{aura=tyeennsou_boost}
   - leap{v=400} @forward{f=6;y=-1;lockpitch=true} ?hasaura{aura=tyeennsou_boost}
