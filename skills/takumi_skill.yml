@@ -646,4 +646,5 @@ tyeennsou_swing_ot_dash:
   - onground{} true
   - pitch{p=90to60} true
   Skills:
-  - leap{v=400} @forward{f=6;y=-1;lockpitch=true}
+  - leap{v=200} @forward{f=6;y=-1;lockpitch=true} ?!hasaura{aura=tyeennsou_boost}
+  - leap{v=400} @forward{f=6;y=-1;lockpitch=true} ?hasaura{aura=tyeennsou_boost}
