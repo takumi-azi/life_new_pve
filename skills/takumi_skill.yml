@@ -577,7 +577,7 @@ tyeennsou_swing_off:
   - hasaura{aura=tyeennsou_c_ct} false
   Skills:
   - aura{auraname=tyeennsou_c_ct;d=1} @self
-  - auraramove{aura=tyeennsou} @self
+  - auraremove{aura=tyeennsou} @self
 tyeennsou_swing_boost:
   Conditions:
   - wearing{s=HAND;m=PVE_Weapon_tyeennsou_takumi3s} true
