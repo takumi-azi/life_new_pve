@@ -652,3 +652,125 @@ tyeennsou_swing_ot_dash:
   Skills:
   - leap{v=120;repeat=3;repeatInterval=1} @forward{f=6;y=-4;lockpitch=true} ?!hasaura{aura=tyeennsou_boost}
   - leap{v=180;repeat=3;repeatInterval=1} @forward{f=6;y=-4;lockpitch=true} ?hasaura{aura=tyeennsou_boost}
+
+CancelEvent:
+  Skills:
+  - CancelEvent
+sikisai_yumi1:
+  Conditions:
+  - wearing{s=HAND;m=PVE_Weapon_sikisai_yumi_takumi3s} true
+  - hasMana{a=>14} true
+  - pitch{p=>70} false
+  Skills:
+  - modifyMana{a=-14} @self
+  - sound{s=minecraft:entity.firework_rocket.launch;a=0.8} @self
+  - shoot{type=snowball;d=0;v=1.3;md=80;ot=sikisai_yumi1_1;oh=sikisai_yumi1_2;i=1;ac=0.99} @targetLocation
+sikisai_yumi1_1:
+  Skills:
+  - particles{p=crit;a=1}
+  - particles{p=firework;a=3;audience=caster;s=0.3}
+sikisai_yumi1_2:
+  Skills:
+  - sudoskill{s=kyorigensui}
+  - damage{a=12;pi=true;type=syukusei}
+  - sudoskill{s=sikisai_yumi1_3}
+sikisai_yumi1_3:
+  Skills:
+  - sound{s=minecraft:item.totem.use;p=1.5;v=0.8} @self
+  - jump{v=0.5}
+  - particleline{c=#A9F5E1;a=3;vS=0.1;hS=0.1} @ring{r=3;y=0.2;p=7}
+  - particleline{c=#81F7F3;a=2;vS=0.1;hS=0.1} @ring{r=2.5;y=0.5;p=7}
+  - particleline{c=#A9E2F3;a=3;vS=0.1;hS=0.1} @ring{r=1.7;y=1;p=7}
+  - particleline{c=#58D3F7;a=2;vS=0.1;hS=0.1} @ring{r=1.4;y=2;p=6}
+  - particleline{c=#81BEF7;a=1;vS=0.1;hS=0.1} @ring{r=0.8;y=3;p=5}
+  - particleline{c=#819FF7;a=2;vS=0.1;hS=0.1} @ring{r=0.5;y=5;p=3}
+  - particleline{c=#A9A9F5;a=3;vS=0.2;hS=0.2} @ring{r=0.2;y=9;p=1}
+  - particles{c=#F3F781;a=1} @ring{r=2.7;y=1;p=30}
+  - particles{c=#F3F781;a=1} @ring{r=2;y=4;p=15}
+  - particles{c=#F3F781;a=1} @ring{r=1.3;y=7;p=10}
+sikisai_yumi2:
+  Cooldown: 0
+  Conditions:
+  - wearing{s=HAND;m=PVE_Weapon_sikisai_yumi_takumi3s} true
+  - hasMana{a=>30} true
+  - pitch{p=>70} true
+  Skills:
+  - modifyMana{a=-30} @self
+  - sound{s=minecraft:item.totem.use;p=1.5;v=0.8} @self
+  - particleline{c=#A9F5E1;a=3;vS=0.1;hS=0.1} @ring{r=3;y=0.2;p=7}
+  - particleline{c=#81F7F3;a=2;vS=0.1;hS=0.1;audience=Caster} @ring{r=2.5;y=0.5;p=7}
+  - particleline{c=#A9E2F3;a=3;vS=0.1;hS=0.1;audience=Caster} @ring{r=1.7;y=1;p=7}
+  - particleline{c=#58D3F7;a=2;vS=0.1;hS=0.1;audience=Caster} @ring{r=1.4;y=2;p=6}
+  - particleline{c=#81BEF7;a=1;vS=0.1;hS=0.1;audience=Caster} @ring{r=0.8;y=3;p=5}
+  - particleline{c=#819FF7;a=2;vS=0.1;hS=0.1;audience=Caster} @ring{r=0.5;y=5;p=3}
+  - particleline{c=#A9A9F5;a=3;vS=0.2;hS=0.2} @ring{r=0.2;y=9;p=1}
+  - particles{c=#F3F781;a=1} @ring{r=2.7;y=1;p=30}
+  - particles{c=#F3F781;a=1} @ring{r=2;y=4;p=15}
+  - particles{c=#F3F781;a=1} @ring{r=1.3;y=7;p=10}
+  - potion{t=INCREASE_DAMAGE;d=200;l=0} @self
+  - heal{a=<caster.mhp>*0.2+2} @self
+
+taifuu_raizin1:
+  Cooldown: 10
+  Conditions:
+  - wearing{s=HAND;m=PVE_Weapon_taifuu_raizin_takumi3s} true
+  - onground{} true
+  - hasMana{a=>120} true
+  Skills:
+  - modifyMana{a=-120} @self
+  - setvariable{var=caster.raizin_x;value=<caster.l.x.double>;type=FLOAT} @self
+  - setvariable{var=caster.raizin_z;value=<caster.l.z.double>;type=FLOAT} @self
+  - Velocity{m=SET;x=0;y=1;z=0} @self
+  - delay 10
+  - Velocity{m=SET;x=0;y=0;z=0} @self
+  - potion{t=SLOW_FALLING;d=20;l=1} @self
+  - delay 4
+  - particles{p=cloud;s=2;hS=0.2;vS=0.2;a=20} @self
+  - particles{p=cloud;s=2;hS=0.2;vS=0.2;a=20;audience=caster} @self
+  - particlering{p=poof;r=1;a=1;points=20;d=true;dir=0,10,0;s=1} @self
+  - delay 10
+  - Velocity{m=SET;x=0;y=-0.2;z=0} @self
+  - totem{oT=taifuu_raizin0;md=220;i=1;yo=0.1} @origin
+  - aura{auraname=taifuu_raizin;oT=taifuu_raizin4;d=220;i=1} @self
+taifuu_raizin0:
+  Skills:
+  - particles{p=falling_water;hS=4.2;vS=0;a=5;y=7;audience=caster} @origin
+  - particles{p=falling_water;hS=4.2;vS=0;a=5;y=7} @origin
+  - particlering{r=10;a=1;points=20;c=#58FA58} @origin
+  - particlering{r=10;a=1;points=40;c=#58FA58;audience=caster} @origin
+  - particles{p=cloud;hS=4.5;vS=0;a=5;y=7;audience=caster} @origin
+  - particles{p=cloud;hS=4.5;vS=0;a=5;y=7} @origin
+  - skill{s=taifuu_raizin2} @self
+taifuu_raizin2:
+  Cooldown: 1
+  Skills:
+  - sudoskill{s=taifuu_raizin3} @EntitiesNearOrigin{r=10}
+  - particlering{p=poof;r=11;a=1;points=30;d=true;dir=0,-10,0;s=1} @origin
+  - delay 2
+  - sudoskill{s=taifuu_raizin3} @EntitiesNearOrigin{r=8}
+  - particlering{p=poof;r=8;a=1;points=20;d=true;dir=0,-10,0;s=0.6} @origin
+  - delay 2
+  - sudoskill{s=taifuu_raizin3} @EntitiesNearOrigin{r=5}
+  - particlering{p=poof;r=5;a=1;points=10;d=true;dir=0,-10,0;s=0.4} @origin
+  - delay 2
+  - sudoskill{s=taifuu_raizin3} @EntitiesNearOrigin{r=3}
+  - particlering{p=poof;r=3;a=1;points=5;d=true;dir=0,-10,0;s=0.2} @origin
+  - delay 2
+  - damage{a=3;pi=true;type=kaze} @EntitiesNearOrigin{r=3}
+taifuu_raizin3:
+  Skills:
+  - leap{v=15} @origin{yoffset=-4}
+taifuu_raizin4:
+  Skills:
+  - setvariable{var=caster.raizin_1x;value=(<caster.var.raizin_x>-<caster.l.x>)*(<caster.var.raizin_x>-<caster.l.x>);type=FLOAT} @self
+  - setvariable{var=caster.raizin_1z;value=(<caster.var.raizin_z>-<caster.l.z>)*(<caster.var.raizin_z>-<caster.l.z>);type=FLOAT} @self
+  - setvariable{var=caster.taifuu_raizin_1;value=<caster.var.raizin_1x>+<caster.var.raizin_1z>;type=FLOAT} @self
+  - skill{s=taifuu_raizin5} @self
+  - skill{s=taifuu_raizin6} @self
+taifuu_raizin5:
+  Conditions:
+  - variableInRange{var=caster.taifuu_raizin_1;value=<100} true
+  Skills:
+  - potion{t=SLOW;d=10;l=0} @self
+  - potion{t=SLOW_FALLING;d=10;l=1} @self
+  - potion{t=INCREASE_DAMAGE;d=21;l=0} @self

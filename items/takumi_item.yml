@@ -124,4 +124,27 @@ PVE_Weapon_tyeennsou_takumi3s:
   - skill{s=tyeennsou_swing_on} @self ~onSwing
   - skill{s=tyeennsou_swing_off} @self ~onSwing
   - skill{s=tyeennsou_swing_boost} @self ~onUse
-  
+
+PVE_Weapon_sikisai_yumi_takumi3s:
+  Id: bow
+  Display: '&f&o色彩'
+  Model: 1
+  Lore:
+  - "&7&l極光はソラへと至る。"
+  Skills:
+  - skill{s=CancelEvent;sync=true} @self ~onShoot
+  - skill{s=sikisai_yumi1} @self ~onShoot
+  - skill{s=sikisai_yumi2} @self ~onShoot
+  Options:
+    Unbreakable: true
+
+PVE_Weapon_taifuu_raizin_takumi3s:
+  Id: book
+  Display: '&a&o雷鳴鳴らす台風の鼓動'
+  Model: 0
+  Lore:
+  - "&e&l持続ダメージを発生させながら敵を集める。"
+  - "&e&lまた自然属性と雷属性と水属性のバフを得る。"
+  - '&e&l自然属性サブ武器'
+  Skills:
+  - skill{s=taifuu_raizin1} @self ~onUse
