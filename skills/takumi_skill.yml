@@ -758,6 +758,8 @@ taifuu_raizin2:
   - delay 2
   - damage{a=3;pi=true;type=kaze} @EntitiesNearOrigin{r=3}
 taifuu_raizin3:
+  Conditions:
+  - isPlayer{} false
   Skills:
   - leap{v=15} @origin{yoffset=-4}
 taifuu_raizin4:
