@@ -786,7 +786,7 @@ houki_usen_kaihou:
 houki_kaihou_usen:
   Skills:
   - endprojectile{}
-  - projectile{fo=true;v=10;hp=false;sE=false;sfo=0;syo=0;oT=houki_usen_p_ot;oT=houki_usen_p_oe;mr=8;i=1} @origin{y=2}
+  - projectile{fo=true;v=10;hp=false;sE=false;sfo=0;syo=0;oT=houki_usen_p_ot;oE=houki_usen_p_oe;mr=8;i=1} @origin{y=2}
 houki_usen_p_ot:
   Skills:
   - particles{c=#2222FF;a=1;size=0.7}
