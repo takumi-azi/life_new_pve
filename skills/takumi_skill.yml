@@ -799,10 +799,10 @@ houki_usen_t_ot:
   - particles{c=#4444FF;a=1;size=1}
 houki_usen_t_oe:
   Skills:
-  - missile{v=8;in=16;mr=30;sB=true;hnp=true;hp=false;oT=houki_usen_p_ot;oe=houki_usen_p_oe_dmg;
+  - missile{v=13;in=16;mr=30;sB=true;hnp=true;hp=false;oT=houki_usen_p_ot;oe=houki_usen_p_oe_dmg;
                os=[ - projectilevelocity{mode=SET;vz=0;vx=0;vy=-2;r=false}
                ];
-               bullet=DISPLAY;sfo=0;fo=true;syo=0;model=0;mat=IRON_SWORD;scale=1,1,1;i=1;
+               bullet=DISPLAY;sfo=0;fo=true;tyo=-2;syo=0;model=0;mat=IRON_SWORD;scale=1,1,1;i=1;
                tx=0;tz=0;pitch=1.57;roll=0.785} @ENO{r=25;limit=1;sort=RANDOM}
 houki_usen_p_oe_dmg:
   Skills:
