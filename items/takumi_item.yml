@@ -40,7 +40,7 @@ kokutou_souen:
   - skill{s=kokutou_souen2_0} @self ~onUse
   - skill{s=kokutou_souen3} @self ~ondamaged
 
-PVE_Weapon_zingi_tenkai_mu_takumi3s:
+PVE_Weapon_houki_tenkai_mu_takumi3s:
   Id: iron_sword
   Display: '&7&l開闢の剣 宝器生成[無]/宝器解放[爆]'
   Lore:
@@ -51,30 +51,38 @@ PVE_Weapon_zingi_tenkai_mu_takumi3s:
   Options:
     Unbreakable: true
   Skills:
-  - skill{s=zingi_tenkai_mu_use1} @self ~onUse
-  - skill{s=zingi_tenkai_mu_use2} @self ~onUse
-  - aura{auraname=zingi_kaihou_mu;d=2} @self ~onSwing
-PVE_Weapon_zingi_kaihou_zangetu_takumi3s:
+  - skill{s=houki_tenkai_mu_use1} @self ~onUse
+  - skill{s=houki_tenkai_mu_use2} @self ~onUse
+  - aura{auraname=houki_kaihou_mu;d=2} @self ~onSwing
+PVE_Weapon_houki_kaihou_zangetu_takumi3s:
   Id: iron_sword
   Display: '&7&l宝器斬月/宝器解放[射出]'
   Lore:
   - '&8&l無属性main武器'
+  - '&8右クリックで宝器を消費して飛ばす。'
+  - '&8左クリックで視点の動きに影響を受ける斬撃を放つ'
+  - '&8この攻撃を当てたとき蒼の宝器を一つ生成する。'
+  - '&8蒼の宝器は消費されたとき宝器を出す。'
   Attributes:
     MainHand:
       AttackSpeed: 500%
   Options:
     Unbreakable: true
   Skills:
-  - skill{s=zingi_zangetu_swing} @self ~onSwing
-  - aura{auraname=zingi_kaihou_zangetu;d=2} @self ~onUse
+  - skill{s=houki_zangetu_swing} @self ~onSwing
+  - aura{auraname=houki_kaihou_zangetu;d=2} @self ~onUse
 
 PVE_Weapon_riru_sankutyuari_takumi3s:
   Id: iron_sword
   Display: '&a&l不可侵領域=リル・サンクチュアリ'
   Lore:
   - '&8&l自然属性sub武器'
+  - '&8右クリック長押しでしばらくのための後エリアを展開する。'
   Options:
     Unbreakable: true
+  Attributes:
+    MainHand:
+     Damage: +0
   Skills:
   - skill{s=riru_sankutyuari_st} @self ~onUse
   - skill{s=riru_sankutyuari} @self ~onUse
@@ -90,6 +98,9 @@ PVE_Weapon_kuraisisu_of_sankutyuari_takumi3s:
   - 'もう一度右クリで敵に突進する。'
   Options:
     Unbreakable: true
+  Attributes:
+    MainHand:
+     Damage: +0
   Skills:
   - skill{s=kuraisisu_sankutyuari_swing} @self ~onSwing
   - skill{s=kuraisisu_sankutyuari_buff} @self ~onUse
@@ -104,6 +115,9 @@ PVE_Weapon_pairubanka_takumi3s:
   - 'コンボの始動役として優秀'
   Options:
     Unbreakable: true
+  Attributes:
+    MainHand:
+     Damage: +0
   Skills:
   - skill{s=pairubanka_use} @self ~onUse
   - skill{s=pairubanka_use_st} @self ~onUse
@@ -120,6 +134,9 @@ PVE_Weapon_tyeennsou_takumi3s:
   - '右クリック長押しで、その間マナ消費が2倍になり、威力が上がる。'
   Options:
     Unbreakable: true
+  Attributes:
+    MainHand:
+     Damage: +0
   Skills:
   - skill{s=tyeennsou_swing_on} @self ~onSwing
   - skill{s=tyeennsou_swing_off} @self ~onSwing
@@ -131,6 +148,9 @@ PVE_Weapon_sikisai_yumi_takumi3s:
   Model: 1
   Lore:
   - "&7&l極光はソラへと至る。"
+  - "&7地面に矢を撃つと、矢を飛ばす代わりに"
+  - "&7自身にバフと回復を付与する。"
+  - "&7無属性sub武器"
   Skills:
   - skill{s=CancelEvent;sync=true} @self ~onShoot
   - skill{s=sikisai_yumi1} @self ~onShoot
@@ -148,3 +168,21 @@ PVE_Weapon_taifuu_raizin_takumi3s:
   - '&e&l自然属性サブ武器'
   Skills:
   - skill{s=taifuu_raizin1} @self ~onUse
+
+PVE_Weapon_houki_usen_takumi3s:
+  Id: iron_sword
+  Display: '&b&l宝器解放[雨穿]:宝器生成[纏着]'
+  Lore:
+  - '&8&l水属性sub武器'
+  - '左クリックで宝器を消費して周囲に時間差で攻撃する。'
+  - 'この攻撃が当たった敵の水属性耐性が下がる。'
+  - '右クリックで特殊な宝器をまとう。'
+  - 'この宝器がある間、耐性効果を得る。'
+  Options:
+    Unbreakable: true
+  Attributes:
+    MainHand:
+     Damage: +0
+  Skills:
+  - skill{s=houki_usen_kaihou} @self ~onSwing
+  - skill{s=houki_usen_seisei} @self ~onUse
