@@ -812,3 +812,13 @@ houki_usen_seisei:
   - wearing{s=HAND;m=PVE_Weapon_houki_usen_takumi3s} true
   - hasMana{a=>120} true
   Skills:
+  - orbital{oT=houki_usen_o_ot;hp=false;p=18;i=1;d=200;r=3;oy=1;
+               bullet=DISPLAY;model=0;mat=IRON_SWORD;scale=1,1,1;i=1;
+               tx=0;tz=0;pitch=1.57;roll=0.785} @self
+  - orbital{oT=houki_usen_o_ot;hp=false;p=18;i=1;d=200;r=3;oy=1;
+               bullet=DISPLAY;model=0;mat=IRON_SWORD;scale=1,1,1;i=1;
+               tx=0;tz=0;pitch=1.57;roll=0.785} @self
+houki_usen_o_ot:
+  Skills:
+  - particles{c=#4444FF;a=1;size=0.7}
+  - skill{s=houki_tenkai_ot}
