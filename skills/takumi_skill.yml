@@ -792,7 +792,7 @@ houki_usen_p_ot:
   - particles{c=#4444FF;a=1;size=0.7}
 houki_usen_p_oe:
   Skills:
-  - totem{oT=houki_usen_t_ot;oE=houki_usen_t_oe;d=40+<random.0to20>;fo=true;YOffset=-3;i=1} @origin{y=0}
+  - totem{oT=houki_usen_t_ot;oE=houki_usen_t_oe;d=40+<random.0to20>;fo=true;YOffset=-3;i=1} @origin{yo=-3}
 houki_usen_t_ot:
   Skills:
   - particles{c=#4444FF;a=5;size=1;audience=caster;hs=0.2}
