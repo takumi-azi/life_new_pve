@@ -813,7 +813,7 @@ houki_usen_seisei:
   - hasMana{a=>120} true
   Skills:
   - missile{oT=houki_usen_o_ot;hp=false;sE=false;p=100;i=1;d=200;r=2;oy=1;
-               bullet=DISPLAY;model=0;mat=IRON_SWORD;scale=1,1,1;i=1
+               bullet=DISPLAY;model=0;mat=IRON_SWORD;scale=1,1,1;i=1;
                tx=0;tz=0;pitch=1.57;roll=0.785;yaw=10;in=10;v=5;tyo=2;sB=false} @self
 houki_usen_o_ot:
   Skills:
