@@ -269,7 +269,7 @@ houki_tenkai_mu3:
   - particlering{c=#00000;r="<caster.var.houki_tenkai_mu|0>*0.2+3";audience=caster;points=<caster.var.houki_tenkai_mu|0>;y=2} @self
 houki_tenkai_mu4:
   Skills:
-  - totem{os=houki_tenkai_mu4_os;d=1;yo=5;repeat="floor(<caster.var.houki_tenkai_mu|0>*1.2)+1";repeatInterval=0} @forward{f=(<caster.var.houki_tenkai_mu|0>*0.3+2)*<random.0to100>/100;rot=<random.0to360>;lockpitch=true}
+  - totem{os=houki_tenkai_mu4_os;d=1;yo=4;repeat="floor(<caster.var.houki_tenkai_mu|0>*1.2)+1";repeatInterval=0} @forward{f=(<caster.var.houki_tenkai_mu|0>*0.3+2)*<random.0to100>/100;rot=<random.0to360>;lockpitch=true}
   - totem{oT=houki_tenkai_mu_ot;i=10;d="<caster.var.houki_tenkai_mu|0>*4"} @selfLocation
   - delay 0
   - setvariable{var=skill.houki_tenkai_mu;value=0;type=FLOAT} @self
@@ -277,7 +277,7 @@ houki_tenkai_mu4:
   - skill{s=houki_tenkai_mu4_roop;repeat="floor(<caster.var.houki_tenkai_mu|0>)+1";repeatInterval=0} @self
 houki_tenkai_mu4_os:
   Skills:
-  - projectile{ot=houki_tenkai_mu4_ot;oe=houki_tenkai_mu4_oe;se=false;fo=true;origin=@origin{y=2};mr=10;sfo=0;v=18} @origin
+  - projectile{ot=houki_tenkai_mu4_ot;oe=houki_tenkai_mu4_oe;se=false;fo=true;origin=@origin{y=0.2};mr=10;sfo=0;v=18} @origin
 houki_tenkai_mu4_ot:
   Skills:
   - particles{p=crit;a=3;vS=0.05}
@@ -298,10 +298,10 @@ houki_tenkai_mu4_roop:
   - totem{bullet=DISPLAY;
           model=0;
           mat=IRON_SWORD;
-          scale=4,4,4;
+          scale=3,3,3;
           tx=0;tz=0;
           d="<caster.var.houki_tenkai_mu|0>*4";
-          yaw="(6.28/<caster.var.houki_tenkai_mu|0>)*<skill.var.houki_tenkai_mu|0>+0.85";
+          yaw="(6.28/<caster.var.houki_tenkai_mu|0>)*<skill.var.houki_tenkai_mu|0>+0.9";
           pitch=3.14;roll=0.785;
           yo=4} @origin{zo="(<caster.var.houki_tenkai_mu|0>*0.2+12)*sin(6.28/floor(<caster.var.houki_tenkai_mu|0>*1)*<skill.var.houki_tenkai_mu|0>)";xo="(<caster.var.houki_tenkai_mu|0>*0.2+12)*cos(6.28/floor(<caster.var.houki_tenkai_mu|0>*1)*<skill.var.houki_tenkai_mu|0>)"}
 houki_tenkai_mu_ot:
