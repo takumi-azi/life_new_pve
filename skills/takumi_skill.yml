@@ -789,20 +789,20 @@ houki_kaihou_usen:
   - projectile{fo=true;v=10;hp=false;sE=false;sfo=0;syo=0;oT=houki_usen_p_ot;oE=houki_usen_p_oe;mr=14;i=1} @origin{y=2}
 houki_usen_p_ot:
   Skills:
-  - particles{c=#2222FF;a=1;size=0.7}
+  - particles{c=#4444FF;a=1;size=0.7}
 houki_usen_p_oe:
   Skills:
   - totem{oT=houki_usen_t_ot;oE=houki_usen_t_oe;d=60;fo=true;yo=0;i=1} @origin{y=-2}
 houki_usen_t_ot:
   Skills:
-  - particles{c=#2222FF;a=3;size=1;audience=caster}
-  - particles{c=#2222FF;a=1;size=1}
+  - particles{c=#4444FF;a=3;size=1;audience=caster}
+  - particles{c=#4444FF;a=1;size=1}
 houki_usen_t_oe:
   Skills:
-  - missile{v=18;in=4;mr=30;sB=true;hnp=true;hp=false;oT=houki_usen_p_ot;oe=houki_usen_p_oe_dmg;
+  - missile{v=18;in=20;mr=30;sB=true;hnp=true;hp=false;oT=houki_usen_p_ot;oe=houki_usen_p_oe_dmg;
                os=[ - projectilevelocity{mode=SET;vz=0;vx=0;vy=-2;r=false}
                ];
-               bullet=DISPLAY;sfo=0;fo=true;syo=0;model=0;mat=IRON_SWORD;scale=1,1,1;
+               bullet=DISPLAY;sfo=0;fo=true;syo=0;model=0;mat=IRON_SWORD;scale=1,1,1;i=1;
                tx=0;tz=0;pitch=1.57;roll=0.785} @ENO{r=25;limit=1;sort=RANDOM}
 houki_usen_p_oe_dmg:
   Skills:
