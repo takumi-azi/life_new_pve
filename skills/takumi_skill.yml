@@ -782,7 +782,7 @@ houki_usen_kaihou:
   Conditions:
   - wearing{s=HAND;m=PVE_Weapon_houki_usen_takumi3s} true
   Skills:
-  - aura{auraname=houki_kaihou_usen} @self
+  - aura{auraname=houki_kaihou_usen;d=2} @self
 houki_kaihou_usen:
   Skills:
   - endprojectile{}
@@ -795,7 +795,7 @@ houki_usen_p_oe:
   - totem{oT=houki_usen_t_ot;oE=houki_usen_t_oe;d=60;fo=true;yo=0;i=1} @origin{y=-2}
 houki_usen_t_ot:
   Skills:
-  - particles{c=#4444FF;a=3;size=1;audience=caster}
+  - particles{c=#4444FF;a=5;size=1;audience=caster;hs=0.2}
   - particles{c=#4444FF;a=1;size=1}
 houki_usen_t_oe:
   Skills:
