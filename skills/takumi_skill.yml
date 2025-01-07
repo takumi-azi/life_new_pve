@@ -291,7 +291,7 @@ houki_tenkai_mu4_oe:
           tx=0;tz=0;
           d="<caster.var.houki_tenkai_mu|0>*4";
           yaw=<random.0to100>;pitch="3.14+(<random.-30to30>*0.01)";roll="0.785+(<random.-30to30>*0.01)";
-          yo=1.2} @origin
+          oy=1.2} @origin
 houki_tenkai_mu4_roop:
   Skills:
   - setvariable{var=skill.houki_tenkai_mu;value="<skill.var.houki_tenkai_mu|0>+1";type=FLOAT} @self
@@ -303,7 +303,7 @@ houki_tenkai_mu4_roop:
           d="<caster.var.houki_tenkai_mu|0>*4";
           yaw="(6.28/<caster.var.houki_tenkai_mu|0>)*<skill.var.houki_tenkai_mu|0>+0.9";
           pitch=3.14;roll=0.785;
-          yo=4} @origin{zo="(<caster.var.houki_tenkai_mu|0>*0.2+12)*sin(6.28/floor(<caster.var.houki_tenkai_mu|0>*1)*<skill.var.houki_tenkai_mu|0>)";xo="(<caster.var.houki_tenkai_mu|0>*0.2+12)*cos(6.28/floor(<caster.var.houki_tenkai_mu|0>*1)*<skill.var.houki_tenkai_mu|0>)"}
+          oy=4} @origin{zo="(<caster.var.houki_tenkai_mu|0>*0.2+12)*sin(6.28/floor(<caster.var.houki_tenkai_mu|0>*1)*<skill.var.houki_tenkai_mu|0>)";xo="(<caster.var.houki_tenkai_mu|0>*0.2+12)*cos(6.28/floor(<caster.var.houki_tenkai_mu|0>*1)*<skill.var.houki_tenkai_mu|0>)"}
 houki_tenkai_mu_ot:
   Skills:
   - potion{type=STRENGTH;d=10;l=1} @PlayersNearOrigin{r="<caster.var.houki_tenkai_mu|0>*0.2+3";target=self,player}
@@ -731,7 +731,7 @@ taifuu_raizin1:
   - particlering{p=poof;r=1;a=1;points=20;d=true;dir=0,10,0;s=1} @self
   - delay 10
   - Velocity{m=SET;x=0;y=-0.2;z=0} @self
-  - totem{oT=taifuu_raizin0;md=220;i=1;yo=0.1} @origin
+  - totem{oT=taifuu_raizin0;md=220;i=1;oy=0.1} @origin
   - aura{auraname=taifuu_raizin;oT=taifuu_raizin4;d=220;i=1} @self
 taifuu_raizin0:
   Skills:
@@ -802,7 +802,7 @@ houki_usen_t_oe:
   - missile{v=16;in=5;mr=30;sB=true;hnp=true;hp=false;oT=houki_usen_p_ot;oe=houki_usen_p_oe_dmg;
                os=[ - projectilevelocity{mode=SET;vz=0;vx=0;vy=-0.1;r=false}
                ];
-               bullet=DISPLAY;sfo=0;fo=true;tyo=1;syo=-1;model=0;mat=IRON_SWORD;scale=1,1,1;i=1;
+               bullet=DISPLAY;sfo=0;fo=true;tyo=1;syo=0;model=0;mat=IRON_SWORD;scale=1,1,1;i=1;
                tx=0;tz=0;pitch=1.57;roll=0.785} @ENO{r=25;limit=1;sort=RANDOM}
 houki_usen_p_oe_dmg:
   Skills:
