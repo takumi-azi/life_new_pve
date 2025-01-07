@@ -814,7 +814,7 @@ houki_usen_seisei:
   Skills:
   - missile{oT=houki_usen_o_ot;hp=false;sE=false;p=100;i=1;d=600;r=2;oy=1;
                bullet=DISPLAY;model=0;mat=IRON_SWORD;scale=1,1,1;i=1;
-               tx=0;tz=0;pitch=1.57;roll=0.785;yaw=10;in=70;v=6;tyo=1;sB=false} @self
+               tx=0;tz=0;pitch=1.57;roll=0.785;yaw=10;in=60;v=6;tyo=1;sB=false} @self
 houki_usen_o_ot:
   Skills:
   - particles{c=#4444FF;a=1;size=0.7}
