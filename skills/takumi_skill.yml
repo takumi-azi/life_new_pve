@@ -303,7 +303,7 @@ houki_tenkai_mu4_roop:
           d="<caster.var.houki_tenkai_mu|0>*4";
           yaw="(6.28/<caster.var.houki_tenkai_mu|0>)*<skill.var.houki_tenkai_mu|0>+0.9";
           pitch=3.14;roll=0.785;
-          oy=8} @origin{zo="(<caster.var.houki_tenkai_mu|0>*0.2+12)*sin(6.28/floor(<caster.var.houki_tenkai_mu|0>*1)*<skill.var.houki_tenkai_mu|0>)";xo="(<caster.var.houki_tenkai_mu|0>*0.2+12)*cos(6.28/floor(<caster.var.houki_tenkai_mu|0>*1)*<skill.var.houki_tenkai_mu|0>)"}
+          oy=-4} @origin{zo="(<caster.var.houki_tenkai_mu|0>*0.2+12)*sin(6.28/floor(<caster.var.houki_tenkai_mu|0>*1)*<skill.var.houki_tenkai_mu|0>)";xo="(<caster.var.houki_tenkai_mu|0>*0.2+12)*cos(6.28/floor(<caster.var.houki_tenkai_mu|0>*1)*<skill.var.houki_tenkai_mu|0>)"}
 houki_tenkai_mu_ot:
   Skills:
   - potion{type=STRENGTH;d=10;l=1} @PlayersNearOrigin{r="<caster.var.houki_tenkai_mu|0>*0.2+3";target=self,player}
