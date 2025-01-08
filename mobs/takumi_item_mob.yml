@@ -11,8 +11,8 @@ PVE_Weapon_totem_red_takumi3s:
   - aura{auraname=totem;oT=totem_red_ot;oE=totem_red_oe;d=200} @self ~onSpawn
   - aura{auraname=totem;oT=totem_red_ot;oE=totem_red_oe;d=200} @self ~onSignal:totem_continue
   - skill{s=totem_red_od} @self ~onDamaged
-  - swap @parent ~onSignal:totem_swap
-  - teleport{} @parent ~onSignal:totem_call
+  - swap{} @Parent ~onSignal:totem_swap
+  - teleport{} @Parent ~onSignal:totem_call
   Options:
     KnockbackResistance: 1
     PreventMobKillDrops: true
