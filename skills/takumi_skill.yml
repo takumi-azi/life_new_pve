@@ -825,7 +825,6 @@ totem_master_swap:
   - crouching{} false
   - wearing{s=HAND;m=PVE_Weapon_totem_master_takumi3s} true
   Skills:
-  - message{m="swap"} @self
   - signal{s=totem_swap} @Children
 totem_master_call:
   Cooldown: 4
@@ -833,7 +832,6 @@ totem_master_call:
   - crouching{} true
   - wearing{s=HAND;m=PVE_Weapon_totem_master_takumi3s} true
   Skills: 
-  - message{m="call"} @self
   - signal{s=totem_call} @Children
 
 
@@ -856,4 +854,4 @@ totem_red_od:
   Skills:
   - leap{v=400} @trigger
   - delay 10
-  - damage{a=5;pi=true;type=red} @EIR{r=6}
+  - damage{a=8;pi=true;type=red} @EIR{r=6}
