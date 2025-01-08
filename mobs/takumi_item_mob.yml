@@ -1,0 +1,23 @@
+PVE_Weapon_totem_red_takumi3s:
+  Type: skelton
+  Display: '&0炎舞のトーテム'
+  Health: 100
+  Damage: 0
+  AIGoalSelectors:
+  - clear
+  - doNothing
+  Skills:
+  - remove @self ~onSignal:totem_remove
+  - aura{auraname=totem;oT=totem_red_ot;oE=totem_red_oe;d=200} @self ~onSpawn
+  - aura{auraname=totem;oT=totem_red_ot;oE=totem_red_oe;d=200} @self ~onSignal:totem_continue
+  - skill{s=totem_red_od} @self ~onDamaged
+  - swap @parent ~onSignal:totem_swap
+  - teleport{} @parent ~onSignal:totem_call
+  Options:
+    KnockbackResistance: 1
+    PreventMobKillDrops: true
+    PreventOtherDrops: true
+    PreventSunburn: true
+    LockPitch: false
+    ApplyInvisibility: true
+    MovementSpeed: 0
