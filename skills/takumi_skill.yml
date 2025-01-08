@@ -845,7 +845,7 @@ totem_red_ot:
   Skills:
   - aura{auraname=totem_red;d=20} @parent
   - potion{type=STRENGTH;d=10;l=1} @PIR{r=10}
-  - particlering{r=10;c=#FF3333;a=1} @self
+  - particlering{r=10;c=#FF3333;a=1;y=1} @self
 totem_red_oe:
   Skills:
   - remove @self
@@ -857,4 +857,5 @@ totem_red_od:
   - sudoskill{s=totem_red_od_dmg;target=@selflocation{};cat=true} @parent
 totem_red_od_dmg:
   Skills:
-  - damage{a=8;pi=true;type=red;origin=@trigger{}} @ENO{r=6;targettrigger=false}
+  - damage{a=8;pi=true;type=red;origin=@trigger{}} @ENO{r=6}
+  - particlering{r=6;c=#FF3333;a=1;y=1} @trigger{}
