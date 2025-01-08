@@ -538,7 +538,7 @@ pairubanka_oe:
   - potion{type=SLOW;l=6;d=8} @self
   - delay 2
   - leap{v=500+<caster.var.pairubanka|0>*20} @forward{f=4.5}
-  - setvariable{var=skill.pairubanka;value=<caster.var.pairubanka|0>/2-4;type=INT} @self
+  - setvariable{var=skill.pairubanka;value=floor(<caster.var.pairubanka|0>/2-4);type=INTEGER} @self
   - delay <skill.var.pairubanka|0>
   - Velocity{m=SET;x=0;y=0;z=0} @self
   - delay 2
