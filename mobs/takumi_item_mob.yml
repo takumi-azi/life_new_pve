@@ -17,6 +17,7 @@ PVE_Weapon_totem_red_takumi3s:
     KnockbackResistance: 1
     PreventMobKillDrops: true
     PreventOtherDrops: true
+    PreventRandomEquipment: true
     PreventSunburn: true
     LockPitch: false
     MovementSpeed: 0
