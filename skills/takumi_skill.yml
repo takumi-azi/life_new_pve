@@ -525,7 +525,7 @@ pairubanka_use:
   - aura{auraname=pairubanka;oT=pairubanka_ot;d=8;oE=pairubanka_oe;i=1} @self
 pairubanka_ot:
   Skills:
-  - potion{type=SLOW;l=3;d=2} @self
+  - potion{type=SLOW;l=6;d=5} @self
   - skill{s=pairubanka_ot_var} @self
 pairubanka_ot_var:
   Conditions:
@@ -535,7 +535,6 @@ pairubanka_ot_var:
   - sound{s=minecraft:block.iron_trapdoor.open;p=<caster.var.pairubanka|0>/15} @self
 pairubanka_oe:
   Skills:
-  - potion{type=SLOW;l=6;d=22} @self
   - sound{s=minecraft:block.anvil.place;p=<caster.var.pairubanka|0>/15;repeat=2;repeatInterval=1} @self
   - skill{s=pairubanka_oe_shoot} @forward{f=4.5;y=1.2}
 pairubanka_oe_shoot:
@@ -548,24 +547,6 @@ pairubanka_oe_hit:
   Skills:
   - Velocity{m=SET;x=0;y=0;z=0;repeat=<trigger.var.pairubanka>*2;repaetInterval=1} @self
   - potion{type=SLOW;l=6;d=<trigger.var.pairubanka>*2} @self
-pairubanka_swing:
-  Cooldown: 5
-  Conditions:
-  - wearing{s=HAND;m=PVE_Weapon_pairubanka_takumi3s} true
-  - hasaura{aura=pairubanka} true
-  - hasaura{aura=pairubanka_ct} false
-  Skills:
-  - leap{v=1000} @forward{f=5}
-  - aura{auraname=pairubanka_swing;d=10;oE=pairubanka_swing_oe;oT=pairubanka_swing_ot} @self
-pairubanka_swing_ot:
-  Skills:
-  - sudoskill{s=pairubanka_swing_ot_stop} @EIC{r=4;a=60}
-pairubanka_swing_ot_stop:
-  Skills:
-  - auraremove{aura=pairubanka_swing} @trigger
-pairubanka_swing_oe:
-  Skills:
-  - Velocity{m=SET;x=0;y=0;z=0} @self
 
 tyeennsou_swing_on:
   Cooldown: 12
