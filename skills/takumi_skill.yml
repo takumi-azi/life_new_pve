@@ -539,7 +539,11 @@ pairubanka_oe:
 pairubanka_oe_t:
   Skills:
   - potion{type=SLOW;l=6;d=8} @self
-  - delay 5
+  - delay 2
+  - leap{v=500}
+  - delay <caster.var.pairubanka|0>-8
+  - Velocity{m=SET;x=0;y=0;z=0} @self
+  - delay 2
   - sound{s=minecraft:block.anvil.place;p=<caster.var.pairubanka|0>/15;repeat=2;repeatInterval=1} @self
   - particleline{p=crit;a=4;hS=0.05;db=0.1;syo=1.2} @forward{f=4.5;y=1.2}
   - damage{a=2+<caster.var.pairubanka>*0.2} @entitiesInLine{r=1}
@@ -548,18 +552,6 @@ pairubanka_oe_hit:
   Skills:
   - Velocity{m=SET;x=0;y=0;z=0;repeat=<trigger.var.pairubanka>;repaetInterval=1} @self
   - potion{type=SLOW;l=6;d=<trigger.var.pairubanka>} @self
-
-pairubanka_swing:
-  Cooldown: 2
-  Conditions:
-  - wearing{s=HAND;m=PVE_Weapon_pairubanka_takumi3s} true
-  - onground{} true
-  Skills:
-  - potion{type=SLOW;l=2;d=20} @self
-  - delay 20
-  - leap{v=4000;repeat=4;repeatInterval=1} @forward{f=5;y=-6}
-  - delay 5
-  - Velocity{m=SET;x=0;y=0;z=0} @self
 
 tyeennsou_swing_on:
   Cooldown: 12
@@ -816,8 +808,26 @@ houki_usen_seisei:
   - modifyMana{a=-120} @self
   - missile{oT=houki_usen_o_ot;hp=false;sE=false;p=100;i=1;d=600;r=2;oy=1;
                bullet=DISPLAY;model=0;mat=IRON_SWORD;scale=1,1,1;i=1;
-               tx=0;tz=0;pitch=1.57;roll=0.785;yaw=10;in=20;v=7;tyo=1;sB=false;repeat=9;repeatInterval=4} @self
+               tx=0;tz=0;pitch=1.57;roll=0.785;yaw=10;in=20;v=6;tyo=1;sB=false;repeat=9;repeatInterval=4} @self
 houki_usen_o_ot:
   Skills:
   - particles{c=#4444FF;a=1;size=0.7}
   - skill{s=houki_tenkai_ot}
+
+totem_master_swing:
+  Conditions:
+  - wearing{s=HAND;m=PVE_Weapon_houki_usen_takumi3s} true
+  Skills:
+  - 
+totem_master_swap:
+  Conditions:
+  - wearing{s=HAND;m=PVE_Weapon_houki_usen_takumi3s} true
+  Skills:
+totem_master_call:
+  Conditions:
+  - wearing{s=HAND;m=PVE_Weapon_houki_usen_takumi3s} true
+  Skills:
+totem_red_use:
+  Conditions:
+  - wearing{s=HAND;m=PVE_Weapon_totem_red_takumi3s} true
+  Skills:
