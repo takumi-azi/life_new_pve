@@ -110,8 +110,8 @@ PVE_Weapon_pairubanka_takumi3s:
   Display: '&c&lパイルバンカー'
   Lore:
   - '&8&l炎属性main武器'
-  - '右クリックでチャージし、チャージ量に応じた速度で'
-  - '突進し、狭い範囲にチャージ量に応じたダメージをあたえる。'
+  - '右クリックでチャージし、チャージ量に応じたダメージをあたえる。'
+  - 'チャージ中に左クリックで、近くの敵に突進する。'
   - 'この攻撃に当たった敵はしばらく動けなくなる。'
   Options:
     Unbreakable: true
@@ -121,6 +121,7 @@ PVE_Weapon_pairubanka_takumi3s:
   Skills:
   - skill{s=pairubanka_use} @self ~onUse
   - skill{s=pairubanka_use_st} @self ~onUse
+  - skill{s=pairubanka_swing} @self ~onSwing
   
 PVE_Weapon_tyeennsou_takumi3s:
   Id: iron_sword
