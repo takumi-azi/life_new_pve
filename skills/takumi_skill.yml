@@ -535,6 +535,7 @@ pairubanka_ot_var:
   - sound{s=minecraft:block.iron_trapdoor.open;p=<caster.var.pairubanka|0>/15} @self
 pairubanka_oe:
   Skills:
+  - delay 10
   - sound{s=minecraft:block.anvil.place;p=<caster.var.pairubanka|0>/15;repeat=2;repeatInterval=1} @self
   - skill{s=pairubanka_oe_shoot} @forward{f=4.5;y=1.2}
 pairubanka_oe_shoot:
@@ -542,6 +543,7 @@ pairubanka_oe_shoot:
   - particleline{p=crit;a=4;hS=0.05;db=0.1;syo=1.2}
   - damage{a=2+<caster.var.pairubanka>*0.2} @entitiesInLine{r=1}
   - sudoskill{s=pairubanka_oe_hit} @entitiesInLine{r=1}
+  - recoil{r=-5;pitch=1to8} @self
 pairubanka_oe_hit:
   Cooldown: 5
   Skills:
@@ -597,6 +599,7 @@ tyeennsou_swing_ot_hasmana_haveitem:
            - particles{c=#111111;a=1;size=0.2}
       ];
       oH=[ - damage{a=1.25}
+           - recoil{r=-1;pitch=1to8} @self
            - particles{p=block_crack;material=REDSTONE_BLOCK;a=2;size=0.3;y=1}
       ]
       } @self ?wearing{s=HAND;m=PVE_Weapon_tyeennsou_takumi3s}
