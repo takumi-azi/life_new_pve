@@ -1,5 +1,5 @@
 PVE_Weapon_totem_red_takumi3s:
-  Type: skelton
+  Type: zombie
   Display: '&0炎舞のトーテム'
   Health: 100
   Damage: 0
@@ -19,5 +19,4 @@ PVE_Weapon_totem_red_takumi3s:
     PreventOtherDrops: true
     PreventSunburn: true
     LockPitch: false
-    ApplyInvisibility: true
     MovementSpeed: 0
