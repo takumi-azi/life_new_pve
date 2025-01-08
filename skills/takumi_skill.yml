@@ -857,4 +857,4 @@ totem_red_od:
   - sudoskill{s=totem_red_od_dmg;target=@selflocation{};cat=true} @parent
 totem_red_od_dmg:
   Skills:
-  - damage{a=8;pi=true;type=red;origin=@trigger{}} @ENO{r=6}
+  - damage{a=8;pi=true;type=red;origin=@trigger{}} @ENO{r=6;targettrigger=false}
