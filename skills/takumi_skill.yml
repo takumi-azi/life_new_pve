@@ -819,13 +819,11 @@ totem_master_swing:
   - wearing{s=HAND;m=PVE_Weapon_houki_usen_takumi3s} true
   Skills:
 
-
-
 totem_master_swap:
   Cooldown: 4
   Conditions:
   - crouching{} false
-  - wearing{s=HAND;m=PVE_Weapon_totem_red_takumi3s} true
+  - wearing{s=HAND;m=PVE_Weapon_totem_master_takumi3s} true
   Skills:
   - message{m="swap"} @self
   - signal{s=totem_swap} @Children
@@ -833,10 +831,12 @@ totem_master_call:
   Cooldown: 4
   Conditions:
   - crouching{} true
-  - wearing{s=HAND;m=PVE_Weapon_totem_red_takumi3s} true
+  - wearing{s=HAND;m=PVE_Weapon_totem_master_takumi3s} true
   Skills: 
   - message{m="call"} @self
   - signal{s=totem_call} @Children
+
+
 totem_red_use:
   Conditions:
   - wearing{s=HAND;m=PVE_Weapon_totem_red_takumi3s} true
@@ -854,6 +854,6 @@ totem_red_oe:
 totem_red_od:
   Cooldown: 1
   Skills:
-  - leap{v=200} @trigger
+  - leap{v=400} @trigger
   - delay 10
   - damage{a=5;pi=true;type=red} @EIR{r=6}
