@@ -854,4 +854,7 @@ totem_red_od:
   Skills:
   - leap{v=400} @trigger
   - delay 10
-  - damage{a=8;pi=true;type=red} @EIR{r=6}
+  - sudoskill{s=totem_red_od_dmg;target=@selflocation{};cat=true} @parent
+totem_red_od_dmg:
+  Skills:
+  - damage{a=8;pi=true;type=red;origin=@trigger{}} @ENO{r=6}
