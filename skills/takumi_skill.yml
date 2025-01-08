@@ -536,7 +536,6 @@ pairubanka_ot_var:
 pairubanka_oe:
   Skills:
   - potion{type=SLOW;l=6;d=22} @self
-  - delay 20
   - sound{s=minecraft:block.anvil.place;p=<caster.var.pairubanka|0>/15;repeat=2;repeatInterval=1} @self
   - skill{s=pairubanka_oe_shoot} @forward{f=4.5;y=1.2}
 pairubanka_oe_shoot:
