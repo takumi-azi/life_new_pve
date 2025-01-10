@@ -1,0 +1,45 @@
+totem_master_swing:
+  Conditions:
+  - wearing{s=HAND;m=PVE_Weapon_houki_usen_takumi3s} true
+  Skills:
+
+totem_master_swap:
+  Cooldown: 4
+  Conditions:
+  - crouching{} false
+  - wearing{s=HAND;m=PVE_Weapon_totem_master_takumi3s} true
+  Skills:
+  - signal{s=totem_swap} @Children
+totem_master_call:
+  Cooldown: 4
+  Conditions:
+  - crouching{} true
+  - wearing{s=HAND;m=PVE_Weapon_totem_master_takumi3s} true
+  Skills: 
+  - signal{s=totem_call} @Children
+
+
+totem_red_use:
+  Conditions:
+  - wearing{s=HAND;m=PVE_Weapon_totem_red_takumi3s} true
+  Skills:
+  - signal{s=totem_remove} @Children
+  - summon{type=PVE_Weapon_totem_red_takumi3s;a=1} @self
+totem_red_ot:
+  Skills:
+  - aura{auraname=totem_red;d=20} @parent
+  - potion{type=STRENGTH;d=10;l=1} @PIR{r=10}
+  - particlering{r=10;c=#FF3333;a=1;y=1} @self
+totem_red_oe:
+  Skills:
+  - remove @self
+totem_red_od:
+  Cooldown: 1
+  Skills:
+  - leap{v=400} @trigger
+  - delay 10
+  - sudoskill{s=totem_red_od_dmg;target=@selflocation{};cat=true} @parent
+totem_red_od_dmg:
+  Skills:
+  - damage{a=8;pi=true;type=red;origin=@trigger{}} @ENO{r=6}
+  - particlering{r=6;c=#FF3333;a=1;y=1} @trigger{}
