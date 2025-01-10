@@ -4,12 +4,12 @@ enemy_madan_loop_ot:
   - skill{s=madan_loop_ot_notnear} @target
 madan_loop_ot_near:
   TargetConditions:
-  - distance{d=<8} true
+  - distance{d=<8} false
   Skills:
   - randomskill{s=enemy_madan_straight,enemy_madan_circle_missile,enemy_madan_multi_missile,enemy_madan_multi_meteor,enemy_madan_sphere}
 madan_loop_ot_notnear:
   TargetConditions:
-  - distance{d=<8} false
+  - distance{d=<8} true
   Skills:
   - randomskill{s=enemy_madan_straight,enemy_madan_meteor,enemy_madan_multishot,enemy_madan_sphere}
 
@@ -120,17 +120,17 @@ enemy_madan_sphere:
   - hasaura{aura=cooldown} false
   Coondown: 10
   Skills:
-  - aura{auraname=cooldown;d=50} @self
-  - totem{oT=enemy_madan_sphere_ot;oE=enemy_madan_sphere_oe;d=50;i=2;origin=@target} @RingAroundOrigin{r=4;p=6;yo=0}
-  - totem{oT=enemy_madan_sphere_ot;oE=enemy_madan_sphere_oe;d=50;i=2;origin=@target} @RingAroundOrigin{r=5;p=8;yo=1}
-  - totem{oT=enemy_madan_sphere_ot;oE=enemy_madan_sphere_oe;d=50;i=2;origin=@target} @RingAroundOrigin{r=4;p=6;yo=2}
-  - totem{oT=enemy_madan_sphere_ot;oE=enemy_madan_sphere_oe;d=50;i=2;origin=@target} @RingAroundOrigin{r=2;p=4;yo=3}
-enemy_madan_sphere_ot:
-  Skills:
-  - particles{p=endrod;a=3;hS=0.2} @origin
-enemy_madan_sphere_oe:
-  Skills:
-  - missile{in=1;oE=enemy_madan_circle_missile_oe;ot=enemy_madan_straight_p_ot;mr=10;v=10;i=1;fo=true} @target
+#  - aura{auraname=cooldown;d=50} @self
+#  - totem{oT=enemy_madan_sphere_ot;oE=enemy_madan_sphere_oe;d=50;i=2;origin=@target} @RingAroundOrigin{r=4;p=6;yo=0}
+#  - totem{oT=enemy_madan_sphere_ot;oE=enemy_madan_sphere_oe;d=50;i=2;origin=@target} @RingAroundOrigin{r=5;p=8;yo=1}
+#  - totem{oT=enemy_madan_sphere_ot;oE=enemy_madan_sphere_oe;d=50;i=2;origin=@target} @RingAroundOrigin{r=4;p=6;yo=2}
+#  - totem{oT=enemy_madan_sphere_ot;oE=enemy_madan_sphere_oe;d=50;i=2;origin=@target} @RingAroundOrigin{r=2;p=4;yo=3}
+#enemy_madan_sphere_ot:
+#  Skills:
+#  - particles{p=endrod;a=3;hS=0.2} @origin
+#enemy_madan_sphere_oe:
+#  Skills:
+#  - missile{in=1;oE=enemy_madan_circle_missile_oe;ot=enemy_madan_straight_p_ot;mr=10;v=10;i=1;fo=true} @target
 
 enemy_madan_meteor:
   Conditions:
