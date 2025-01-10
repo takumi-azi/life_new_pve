@@ -1,0 +1,48 @@
+PVE_enemy_madan_takumi3s:
+  Type: zombie
+  Display: '&7&l魔弾の使い手 &f&lLv.<mob.level>'
+  Health: 10000
+  Damage: 0
+  Modules:
+    ImmunityTable: true
+  AIGoalSelectors:
+    - clear
+    - meleeattack
+    - float
+    - gotospawnlocation
+    - randomlookaround
+  AITargetSelectors:
+    - clear
+    - attacker
+    - players
+    - OtherFactionMonsters
+  DamageModifiers:
+    - ENTITY_ATTACK 1
+    - none 1
+    - green 1
+    - yellow 1
+    - blue 1
+    - red 1
+  Equipment:
+    - iron_block head
+    - book hand
+    - stick offhand
+  LevelModifiers:
+    Damage: 3
+    Health: 10
+    Armor: 3
+    AttackSpeed: 0.1
+    KnockbackResistance: 0.1
+    MovementSpeed: 0.01
+  KillMessages:
+    - "<target.name>は圧倒的な弾幕によりハチの巣にされた。"
+  Options:
+    NoDamageTicks: 0
+    MovementSpeed: 0.1
+    KnockbackResistance: 0.7
+    PreventMobKillDrops: true
+    PreventOtherDrops: true
+    PreventSunburn: true
+  Skills:
+  - aura{auraname=skillloop;oT=enemy_madan_loop_ot;i=1;oE=enemy_madan_loop_oe;d=1200} @self ~onDamaged
+  - aura{auraname=skillloop;oT=enemy_madan_loop_ot;i=1;oE=enemy_madan_loop_oe;d=1200} @self ~onEnterCombat
