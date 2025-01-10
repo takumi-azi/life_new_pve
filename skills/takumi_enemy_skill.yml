@@ -1,4 +1,4 @@
-madan_loop_ot:
+enemy_madan_loop_ot:
   Skills:
   - skill{s=madan_loop_ot_near} @target
   - skill{s=madan_loop_ot_notnear} @target
