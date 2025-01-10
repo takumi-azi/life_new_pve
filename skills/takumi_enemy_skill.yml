@@ -33,10 +33,10 @@ enemy_madan_straight_oe:
   - projectile{v=20;ot=enemy_madan_straight_p_ot;oh=enemy_madan_straight_p_oh;mr=40} @origin
 enemy_madan_straight_p_ot:
   Skills:
-  - particles{c=#7777FF;a=1;hS=0;vS=0}
+  - particles{c=#7777FF;a=3;hS=0.1;vS=0.1}
 enemy_madan_straight_p_oh:
   Skills:
-  - damage{a=8;type=none}
+  - damage{a=8;type=none;pi=true}
 
 enemy_madan_circle_missile:
   Cooldown: 6
@@ -80,7 +80,7 @@ enemy_madan_circle_missile:
             ];mr=60;v=8} @target
 enemy_madan_circle_missile_oe:
   Skills:
-  - damage{a=4} @ENO{r=3}
+  - damage{a=4;type=none;pi=true} @ENO{r=3}
   - particles{c=#7777FF;a=20;hS=0.5;vS=0.5}
 
 enemy_madan_multi_missile:
@@ -121,10 +121,10 @@ enemy_madan_sphere:
   Coondown: 10
   Skills:
   - aura{auraname=cooldown;d=50} @self
-  - totem{oT=enemy_madan_sphere_ot;oE=enemy_madan_sphere_oe;d=20;i=2;origin=@target} @RingAroundOrigin{r=4;p=6;yo=0}
-  - totem{oT=enemy_madan_sphere_ot;oE=enemy_madan_sphere_oe;d=20;i=2;origin=@target} @RingAroundOrigin{r=5;p=8;yo=1}
-  - totem{oT=enemy_madan_sphere_ot;oE=enemy_madan_sphere_oe;d=20;i=2;origin=@target} @RingAroundOrigin{r=4;p=6;yo=2}
-  - totem{oT=enemy_madan_sphere_ot;oE=enemy_madan_sphere_oe;d=20;i=2;origin=@target} @RingAroundOrigin{r=2;p=4;yo=3}
+  - totem{oT=enemy_madan_sphere_ot;oE=enemy_madan_sphere_oe;d=50;i=2;origin=@target} @RingAroundOrigin{r=4;p=6;yo=0}
+  - totem{oT=enemy_madan_sphere_ot;oE=enemy_madan_sphere_oe;d=50;i=2;origin=@target} @RingAroundOrigin{r=5;p=8;yo=1}
+  - totem{oT=enemy_madan_sphere_ot;oE=enemy_madan_sphere_oe;d=50;i=2;origin=@target} @RingAroundOrigin{r=4;p=6;yo=2}
+  - totem{oT=enemy_madan_sphere_ot;oE=enemy_madan_sphere_oe;d=50;i=2;origin=@target} @RingAroundOrigin{r=2;p=4;yo=3}
 enemy_madan_sphere_ot:
   Skills:
   - particles{p=endrod;a=3;hS=0.2} @origin
@@ -144,7 +144,7 @@ enemy_madan_meteor_ot:
 enemy_madan_meteor_oe:
   Skills:
   - particleline{db=0.2;c=#7777FF;origin=@selflocation{y=5};fo=true}
-  - damage{a=10} @ENO{r=5}
+  - damage{a=10;type=none;pi=true} @ENO{r=5}
   - particles{p=end_rod;s=0.2;a=15} 
   - particlesphere{p=end_rod;a=1;points=40;r=3} 
 
