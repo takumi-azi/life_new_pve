@@ -44,35 +44,35 @@ enemy_madan_circle_missile:
   - aura{auraname=cooldown;d=60} @self
   - potion{type=SLOW;d=30;l=6} @self
   - delay 20
-  - missile{in=40;oE=enemy_madan_circle_missile_oe;ot=enemy_madan_straight_p_ot;i=1;
+  - missile{in=60;oE=enemy_madan_circle_missile_oe;ot=enemy_madan_straight_p_ot;i=1;
             oS=[ - particles{p=endrod;a=10;hS=0.2;vS=0.2} @origin
                  - projectilevelocity{mode=SET;vz=0;vx=1;vy=0.4;r=false}
             ];mr=30;v=6} @target
-  - missile{in=40;oE=enemy_madan_circle_missile_oe;ot=enemy_madan_straight_p_ot;i=1;
+  - missile{in=60;oE=enemy_madan_circle_missile_oe;ot=enemy_madan_straight_p_ot;i=1;
             oS=[ - particles{p=endrod;a=10;hS=0.2;vS=0.2} @origin
                  - projectilevelocity{mode=SET;vz=1;vx=1;vy=0.4;r=false}
             ];mr=30;v=6} @target
-  - missile{in=40;oE=enemy_madan_circle_missile_oe;ot=enemy_madan_straight_p_ot;i=1;
+  - missile{in=60;oE=enemy_madan_circle_missile_oe;ot=enemy_madan_straight_p_ot;i=1;
             oS=[ - particles{p=endrod;a=10;hS=0.2;vS=0.2} @origin
                  - projectilevelocity{mode=SET;vz=1;vx=0;vy=0.4;r=false}
             ];mr=30;v=6} @target
-  - missile{in=40;oE=enemy_madan_circle_missile_oe;ot=enemy_madan_straight_p_ot;i=1;
+  - missile{in=60;oE=enemy_madan_circle_missile_oe;ot=enemy_madan_straight_p_ot;i=1;
             oS=[ - particles{p=endrod;a=10;hS=0.2;vS=0.2} @origin
                  - projectilevelocity{mode=SET;vz=0;vx=-1;vy=0.4;r=false}
             ];mr=30;v=6} @target
-  - missile{in=40;oE=enemy_madan_circle_missile_oe;ot=enemy_madan_straight_p_ot;i=1;
+  - missile{in=60;oE=enemy_madan_circle_missile_oe;ot=enemy_madan_straight_p_ot;i=1;
             oS=[ - particles{p=endrod;a=10;hS=0.2;vS=0.2} @origin
                  - projectilevelocity{mode=SET;vz=-1;vx=-1;vy=0.4;r=false}
             ];mr=30;v=6} @target
-  - missile{in=40;oE=enemy_madan_circle_missile_oe;ot=enemy_madan_straight_p_ot;i=1;
+  - missile{in=60;oE=enemy_madan_circle_missile_oe;ot=enemy_madan_straight_p_ot;i=1;
             oS=[ - particles{p=endrod;a=10;hS=0.2;vS=0.2} @origin
                  - projectilevelocity{mode=SET;vz=-1;vx=0;vy=0.4;r=false}
             ];mr=30;v=6} @target
-  - missile{in=40;oE=enemy_madan_circle_missile_oe;ot=enemy_madan_straight_p_ot;i=1;
+  - missile{in=60;oE=enemy_madan_circle_missile_oe;ot=enemy_madan_straight_p_ot;i=1;
             oS=[ - particles{p=endrod;a=10;hS=0.2;vS=0.2} @origin
                  - projectilevelocity{mode=SET;vz=-1;vx=1;vy=0.4;r=false}
             ];mr=30;v=6} @target
-  - missile{in=40;oE=enemy_madan_circle_missile_oe;ot=enemy_madan_straight_p_ot;i=1;
+  - missile{in=60;oE=enemy_madan_circle_missile_oe;ot=enemy_madan_straight_p_ot;i=1;
             oS=[ - particles{p=endrod;a=10;hS=0.2;vS=0.2} @origin
                  - projectilevelocity{mode=SET;vz=1;vx=-1;vy=0.4;r=false}
             ];mr=30;v=6} @target
@@ -110,25 +110,10 @@ enemy_madan_multi_meteor:
   Cooldown: 4
   Skills:
   - aura{auraname=cooldown;d=50} @self
-  - missile{in=8;oE=enemy_madan_circle_missile_oe;ot=enemy_madan_straight_p_ot;i=1;
+  - missile{in=14;oE=enemy_madan_circle_missile_oe;ot=enemy_madan_straight_p_ot;i=1;
             oS=[ - particles{p=endrod;a=10;hS=0.2;vS=0.2} @origin
-                 - projectilevelocity{mode=SET;vz=0;vx=0;vy=1;r=false}
+                 - projectilevelocity{mode=SET;vz=0;vx=0;vy=3;r=false}
             ];mr=40;v=20;repeat=4;repeatInterval=10} @target
-
-enemy_madan_sphere:
-  Conditions:
-  - hasaura{aura=cooldown} false
-  Coondown: 10
-  Skills:
-  - aura{auraname=cooldown;d=50} @self
-  - totem{oT=enemy_madan_sphere_ot;oE=enemy_madan_sphere_oe;d=40;i=2} @targetLocation
-enemy_madan_sphere_ot:
-  Skills:
-  - particlesphere{r=5;p=end_rod;a=1;points=30}
-enemy_madan_sphere_oe:
-  Skills:
-  - damage{a=2;pi=true;type=none} @ENO{r=5}
-  - sudoskill{s=enemy_madan_multishot_p_oh_sudo} @ENO{r=5}
 
 enemy_madan_meteor:
   Conditions:
@@ -168,3 +153,11 @@ enemy_madan_multishot_p_oh:
 enemy_madan_multishot_p_oh_sudo:
   Skills:
   - leap{v=300} @trigger{y=-2}
+
+enemy_madan_rensya:
+  Conditions:
+  - hasaura{aura=cooldown} false
+  Coondown: 10
+  Skills:
+  - aura{auraname=cooldown;d=50} @self
+  - totem{oT=enemy_madan_sphere_ot;oE=enemy_madan_sphere_oe;d=40;i=2} @targetLocation
