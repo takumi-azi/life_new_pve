@@ -33,7 +33,7 @@ PVE_enemy_madan_takumi3s:
     Armor: 3
     AttackSpeed: 0.1
     KnockbackResistance: 0.1
-    MovementSpeed: 0.01
+    MovementSpeed: 0.02
   KillMessages:
     - "<target.name>は圧倒的な弾幕によりハチの巣にされた。"
   Options:
