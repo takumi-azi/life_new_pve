@@ -19,7 +19,7 @@ enemy_madan_straight:
   - hasaura{aura=cooldown} false
   Skills:
   - aura{auraname=cooldown;d=30} @self
-  - leap{v=-100;repeat=3;repeatInterval=1} @target{oy=5}
+  - leap{v=200;repeat=3;repeatInterval=1} @target{oy=-5}
   - potion{type=SLOW;d=20;l=6} @self
   - delay 4
   - Velocity{m=SET;x=0;y=0;z=0} @self
@@ -114,6 +114,7 @@ enemy_madan_multi_meteor:
             oS=[ - particles{p=endrod;a=10;hS=0.2} @origin
                  - projectilevelocity{mode=SET;vz=0;vx=0;vy=10;r=false}
             ];mr=40;v=17;repeat=2;repeatInterval=10} @target
+  - leap{v=-100;repeat=39;repeatInterval=1} @target{oy=5}
 
 enemy_madan_sphere:
   Conditions:
