@@ -19,7 +19,7 @@ enemy_madan_straight:
   - hasaura{aura=cooldown} false
   Skills:
   - aura{auraname=cooldown;d=30} @self
-  - leap{v=-1000;repeat=3;repeatInterval=1} @target{oy=5}
+  - leap{v=-100;repeat=3;repeatInterval=1} @target{oy=5}
   - potion{type=SLOW;d=20;l=6} @self
   - delay 4
   - Velocity{m=SET;x=0;y=0;z=0} @self
@@ -46,38 +46,38 @@ enemy_madan_circle_missile:
   - aura{auraname=cooldown;d=60} @self
   - potion{type=SLOW;d=30;l=6} @self
   - delay 20
-  - missile{in=10;oE=enemy_madan_circle_missile_oe;ot=enemy_madan_straight_p_ot;
+  - missile{in=10;oE=enemy_madan_circle_missile_oe;ot=enemy_madan_straight_p_ot;i=1;
             oS=[ - particles{p=endrod;a=10;hS=0.2} @origin
-                 - projectilevelocity{mode=SET;vz=0;vx=1;vy=0;r=false}
-            ];mr=60;v=12} @target
-  - missile{in=10;oE=enemy_madan_circle_missile_oe;ot=enemy_madan_straight_p_ot;
+                 - projectilevelocity{mode=SET;vz=0;vx=1;vy=0.4;r=false}
+            ];mr=60;v=8} @target
+  - missile{in=10;oE=enemy_madan_circle_missile_oe;ot=enemy_madan_straight_p_ot;i=1;
             oS=[ - particles{p=endrod;a=10;hS=0.2} @origin
-                 - projectilevelocity{mode=SET;vz=1;vx=1;vy=0;r=false}
-            ];mr=60;v=12} @target
-  - missile{in=10;oE=enemy_madan_circle_missile_oe;ot=enemy_madan_straight_p_ot;
+                 - projectilevelocity{mode=SET;vz=1;vx=1;vy=0.4;r=false}
+            ];mr=60;v=8} @target
+  - missile{in=10;oE=enemy_madan_circle_missile_oe;ot=enemy_madan_straight_p_ot;i=1;
             oS=[ - particles{p=endrod;a=10;hS=0.2} @origin
-                 - projectilevelocity{mode=SET;vz=1;vx=0;vy=0;r=false}
-            ];mr=60;v=12} @target
-  - missile{in=10;oE=enemy_madan_circle_missile_oe;ot=enemy_madan_straight_p_ot;
+                 - projectilevelocity{mode=SET;vz=1;vx=0;vy=0.4;r=false}
+            ];mr=60;v=8} @target
+  - missile{in=10;oE=enemy_madan_circle_missile_oe;ot=enemy_madan_straight_p_ot;i=1;
             oS=[ - particles{p=endrod;a=10;hS=0.2} @origin
-                 - projectilevelocity{mode=SET;vz=0;vx=-1;vy=0;r=false}
-            ];mr=60;v=12} @target
-  - missile{in=10;oE=enemy_madan_circle_missile_oe;ot=enemy_madan_straight_p_ot;
+                 - projectilevelocity{mode=SET;vz=0;vx=-1;vy=0.4;r=false}
+            ];mr=60;v=8} @target
+  - missile{in=10;oE=enemy_madan_circle_missile_oe;ot=enemy_madan_straight_p_ot;i=1;
             oS=[ - particles{p=endrod;a=10;hS=0.2} @origin
-                 - projectilevelocity{mode=SET;vz=-1;vx=-1;vy=0;r=false}
-            ];mr=60;v=12} @target
-  - missile{in=10;oE=enemy_madan_circle_missile_oe;ot=enemy_madan_straight_p_ot;
+                 - projectilevelocity{mode=SET;vz=-1;vx=-1;vy=0.4;r=false}
+            ];mr=60;v=8} @target
+  - missile{in=10;oE=enemy_madan_circle_missile_oe;ot=enemy_madan_straight_p_ot;i=1;
             oS=[ - particles{p=endrod;a=10;hS=0.2} @origin
-                 - projectilevelocity{mode=SET;vz=-1;vx=0;vy=0;r=false}
-            ];mr=60;v=12} @target
-  - missile{in=10;oE=enemy_madan_circle_missile_oe;ot=enemy_madan_straight_p_ot;
+                 - projectilevelocity{mode=SET;vz=-1;vx=0;vy=0.4;r=false}
+            ];mr=60;v=8} @target
+  - missile{in=10;oE=enemy_madan_circle_missile_oe;ot=enemy_madan_straight_p_ot;i=1;
             oS=[ - particles{p=endrod;a=10;hS=0.2} @origin
-                 - projectilevelocity{mode=SET;vz=-1;vx=1;vy=0;r=false}
-            ];mr=60;v=12} @target
-  - missile{in=10;oE=enemy_madan_circle_missile_oe;ot=enemy_madan_straight_p_ot;
+                 - projectilevelocity{mode=SET;vz=-1;vx=1;vy=0.4;r=false}
+            ];mr=60;v=8} @target
+  - missile{in=10;oE=enemy_madan_circle_missile_oe;ot=enemy_madan_straight_p_ot;i=1;
             oS=[ - particles{p=endrod;a=10;hS=0.2} @origin
-                 - projectilevelocity{mode=SET;vz=1;vx=-1;vy=0;r=false}
-            ];mr=60;v=12} @target
+                 - projectilevelocity{mode=SET;vz=1;vx=-1;vy=0.4;r=false}
+            ];mr=60;v=8} @target
 enemy_madan_circle_missile_oe:
   Skills:
   - damage{a=4} @ENO{r=3}
@@ -109,8 +109,8 @@ enemy_madan_multi_meteor:
   - hasaura{aura=cooldown} false
   Cooldown: 4
   Skills:
-  - aura{auraname=cooldown;d=40} @self
-  - missile{in=5;oE=enemy_madan_circle_missile_oe;ot=enemy_madan_straight_p_ot;
+  - aura{auraname=cooldown;d=50} @self
+  - missile{in=5;oE=enemy_madan_circle_missile_oe;ot=enemy_madan_straight_p_ot;i=1;
             oS=[ - particles{p=endrod;a=10;hS=0.2} @origin
                  - projectilevelocity{mode=SET;vz=0;vx=0;vy=10;r=false}
             ];mr=40;v=17;repeat=2;repeatInterval=10} @target
@@ -120,7 +120,7 @@ enemy_madan_sphere:
   - hasaura{aura=cooldown} false
   Coondown: 10
   Skills:
-  - aura{auraname=cooldown;d=20} @self
+  - aura{auraname=cooldown;d=50} @self
   - totem{oT=enemy_madan_sphere_ot;oE=enemy_madan_sphere_oe;d=20;i=2;origin=@target} @RingAroundOrigin{r=4;p=6;yo=0}
   - totem{oT=enemy_madan_sphere_ot;oE=enemy_madan_sphere_oe;d=20;i=2;origin=@target} @RingAroundOrigin{r=5;p=8;yo=1}
   - totem{oT=enemy_madan_sphere_ot;oE=enemy_madan_sphere_oe;d=20;i=2;origin=@target} @RingAroundOrigin{r=4;p=6;yo=2}
@@ -130,7 +130,7 @@ enemy_madan_sphere_ot:
   - particles{p=endrod;a=3;hS=0.2} @origin
 enemy_madan_sphere_oe:
   Skills:
-  - missile{in=1;oE=enemy_madan_circle_missile_oe;ot=enemy_madan_straight_p_ot;mr=6;v=17} @target
+  - missile{in=1;oE=enemy_madan_circle_missile_oe;ot=enemy_madan_straight_p_ot;mr=10;v=10;i=1;fo=true} @target
 
 enemy_madan_meteor:
   Conditions:
@@ -140,13 +140,13 @@ enemy_madan_meteor:
   - totem{ot=enemy_madan_meteor_ot;oE=enemy_madan_meteor_oe;d=20;i=4;oy=1} @target
 enemy_madan_meteor_ot:
   Skills:
-  - particlering{r=5;c=#7777FF;points=30}
+  - particlering{r=3;c=#7777FF;points=10}
 enemy_madan_meteor_oe:
   Skills:
   - particleline{db=0.2;c=#7777FF;origin=@selflocation{y=5};fo=true}
   - damage{a=10} @ENO{r=5}
   - particles{p=end_rod;s=0.2;a=15} 
-  - particlesphere{p=end_rod;a=1;points=40;r=5} 
+  - particlesphere{p=end_rod;a=1;points=40;r=3} 
 
 enemy_madan_multishot:
   Conditions:
