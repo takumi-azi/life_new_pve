@@ -4,12 +4,12 @@ enemy_madan_loop_ot:
   - skill{s=madan_loop_ot_notnear} @target
 madan_loop_ot_near:
   TargetConditions:
-  - distance{d=<8} false
+  - distance{d=<10} false
   Skills:
   - randomskill{s=enemy_madan_straight,enemy_madan_circle_missile,enemy_madan_multi_missile,enemy_madan_multi_meteor,enemy_madan_sphere}
 madan_loop_ot_notnear:
   TargetConditions:
-  - distance{d=<8} true
+  - distance{d=<10} true
   Skills:
   - randomskill{s=enemy_madan_straight,enemy_madan_meteor,enemy_madan_multishot,enemy_madan_sphere}
 
@@ -19,7 +19,6 @@ enemy_madan_straight:
   - hasaura{aura=cooldown} false
   Skills:
   - aura{auraname=cooldown;d=30} @self
-  - leap{v=200;repeat=3;repeatInterval=1} @target{oy=-5}
   - potion{type=SLOW;d=20;l=6} @self
   - delay 4
   - Velocity{m=SET;x=0;y=0;z=0} @self
@@ -103,6 +102,8 @@ enemy_madan_multi_missile:
             oS=[ - particles{p=endrod;a=10;hS=0.2} @origin
                  - projectilevelocity{mode=SET;vz=0;vx=-1;vy=0;r=false}
             ];mr=40;v=17} @target
+  - delay 10
+  - leap{v=200;repeat=4;repeatInterval=1} @target{oy=-5}
 
 enemy_madan_multi_meteor:
   Conditions:
@@ -114,7 +115,6 @@ enemy_madan_multi_meteor:
             oS=[ - particles{p=endrod;a=10;hS=0.2} @origin
                  - projectilevelocity{mode=SET;vz=0;vx=0;vy=10;r=false}
             ];mr=40;v=17;repeat=2;repeatInterval=10} @target
-  - leap{v=-100;repeat=39;repeatInterval=1} @target{oy=5}
 
 enemy_madan_sphere:
   Conditions:
@@ -122,16 +122,14 @@ enemy_madan_sphere:
   Coondown: 10
   Skills:
   - aura{auraname=cooldown;d=50} @self
-  - totem{oT=enemy_madan_sphere_ot;oE=enemy_madan_sphere_oe;d=50;i=2;origin=@target} @RingAroundOrigin{r=3;p=4;yo=0}
-  - totem{oT=enemy_madan_sphere_ot;oE=enemy_madan_sphere_oe;d=50;i=2;origin=@target} @RingAroundOrigin{r=4;p=6;yo=1}
-  - totem{oT=enemy_madan_sphere_ot;oE=enemy_madan_sphere_oe;d=50;i=2;origin=@target} @RingAroundOrigin{r=3;p=4;yo=2}
-  - totem{oT=enemy_madan_sphere_ot;oE=enemy_madan_sphere_oe;d=50;i=2;origin=@target} @RingAroundOrigin{r=1;p=2;yo=3}
+  - totem{oT=enemy_madan_sphere_ot;oE=enemy_madan_sphere_oe;d=40;i=2} @targetLocation
 enemy_madan_sphere_ot:
   Skills:
-  - particles{p=endrod;a=3;hS=0.2} @origin
+  - particlesphere{r=5;p=end_rod;a=1;points=30}
 enemy_madan_sphere_oe:
   Skills:
-  - missile{in=1;oE=enemy_madan_circle_missile_oe;ot=enemy_madan_straight_p_ot;mr=5;v=10;i=1;fo=true} @target
+  - damage{a=2;pi=true;type=none} @ENO{r=5}
+  - sudoskill{s=enemy_madan_multishot_p_oh_sudo} @ENO{r=5}
 
 enemy_madan_meteor:
   Conditions:
@@ -153,8 +151,10 @@ enemy_madan_multishot:
   Conditions:
   - hasaura{aura=cooldown} false
   Skills:
-  - aura{auraname=cooldown;d=20} @self
-  - totem{ot=enemy_madan_multishot_ot;oE=enemy_madan_multishot_oe;d=10;i=3;oy=1} @RandomLocationsNearOrigin{a=5;r=4}
+  - aura{auraname=cooldown;d=30} @self
+  - totem{ot=enemy_madan_multishot_ot;oE=enemy_madan_multishot_oe;d=20;i=3;oy=1;origin=@target} @RandomLocationsNearOrigin{a=5;r=3}
+  - delay 21
+  - leap{v=-100;repeat=39;repeatInterval=1} @target{oy=5}
 enemy_madan_multishot_ot:
   Skills:
   - particles{c=#FF0000;a=1}
