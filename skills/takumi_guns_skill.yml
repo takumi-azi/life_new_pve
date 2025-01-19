@@ -100,7 +100,7 @@ blood_eagle_reload:
   - hasaura{n=silent} false
   - variableInRange{var=caster.blood_eagle_tama;value=<6} true
   Skills:
-  - aura{auraName=blood_eagle_reload;d=22;oT=blood_eagle_reload_ot;i=1;rd=true;mc=true} @self
+  - aura{auraName=blood_eagle_reload;d=42;oT=blood_eagle_reload_ot;i=1;rd=true;mc=true} @self
   - aura{auraName=blood_eagle_cancel;d=2} @self
   - auraremove{aura=blood_eagle_ads;d=2} @self
   - actionmessage{m="&f&lreloading!";d=20}
@@ -108,7 +108,7 @@ blood_eagle_reload:
   - skill{s=blood_eagle_reload_tex1} @self
   - delay 1
   - skill{s=blood_eagle_reload_tex2} @self
-  - delay 19
+  - delay 39
   - skill{s=blood_eagle_reload_end} @self
 blood_eagle_reload_tex1:
   Conditions:
