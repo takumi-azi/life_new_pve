@@ -1,0 +1,21 @@
+PVE_Weapon_blood_eagle_takumi3s:
+  Id: netherite_sword
+  Display: "ブラッドイーグル"
+  Model: 1
+  Lore:
+  - "&b水属性 武器種:銃"
+  - "&b弾を敵に当てると、しばらく回復する。"
+  - "&b"
+  Options:
+    Unbreakable: true
+  Attributes:
+    Mainhand:
+      damage: +0
+  Skills:
+  - skill{s=blood_eagle_reload} @self ~onPressQ
+  - skill{s=blood_eagle_cancel;sync=true} @self ~onPressQ
+  - skill{s=blood_eagle_shoot_notads;damage=6} @self ~onUse
+  - skill{s=blood_eagle_shoot_ads;damage=6} @self ~onUse
+  - skill{s=blood_eagle_ads_on} @self ~onSwing
+  - skill{s=blood_eagle_ads_off} @self ~onSwing
+  - skill{s=blood_eagle_noamo_reload} @self ~onUse'

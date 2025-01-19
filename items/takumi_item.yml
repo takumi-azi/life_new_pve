@@ -134,3 +134,4 @@ PVE_Weapon_taifuu_raizin_takumi3s:
   - '&e&l自然属性サブ武器'
   Skills:
   - skill{s=taifuu_raizin1} @self ~onUse
+
