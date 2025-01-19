@@ -15,7 +15,7 @@ blood_eagle_shoot_notads_0:
   - variableInRange{var=caster.blood_eagle_tama;value=>0} true
   - hasMana{a=>20} true
   Skills:
-  - aura{auraName=silent;d=10;rd=true;mc=true} @self
+  - aura{auraName=silent;d=6;rd=true;mc=true} @self
   - modifyMana{a=-20} @self
   - setvariable{var=caster.blood_eagle_tama;value=<caster.var.blood_eagle_tama|6>-1} @self
   - actionmessage{m="&f&l残弾 &f<caster.var.blood_eagle_tama|6>/6"}
@@ -23,10 +23,11 @@ blood_eagle_shoot_notads_0:
   - sound{s=minecraft:entity.zombie.attack_iron_door;p=1.4;v=1} @self
   - delay 1
   - raytrace{eskill=blood_eagle_es;lskill=blood_eagle_ls;md=20;ac=0.9;syo=1.75;hsm=1} @targetLocation
-  - recoil{r=-10;pitch=1to5} @self
+  - recoil{r=-5;pitch=1to5} @self
 blood_eagle_es:
   Skills:
   - damage{a=<skill.damage>;pi=true;type=blue}
+  - heal{a=1;repeat=4;repeatInterval=8} @self
 blood_eagle_ls:
   Skills:
   - particleline{c=#550000;db=0.2;a=1;syo=1.7;size=0.8}
@@ -47,7 +48,7 @@ blood_eagle_shoot_ads_0:
   - hasaura{n=blood_eagle_ads} true
   - variableInRange{var=caster.blood_eagle_tama;value=>0} true
   Skills:
-  - aura{auraName=silent;d=10;rd=true;mc=true} @self
+  - aura{auraName=silent;d=12;rd=true;mc=true} @self
   - modifyMana{a=-20} @self
   - setvariable{var=caster.blood_eagle_tama;value=<caster.var.blood_eagle_tama|6>-1} @self
   - actionmessage{m="&f&l残弾 &f<caster.var.blood_eagle_tama|6>/6"}
@@ -55,7 +56,7 @@ blood_eagle_shoot_ads_0:
   - sound{s=minecraft:entity.zombie.attack_iron_door;p=1.4;v=1} @self
   - delay 1
   - raytrace{eskill=blood_eagle_es;lskill=blood_eagle_ls;md=30;ac=1;syo=1.75;hsm=1} @targetLocation
-  - recoil{r=-6;pitch=1to5} @self
+  - recoil{r=-3;pitch=1to5} @self
 
 #ADS開始。
 blood_eagle_ads_on:
@@ -84,7 +85,7 @@ blood_eagle_ads_off:
   Conditions:
   - wearing{s=HAND;m=PVE_Weapon_blood_eagle_takumi3s} true
   - hasaura{n=silent} false
-  - hasaura{n=blood_eagle_ads} false
+  - hasaura{n=blood_eagle_ads} true
   - hasaura{n=blood_eagle_cancel} false
   Skills:
   - aura{auraName=silent;d=2;rd=true} @self

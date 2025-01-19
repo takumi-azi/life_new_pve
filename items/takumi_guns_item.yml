@@ -15,7 +15,7 @@ PVE_Weapon_blood_eagle_takumi3s:
   - skill{s=blood_eagle_reload} @self ~onPressQ
   - skill{s=blood_eagle_cancel;sync=true} @self ~onPressQ
   - skill{s=blood_eagle_shoot_notads;damage=6} @self ~onUse
-  - skill{s=blood_eagle_shoot_ads;damage=6} @self ~onUse
+  - skill{s=blood_eagle_shoot_ads;damage=8} @self ~onUse
   - skill{s=blood_eagle_ads_on} @self ~onSwing
   - skill{s=blood_eagle_ads_off} @self ~onSwing
   - skill{s=blood_eagle_noamo_reload} @self ~onUse'
