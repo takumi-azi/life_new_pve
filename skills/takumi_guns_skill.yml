@@ -121,11 +121,12 @@ blood_eagle_reload_tex2:
   - setitemmodel{m=1} @self
 blood_eagle_reload_ot:
   Skills:
+  - aura{auraName=silent;d=2;rd=true} @self
   - skill{s=blood_eagle_reload_cancel} @self
   - potion{type=SLOW;d=4;l=2} @self
 blood_eagle_reload_cancel:
   Conditions:
-  - wearing{s=HAND;m=PVE_Weapon_blood_eagle_takumi3s} true
+  - wearing{s=HAND;m=PVE_Weapon_blood_eagle_takumi3s} false
   Skills:
   - auraremove{aura=blood_eagle_reload} @self
 blood_eagle_reload_end:
