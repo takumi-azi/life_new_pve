@@ -6,7 +6,7 @@ blood_eagle_shoot_notads:
   - hasaura{n=blood_eagle_ads} false
   Skills:
   - aura{auraName=blood_eagle_shooting;d=10;oT=blood_eagle_shoot_notads_0;i=1} @self
-  - setitemmodel{m=1} @self
+  - setSlotModel{m=1;slot=HAND} @self
 blood_eagle_shoot_notads_0:
   Conditions:
   - wearing{s=HAND;m=PVE_Weapon_blood_eagle_takumi3s} true
@@ -40,7 +40,7 @@ blood_eagle_shoot_ads:
   - hasaura{n=blood_eagle_ads} true
   Skills:
   - aura{auraName=blood_eagle_shooting_ads;d=8;oT=blood_eagle_shoot_ads_0;i=2} @self
-  - setitemmodel{m=2} @self
+  - setSlotModel{m=2;slot=HAND} @self
 blood_eagle_shoot_ads_0:
   Conditions:
   - wearing{s=HAND;m=PVE_Weapon_blood_eagle_takumi3s} true
@@ -67,7 +67,7 @@ blood_eagle_ads_on:
   - hasaura{n=blood_eagle_cancel} false
   Skills:
   - aura{auraName=silent;d=2;rd=true;mc=true} @self
-  - setitemmodel{m=2} @self
+  - setSlotModel{m=2;slot=HAND} @self
   - aura{auraName=blood_eagle_ads;d=1200;oT=blood_eagle_ads_ot;i=1;rd=true;mc=true} @self
   - actionmessage{m="&f&l残弾 &f<caster.var.blood_eagle_tama|6>/6"}
 blood_eagle_ads_ot:
@@ -90,7 +90,7 @@ blood_eagle_ads_off:
   Skills:
   - aura{auraName=silent;d=2;rd=true} @self
   - auraremove{aura=blood_eagle_ads} @self
-  - setitemmodel{m=1} @self
+  - setSlotModel{m=1;slot=HAND} @self
   - actionmessage{m="&f&l残弾 &f<caster.var.blood_eagle_tama|6>/6"}
 
 #リロード開始。
@@ -106,20 +106,18 @@ blood_eagle_reload:
   - actionmessage{m="&f&lreloading!";d=20}
   - delay 1
   - skill{s=blood_eagle_reload_tex1} @self
-  - delay 1
-  - skill{s=blood_eagle_reload_tex2} @self
-  - delay 39
+  - delay 40
   - skill{s=blood_eagle_reload_end} @self
 blood_eagle_reload_tex1:
   Conditions:
   - wearing{s=HAND;m=PVE_Weapon_blood_eagle_takumi3s} true
   Skills:
-  - setitemmodel{m=2} @self
+  - setSlotModel{m=3;slot=HAND} @self
 blood_eagle_reload_tex2:
   Conditions:
   - wearing{s=HAND;m=PVE_Weapon_blood_eagle_takumi3s} true
   Skills:
-  - setitemmodel{m=1} @self
+  - setSlotModel{m=1;slot=HAND} @self
 blood_eagle_reload_ot:
   Skills:
   - aura{auraName=silent;d=2;rd=true} @self
