@@ -112,7 +112,7 @@ blood_eagle_reload_tex1:
   Conditions:
   - wearing{s=HAND;m=PVE_Weapon_blood_eagle_takumi3s} true
   Skills:
-  - setSlotModel{m=3;slot=HAND} @self
+  - setSlotModel{m=0;slot=HAND} @self
 blood_eagle_reload_tex2:
   Conditions:
   - wearing{s=HAND;m=PVE_Weapon_blood_eagle_takumi3s} true
