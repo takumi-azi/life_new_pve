@@ -1,7 +1,7 @@
 PVE_Weapon_blood_eagle_takumi3s:
   Id: netherite_hoe
   Display: "ブラッドイーグル"
-  Model: 1
+  Model: 2
   Lore:
   - "&b水属性 武器種:銃"
   - "&b弾を敵に当てると、しばらく回復する。"
