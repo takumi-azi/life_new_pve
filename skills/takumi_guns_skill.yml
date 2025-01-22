@@ -2,7 +2,6 @@
 blood_eagle_shoot_notads:  
   Conditions:
   - wearing{s=HAND;m=PVE_Weapon_blood_eagle_takumi3s} true
-  - hasaura{n=silent} false
   - hasaura{n=blood_eagle_ads} false
   Skills:
   - aura{auraName=blood_eagle_shooting;d=10;oT=blood_eagle_shoot_notads_0;i=1} @self
@@ -21,7 +20,7 @@ blood_eagle_shoot_notads_0:
   - actionmessage{m="&f&l残弾 &f<caster.var.blood_eagle_tama|6>/6"}
   - sound{s=minecraft:item.trident.hit;p=0.2;v=1} @self
   - sound{s=minecraft:entity.zombie.attack_iron_door;p=1.4;v=1} @self
-  - delay 1
+  - delay 0
   - raytrace{eskill=blood_eagle_es;lskill=blood_eagle_ls;md=20;ac=0.9;syo=1.75;hsm=1} @targetLocation
   - recoil{r=-5;pitch=1to5} @self
 blood_eagle_es:
@@ -31,7 +30,6 @@ blood_eagle_es:
 blood_eagle_ls:
   Skills:
   - particleline{c=#550000;db=0.2;a=1;syo=1.7;size=0.8}
-
 #ADSしているときの射撃。
 blood_eagle_shoot_ads:
   Conditions:
@@ -54,10 +52,9 @@ blood_eagle_shoot_ads_0:
   - actionmessage{m="&f&l残弾 &f<caster.var.blood_eagle_tama|6>/6"}
   - sound{s=minecraft:item.trident.hit;p=0.2;v=1} @self
   - sound{s=minecraft:entity.zombie.attack_iron_door;p=1.4;v=1} @self
-  - delay 1
+  - delay 0
   - raytrace{eskill=blood_eagle_es;lskill=blood_eagle_ls;md=30;ac=1;syo=1.75;hsm=1} @targetLocation
   - recoil{r=-3;pitch=1to5} @self
-
 #ADS開始。
 blood_eagle_ads_on:
   Conditions:
@@ -79,7 +76,6 @@ blood_eagle_ads_ot_0:
   - wearing{s=HAND;m=PVE_Weapon_blood_eagle_takumi3s} false
   Skills:
   - auraremove{aura=blood_eagle_ads} @self
-
 #ADS終了。
 blood_eagle_ads_off:
   Conditions:
@@ -92,7 +88,6 @@ blood_eagle_ads_off:
   - auraremove{aura=blood_eagle_ads} @self
   - setSlotModel{m=1;slot=HAND} @self
   - actionmessage{m="&f&l残弾 &f<caster.var.blood_eagle_tama|6>/6"}
-
 #リロード開始。
 blood_eagle_reload:
   Conditions:
@@ -135,7 +130,6 @@ blood_eagle_reload_end:
   Skills:
   - setvariable{var=caster.blood_eagle_tama;value=6} @self
   - actionmessage{m="&f&l残弾 &f<caster.var.blood_eagle_tama|6>/6"}
-
 #Qキー押したときにキャンセルイベント
 blood_eagle_cancel:
   Skills:
@@ -144,7 +138,6 @@ blood_eagle_cancel:
   - skill{s=blood_eagle_reload_tex1} @self
   - delay 1
   - skill{s=blood_eagle_reload_tex2} @self
-
 #銃弾がないときに射撃しようとするとリロード起動。
 blood_eagle_noamo_reload:
   Conditions:
