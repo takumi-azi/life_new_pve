@@ -48,3 +48,22 @@ PVE_Weapon_houki_usen_takumi3s:
   Skills:
   - skill{s=houki_usen_kaihou} @self ~onSwing
   - skill{s=houki_usen_seisei} @self ~onUse
+
+
+PVE_Weapon_houki_bakuen_takumi3s:
+  Id: iron_sword
+  Display: '&b&l宝器解放[火走]:宝器生成[炎舞]'
+  Lore:
+  - '&8&l炎属性main武器'
+  - '左クリックで3段階の切り付け攻撃。'
+  - '右クリックで前方にダッシュ攻撃をする。'
+  - 'その後、宝器を自分の位置に対して飛ばす。'
+  - 'この攻撃を自分に'
+  Options:
+    Unbreakable: true
+  Attributes:
+    MainHand:
+     Damage: +0
+  Skills:
+  - skill{s=houki_usen_kaihou} @self ~onSwing
+  - skill{s=houki_usen_seisei} @self ~onUse

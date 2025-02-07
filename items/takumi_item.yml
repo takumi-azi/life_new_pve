@@ -135,3 +135,30 @@ PVE_Weapon_taifuu_raizin_takumi3s:
   Skills:
   - skill{s=taifuu_raizin1} @self ~onUse
 
+PVE_Weapon_syadenfuroize_takumi3s:
+  Id: iron_sword
+  Display: '&c&lシャーデンフロイゼの悪魔'
+  Lore:
+  - '&8&l炎属性main武器'
+  - '性能未定'
+  Options:
+    Unbreakable: true
+  Attributes:
+    MainHand:
+     Damage: +0
+  Skills:
+
+main_s0_firstkill_takumi3s:
+  Id: iron_sword
+  Display: '&6&lファースト・キル'
+  Lore:
+  - '&8&l無属性main武器'
+  - '左クリックで4段階の切り付け攻撃をする。'
+  - '体力が減るほど威力が上がる。'
+  Options:
+    Unbreakable: true
+  Attributes:
+    MainHand:
+     Damage: +0
+  Skills:
+  - skill{s=firstkill} @self ~onSwing

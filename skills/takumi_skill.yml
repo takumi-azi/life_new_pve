@@ -653,3 +653,47 @@ taifuu_raizin5:
   - potion{t=SLOW_FALLING;d=10;l=1} @self
   - potion{t=INCREASE_DAMAGE;d=21;l=0} @self
 
+firstkill:
+  Conditions:
+  - wearing{s=HAND;m=main_s0_firstkill_takumi3s} true
+  Skills:
+  - skill{s=firstkill1} @self
+  - skill{s=firstkill2} @self
+  - skill{s=firstkill3} @self
+firstkill1:
+  Conditions:
+  - hasaura{aura=firstkill_2danme} false
+  - hasaura{aura=firstkill_3danme} false
+  - hasaura{aura=firstkill_ct} false
+  Skills:
+  - aura{auraname=firstkill_2danme;d=40} @self
+  - aura{auraname=firstkill_ct;d=10} @self
+  - slash{y=1;w=2;h=2;mpd=true;a=80;radius=1;roll=-20;fo=1;duration=10;
+      oP=[ - particles{p=crit;a=1} ];
+      oH=[ - damage{a=4} ]
+      } @self
+firstkill2:
+  Conditions:
+  - hasaura{aura=firstkill_2danme} true
+  - hasaura{aura=firstkill_3danme} false
+  - hasaura{aura=firstkill_ct} false
+  Skills:
+  - auraremove{aura=firstkill_2danme} @self
+  - aura{auraname=firstkill_3danme;d=40} @self
+  - aura{auraname=firstkill_ct;d=10} @self
+  - slash{y=1;w=2;h=2;mpd=true;a=80;radius=1;roll=120;fo=1;duration=10;
+      oP=[ - particles{p=crit;a=1} ];
+      oH=[ - damage{a=3} ]
+      } @self
+firstkill3:
+  Conditions:
+  - hasaura{aura=firstkill_2danme} false
+  - hasaura{aura=firstkill_3danme} true
+  - hasaura{aura=firstkill_ct} false
+  Skills:
+  - auraremove{aura=firstkill_3danme} @self
+  - aura{auraname=firstkill_ct;d=80} @self
+  - slash{y=1;w=2;h=2;mpd=true;a=80;radius=1;roll=50;fo=1;duration=10;
+      oP=[ - particles{p=crit;a=1} ];
+      oH=[ - damage{a=3} ]
+      } @self
