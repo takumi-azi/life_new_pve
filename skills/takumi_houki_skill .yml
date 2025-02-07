@@ -120,7 +120,7 @@ houki_zangetu_saiseisei:
           tx=0;tz=0;
           d=200;
           yaw=<random.0to100>;pitch="3.14+(<random.-30to30>*0.01)";roll="0.785+(<random.-30to30>*0.01)";
-          YOffset=1.2;cooldown=0.2} @origin
+          YOffset=1.2} @origin
 
 
 houki_zangetu_kaihou:
