@@ -137,10 +137,17 @@ PVE_Weapon_taifuu_raizin_takumi3s:
 
 PVE_Weapon_syadenfuroize_takumi3s:
   Id: iron_sword
-  Display: '&c&lシャーデンフロイゼの悪魔'
+  Display: '&4&lノブレス&0&l・&4&lオブリージュ'
   Lore:
   - '&8&l炎属性main武器'
-  - '性能未定'
+  - '左クリック'
+  - '体力が半分以上の時、体力を消費して切り付け、'
+  - '黒い花びらスタックとクリティカルダメージバフを得る。'
+  - '体力が半分以下の時、体力を回復して切り付け、'
+  - '白い花びらスタックとクリティカル確率バフを得る。'
+  - '右クリック'
+  - '白、黒の花びらが3つずつあるときに発動可能。'
+  - '前方に連続範囲ダメージを与える花びらを放つ。'
   Options:
     Unbreakable: true
   Attributes:

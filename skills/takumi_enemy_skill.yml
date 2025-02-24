@@ -161,3 +161,28 @@ enemy_madan_rensya:
   Skills:
   - aura{auraname=cooldown;d=50} @self
   - totem{oT=enemy_madan_sphere_ot;oE=enemy_madan_sphere_oe;d=40;i=2} @targetLocation
+
+enemy_madan_loop_oe:
+  Skills:
+  - remove{} @self
+
+
+zombie_zenei_loop_oe:
+  Skills:
+  - remove{} @self
+
+zombie_zenei_loop_ot:
+  Skills:
+  - randomskill{skills=zombie_bite,zombie_pull,zombie_zenei_jump,zombie_zenei_guard} @self
+
+zombie_bite:
+  Conditions:
+  - hasaura{aura=cooldown} false
+  Skills:
+  - aura{auraname=cooldown;d=60} @self
+  - potion{type=SLOW;d=20;l=5} @self
+  - particleline{c=#FF0000;a=1;syo=0.2;repeat=9;repeatInterval=2} @forward{f=5;sideoffset=5;y=0.1}
+  - particleline{c=#FF0000;a=1;syo=0.2;repeat=9;repeatInterval=2} @forward{f=5;sideoffset=-5;y=0.1}
+  - particles{c=#FF0000;a=5;hS=0.3;vS=0;repeat=9;repeatInterval=2} @forward{f=3;y=0.1}
+  - delay 20
+  - damage{a=10} @EIC{r=5;a=90}

@@ -25,7 +25,7 @@ blood_eagle_shoot_notads_0:
   - recoil{r=-5;pitch=1to5} @self
 blood_eagle_es:
   Skills:
-  - damage{a=<skill.damage>;pi=true;type=blue}
+  - damage{a=<skill.damage>;pi=true;element=blue}
   - heal{a=1;repeat=4;repeatInterval=8} @self
 blood_eagle_ls:
   Skills:

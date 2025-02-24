@@ -46,3 +46,45 @@ PVE_enemy_madan_takumi3s:
   Skills:
   - aura{auraname=skillloop;oT=enemy_madan_loop_ot;i=1;oE=enemy_madan_loop_oe;d=1200} @self ~onDamaged
   - aura{auraname=skillloop;oT=enemy_madan_loop_ot;i=1;oE=enemy_madan_loop_oe;d=1200} @self ~onEnterCombat
+
+s0_zako_zombie_zenei:
+  Type: zombie
+  Display: '&2&l前衛ゾンビ &f&lLv.<mob.level>'
+  Health: 80
+  Damage: 1
+  AIGoalSelectors:
+    - meleeattack
+    - float
+    - gotospawnlocation
+    - randomlookaround
+    - clear
+  AITargetSelectors:
+    - attacker
+    - players
+    - OtherFactionMonsters
+    - clear
+  DamageModifiers:
+    - ENTITY_ATTACK 1
+    - none 1
+    - green 1
+    - yellow 1
+    - blue 1
+    - red 1
+  LevelModifiers:
+    Damage: 3
+    Health: 10
+    Armor: 3
+  KillMessages:
+    - "&2<target.name>はゾンビに食われた。"
+  Options:
+    NoDamageTicks: 0
+    MovementSpeed: 0.25
+    KnockbackResistance: 0.7
+    PreventMobKillDrops: true
+    PreventOtherDrops: true
+    PreventSunburn: true
+  Skills:
+  - aura{auraname=skillloop;oT=zombie_zenei_loop_ot;i=2;oE=zombie_zenei_loop_oe;d=800} @self ~onDamaged
+  - aura{auraname=skillloop;oT=zombie_zenei_loop_ot;i=2;oE=zombie_zenei_loop_oe;d=800} @self ~onEnterCombat
+
+
