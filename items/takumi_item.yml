@@ -169,3 +169,23 @@ main_s0_firstkill_takumi3s:
      Damage: +0
   Skills:
   - skill{s=firstkill} @self ~onSwing
+
+main_s0_raitui:
+  Id: iron_sword
+  Display: '&6&l(+)雷槌(-)'
+  Lore:
+  - '&8&l雷属性main武器'
+  - '右クリックで武器を持ち変える。この時少しのバフを得る。'
+  - '左クリックで攻撃する。'
+  - 'ハンマーの時攻撃が命中すると、負の電荷'
+  - '鎌の時攻撃が命中すると、陽の電荷を得る。'
+  - '電荷は最大三つまで蓄積でき、効果が発動すると一つ消費する。'
+  - '負の電荷を所持しているとき、鎌の攻撃が命中すると、'
+  - '非クリティカルダメージバフを得る。'
+  - '陽の電荷を所持しているとき、ハンマーのダメージが上がる。'
+  Options:
+    Unbreakable: true
+  Attributes:
+    MainHand:
+     Damage: +0
+  Skills:

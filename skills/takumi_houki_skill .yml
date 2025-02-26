@@ -185,6 +185,65 @@ houki_usen_o_ot:
 
 houki_bakuen_seisei:
   Skills:
+  - skill{s=bakuen_seisei1} @self
+  - skill{s=bakuen_seisei2} @self
+  - skill{s=bakuen_seisei3} @self
+  - skill{s=bakuen_seisei4} @self
+bakuen_seisei1:
+  Conditions:
+  - hasaura{aura=bakuen_seisei_2danme} false
+  - hasaura{aura=bakuen_seisei_3danme} false
+  - hasaura{aura=bakuen_seisei_4danme} false
+  - hasaura{aura=bakuen_seisei_ct} false
+  Skills:
+  - aura{auraname=bakuen_seisei_2danme;d=40} @self
+  - aura{auraname=bakuen_seisei_ct;d=10} @self
+  - slash{y=1;w=2;h=2;mpd=true;a=40;radius=1;roll=-20;fo=1;duration=10;
+      oP=[ - particles{p=flame;a=8;hs=0.2} ];
+      oH=[ - damage{a=4} ]
+      } @self
+bakuen_seisei2:
+  Conditions:
+  - hasaura{aura=bakuen_seisei_2danme} true
+  - hasaura{aura=bakuen_seisei_3danme} false
+  - hasaura{aura=bakuen_seisei_4danme} false
+  - hasaura{aura=bakuen_seisei_ct} false
+  Skills:
+  - auraremove{aura=bakuen_seisei_2danme} @self
+  - aura{auraname=bakuen_seisei_3danme;d=40} @self
+  - aura{auraname=bakuen_seisei_ct;d=10} @self
+  - slash{y=1;w=2;h=2;mpd=true;a=40;radius=1;roll=120;fo=1;duration=10;
+      oP=[ - particles{p=flame;a=8;hs=0.2} ];
+      oH=[ - damage{a=3} ]
+      } @self
+bakuen_seisei3:
+  Conditions:
+  - hasaura{aura=bakuen_seisei_2danme} false
+  - hasaura{aura=bakuen_seisei_3danme} true
+  - hasaura{aura=bakuen_seisei_4danme} false
+  - hasaura{aura=bakuen_seisei_ct} false
+  Skills:
+  - auraremove{aura=bakuen_seisei_3danme} @self
+  - aura{auraname=bakuen_seisei_4danme;d=40} @self
+  - aura{auraname=bakuen_seisei_ct;d=10} @self
+  - slash{y=1;w=2;h=2;mpd=true;a=20;radius=1;roll=50;fo=1;duration=12;
+      oP=[ - particles{p=flame;a=8;hs=0.2} ];
+      oH=[ - damage{a=3} ]
+      } @self
+bakuen_seisei4:
+  Conditions:
+  - hasaura{aura=bakuen_seisei_2danme} false
+  - hasaura{aura=bakuen_seisei_3danme} false
+  - hasaura{aura=bakuen_seisei_4danme} true
+  - hasaura{aura=bakuen_seisei_ct} false
+  Skills:
+  - auraremove{aura=bakuen_seisei_4danme} @self
+  - aura{auraname=bakuen_seisei_ct;d=30} @self
+  - slash{y=1;w=2;h=2;mpd=true;a=20;radius=1;roll=50;fo=1;duration=12;
+      oP=[ - particles{p=flame;a=8;hs=0.2} ];
+      oH=[ - damage{a=3} ]
+      } @self
+
 houki_bakuen_kaihou:
   Skills:
   - potion{type=SLOW;d=20;l=6} @self
@@ -192,7 +251,8 @@ houki_bakuen_kaihou:
   - projectile{v=40;vR=4;oT=bakuen_kaihou_ot;oH=bakuen_kaihou_oh;oE=bakuen_kaihou_oe;hnp=true;i=1;hs=true;mr=25;hp=false;hfs=1} @forward{f=5}
 bakuen_kaihou_ot:
   Skills:
-  - particle{p=flame;a=1}
+  - particle{p=flame;a=4;hs=0.6}
+  - particle{p=flame;a=3;s=1;y=-1}
   - leap{v=2000} @origin{y=-10}
 bakuen_kaihou_oh:
   Skills:
