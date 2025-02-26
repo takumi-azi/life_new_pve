@@ -1,0 +1,15 @@
+armor_s0_taizyu_tanebi_h:
+  Id: iron_helmet
+  Display: '&a&l大樹の種火&a[頭]'
+  Lore:
+  - '&c炎属性ダメージ+5%'
+  - '&f2セット効果:&c&l[&fあ&c&l]'
+  - ''
+  - '&f4セット効果:&c&l[&fあ&c&l]'
+  - ''
+  Options:
+    Unbreakable: true
+  Attributes:
+    MainHand:
+     Damage: +0
+  Skills:

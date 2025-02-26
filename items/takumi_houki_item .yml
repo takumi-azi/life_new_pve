@@ -58,12 +58,12 @@ PVE_Weapon_houki_bakuen_takumi3s:
   - '左クリックで3段階の切り付け攻撃。'
   - '右クリックで前方にダッシュ攻撃をする。'
   - 'その後、宝器を自分の位置に対して飛ばす。'
-  - 'この攻撃を自分に'
+  - 'この攻撃が当たった時自身にクリティカルダメージバフ'
   Options:
     Unbreakable: true
   Attributes:
     MainHand:
      Damage: +0
   Skills:
-  - skill{s=houki_usen_kaihou} @self ~onSwing
-  - skill{s=houki_usen_seisei} @self ~onUse
+  - skill{s=houki_bakuen_kaihou} @self ~onUse
+  - skill{s=houki_bakuen_seisei} @self ~onSwing

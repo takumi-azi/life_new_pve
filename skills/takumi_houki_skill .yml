@@ -4,6 +4,7 @@ houki_tenkai_ot:
   - skill{s=houki_kaihou_mu} @self ?hasaura{n=houki_kaihou_mu}
   - skill{s=houki_zangetu_kaihou} @self ?hasaura{n=houki_kaihou_zangetu}
   - skill{s=houki_kaihou_usen} @self ?hasaura{n=houki_kaihou_usen}
+  - skill{s=houki_kaihou_bakuen} @self ?hasaura{n=houki_kaihou_bakuen}
 
 houki_tenkai_mu_use1:
   Conditions:
@@ -181,3 +182,35 @@ houki_usen_o_ot:
   Skills:
   - particles{c=#4444FF;a=1;size=0.7}
   - skill{s=houki_tenkai_ot}
+
+houki_bakuen_seisei:
+  Skills:
+  - 
+houki_bakuen_kaihou:
+  Skills:
+  - potion{type=SLOW;d=20;l=5} @self
+  - delay 20
+  - projectile{v=20;oT=bakuen_kaihou_ot;oH=bakuen_kaihou_oh;oE=bakuen_kaihou_oe;hnp=true;i=true;hsf=true} @forward{f=5}
+bakuen_kaihou_ot:
+  Skills:
+  - particle{p=flame;a=1}
+  - leap{v=1000} @origin{y=-10}
+bakuen_kaihou_oh:
+  Skills:
+  - damage{a=4;pi=true;type=fire}
+bakuen_kaihou_oe:
+  Skills:
+  - damage{a=4;pi=true;type=fire} @EIR{r=5}
+  - aura{auraname=houki_kaihou_bakuen;d=2} @self
+houki_kaihou_bakuen:
+  Skills:
+  - endprojectile{}
+  - projectile{fo=true;v=20;hp=false;sE=true;hnp=true;sfo=0;syo=0;oT=houki_kaihou_bakuen_ot;mr=30;
+               bullet=DISPLAY;sfo=0;fo=true;tyo=1;syo=0;model=0;mat=IRON_SWORD;scale=1,1,1;i=1;
+               tx=0;tz=0;pitch=1.57;roll=0.785;oH=houki_kaihou_bakuen_oh} @self
+houki_kaihou_bakuen_ot:
+  Skills:
+  - particle{p=flame;a=1}
+houki_kaihou_bakuen_oh:
+  Skills:
+  - damage{a=1;pi=true;type=fire}
