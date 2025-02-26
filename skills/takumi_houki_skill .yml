@@ -225,7 +225,7 @@ bakuen_seisei3:
   Skills:
   - auraremove{aura=bakuen_seisei_3danme} @self
   - aura{auraname=bakuen_seisei_4danme;d=40} @self
-  - aura{auraname=bakuen_seisei_ct;d=10} @self
+  - aura{auraname=bakuen_seisei_ct;d=12} @self
   - slash{y=1;w=3;h=3;mpd=true;a=300;radius=1;roll=50;fo=1;duration=12;
       oP=[ - particles{p=flame;a=8;hs=0.2} ];
       oH=[ - damage{a=3} ]
@@ -238,8 +238,8 @@ bakuen_seisei4:
   - hasaura{aura=bakuen_seisei_ct} false
   Skills:
   - auraremove{aura=bakuen_seisei_4danme} @self
-  - aura{auraname=bakuen_seisei_ct;d=30} @self
-  - slash{y=1;w=3;h=3;mpd=true;a=300;radius=1;roll=-120;fo=1;duration=12;
+  - aura{auraname=bakuen_seisei_ct;d=24} @self
+  - slash{y=1;w=3;h=3;mpd=true;a=300;radius=1;roll=-60;fo=1;duration=12;
       oP=[ - particles{p=flame;a=8;hs=0.2} ];
       oH=[ - damage{a=3} ]
       } @self
