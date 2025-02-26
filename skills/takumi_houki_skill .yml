@@ -239,7 +239,7 @@ bakuen_seisei4:
   Skills:
   - auraremove{aura=bakuen_seisei_4danme} @self
   - aura{auraname=bakuen_seisei_ct;d=24} @self
-  - slash{y=1;w=2.6;h=3;mpd=true;a=600;radius=1;roll=-200;fo=1;duration=12;
+  - slash{y=1;w=3.2;h=3.2;mpd=true;a=600;radius=1;roll=-200;fo=1;duration=20;
       oP=[ - particles{p=flame;a=8;hs=0.2;s=0.1} ];
       oH=[ - damage{a=3} ]
       } @self
