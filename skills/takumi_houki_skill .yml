@@ -239,7 +239,23 @@ bakuen_seisei4:
   Skills:
   - auraremove{aura=bakuen_seisei_4danme} @self
   - aura{auraname=bakuen_seisei_ct;d=36} @self
-  - slash{y=1;w=3.4;h=3.4;mpd=true;a=720;radius=1;roll=-200;fo=1;duration=32;
+  - slash{y=1;w=3.4;h=3.4;mpd=true;a=360;radius=1;roll=-200;fo=1;duration=16;
+      oP=[ - particles{p=flame;a=4;hs=0.2;s=0.1} ];
+      oH=[ - damage{a=4} ]
+      } @self
+  - slash{y=1;w=4;h=4;mpd=true;a=720;radius=1;roll=-200;fo=1;duration=32;
+      oP=[ - totem{bullet=DISPLAY;
+          ot=houki_tenkai_ot;i=1;
+          model=0;
+          mat=IRON_SWORD;
+          scale=1.5,1.5,1.5;
+          tx=0;tz=0;
+          d=200;
+          yaw=<random.0to100>;pitch="3.14+(<random.-30to30>*0.01)";roll="0.785+(<random.-30to30>*0.01)";
+          YOffset=0} @origin ];i=2
+      } @self
+  - delay 16
+  - slash{y=1;w=3.4;h=3.4;mpd=true;a=360;radius=1;roll=-200;fo=1;duration=16;
       oP=[ - particles{p=flame;a=4;hs=0.2;s=0.1} ];
       oH=[ - damage{a=4} ]
       } @self
