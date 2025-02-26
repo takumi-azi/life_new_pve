@@ -189,11 +189,11 @@ houki_bakuen_kaihou:
   Skills:
   - potion{type=SLOW;d=20;l=6} @self
   - delay 20
-  - projectile{v=22;oT=bakuen_kaihou_ot;oH=bakuen_kaihou_oh;oE=bakuen_kaihou_oe;hnp=true;i=1;hs=true;mr=30;hp=false;hfs=1} @forward{f=5}
+  - projectile{v=40;vR=4;oT=bakuen_kaihou_ot;oH=bakuen_kaihou_oh;oE=bakuen_kaihou_oe;hnp=true;i=1;hs=true;mr=25;hp=false;hfs=1} @forward{f=5}
 bakuen_kaihou_ot:
   Skills:
   - particle{p=flame;a=1}
-  - leap{v=1000} @origin{y=-10}
+  - leap{v=2000} @origin{y=-10}
 bakuen_kaihou_oh:
   Skills:
   - damage{a=4;pi=true;type=fire}
