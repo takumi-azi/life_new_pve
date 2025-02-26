@@ -198,7 +198,7 @@ bakuen_seisei1:
   Skills:
   - aura{auraname=bakuen_seisei_2danme;d=40} @self
   - aura{auraname=bakuen_seisei_ct;d=10} @self
-  - slash{y=1;w=2;h=2;mpd=true;a=40;radius=1;roll=-20;fo=1;duration=10;
+  - slash{y=1;w=3;h=3;mpd=true;a=120;radius=1;roll=-20;fo=1;duration=10;
       oP=[ - particles{p=flame;a=8;hs=0.2} ];
       oH=[ - damage{a=4} ]
       } @self
@@ -212,7 +212,7 @@ bakuen_seisei2:
   - auraremove{aura=bakuen_seisei_2danme} @self
   - aura{auraname=bakuen_seisei_3danme;d=40} @self
   - aura{auraname=bakuen_seisei_ct;d=10} @self
-  - slash{y=1;w=2;h=2;mpd=true;a=40;radius=1;roll=120;fo=1;duration=10;
+  - slash{y=1;w=3;h=3;mpd=true;a=120;radius=1;roll=120;fo=1;duration=10;
       oP=[ - particles{p=flame;a=8;hs=0.2} ];
       oH=[ - damage{a=3} ]
       } @self
@@ -226,7 +226,7 @@ bakuen_seisei3:
   - auraremove{aura=bakuen_seisei_3danme} @self
   - aura{auraname=bakuen_seisei_4danme;d=40} @self
   - aura{auraname=bakuen_seisei_ct;d=10} @self
-  - slash{y=1;w=2;h=2;mpd=true;a=20;radius=1;roll=50;fo=1;duration=12;
+  - slash{y=1;w=3;h=3;mpd=true;a=300;radius=1;roll=50;fo=1;duration=12;
       oP=[ - particles{p=flame;a=8;hs=0.2} ];
       oH=[ - damage{a=3} ]
       } @self
@@ -239,7 +239,7 @@ bakuen_seisei4:
   Skills:
   - auraremove{aura=bakuen_seisei_4danme} @self
   - aura{auraname=bakuen_seisei_ct;d=30} @self
-  - slash{y=1;w=2;h=2;mpd=true;a=20;radius=1;roll=50;fo=1;duration=12;
+  - slash{y=1;w=3;h=3;mpd=true;a=300;radius=1;roll=50;fo=1;duration=12;
       oP=[ - particles{p=flame;a=8;hs=0.2} ];
       oH=[ - damage{a=3} ]
       } @self
