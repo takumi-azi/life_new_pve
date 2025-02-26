@@ -52,7 +52,7 @@ PVE_Weapon_houki_usen_takumi3s:
 
 PVE_Weapon_houki_bakuen_takumi3s:
   Id: iron_sword
-  Display: '&b&l宝器解放[火走]:宝器生成[炎舞]'
+  Display: '&c&l宝器解放[火走]:宝器生成[炎舞]'
   Lore:
   - '&8&l炎属性main武器'
   - '左クリックで3段階の切り付け攻撃。'
