@@ -189,3 +189,16 @@ main_s0_raitui:
     MainHand:
      Damage: +0
   Skills:
+
+sub_s0_raimei_zankyou:
+  Id: bow
+  Display: '&e&o雷鳴の残響'
+  Model: 0
+  Lore:
+  - "&7&l響く"
+  Skills:
+  - skill{s=cancelevent;sync=true} @self ~onShoot
+  - skill{s=raimei_zankyou1} @self ~onShoot
+  - skill{s=raimei_zankyou2} @self ~onShoot
+  Options:
+    Unbreakable: true
