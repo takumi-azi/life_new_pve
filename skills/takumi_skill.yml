@@ -741,25 +741,24 @@ raimei_zankyou2:
   - particleline{c=#F4FA58;db=0.2;a=1;zz=true;zzs=45;zzo=0.2;syo=1.75} @forward{f=0;y=20}
   - particleline{c=#F4FA58;db=0.2;a=1;zz=true;zzs=40;zzo=0.2;audience=caster;syo=1.75} @forward{f=0;y=20}
   - particleline{c=#A9F5F2;db=0.2;a=1;zz=true;zzs=30;zzo=0.1;syo=1.75} @forward{f=0;y=20}
-  - delay 5
+  - delay 20
   - particleline{c=#F4FA58;db=0.3;a=1;zz=true;zzs=80;zzo=0.4;syo=1.75} @forward{f=0;y=20}
   - particleline{c=#F4FA58;db=0.3;a=1;zz=true;zzs=70;zzo=0.4;audience=caster;syo=1.75} @forward{f=0;y=20}
   - particleline{c=#A9F5F2;db=0.3;a=1;zz=true;zzs=20;zzo=0.2;syo=1.75} @forward{f=0;y=20}
-  - sound{s=minecraft:entity.lightning_bolt.thunder;v=0.5}
-  - sound{s=minecraft:entity.lightning_bolt.thunder;v=0.5;p=1.5}
+  - sound{s=minecraft:entity.lightning_bolt.thunder;v=0.6}
+  - sound{s=minecraft:entity.lightning_bolt.thunder;v=0.6;p=1.5}
   - delay 2
-  - sound{s=minecraft:entity.lightning_bolt.impact;v=0.5}
-  - onSwing{os=raimei_zankyou2_1;d=199;oT=raimei_zankyou2_0;i=1;auraname=raimei_zankyou2} @self
+  - sound{s=minecraft:entity.lightning_bolt.impact;v=0.9}
+  - aura{d=199;oT=raimei_zankyou2_0;i=1;auraname=raimei_zankyou2} @self
 raimei_zankyou2_0:
   Skills:
-  - particles{c=#F4FA58;hS=0.1;vS=0.1;a=5;sfo=-1;y=1} @forward{f=0;sideOffset=1}
-  - particles{c=#A9F5F2;hS=0.05;vS=0.05;a=2;sfo=-1;y=1} @forward{f=0;sideOffset=1}
-  - particles{c=#F4FA58;hS=0.1;vS=0.1;a=5;sfo=-1;y=1} @forward{f=0;sideOffset=-1}
-  - particles{c=#A9F5F2;hS=0.05;vS=0.05;a=2;sfo=-1;y=1} @forward{f=0;sideOffset=-1}
+  - particles{c=#F4FA58;hS=0.1;vS=0.1;a=5;sfo=-1;y=1} @self{sideOffset=1}
+  - particles{c=#A9F5F2;hS=0.05;vS=0.05;a=2;sfo=-1;y=1} @self{sideOffset=1}
+  - particles{c=#F4FA58;hS=0.1;vS=0.1;a=5;sfo=-1;y=1} @self{sideOffset=-1}
+  - particles{c=#A9F5F2;hS=0.05;vS=0.05;a=2;sfo=-1;y=1} @self{sideOffset=-1}
+  - skill{s=raimei_zankyou2_1}
 raimei_zankyou2_1:
   Cooldown: 1
-  Conditions:
-  - hasaura{n=raimei_zankyou2} true
   Skills:
   - projectile{v=35;oT=raimei_zankyou2_2;hp=true;hnp=true;i=1;oy=1;oE=raimei_zankyou2_3;sE=true;d=30;sfo=-1;sso=1;syo=1} @EntitiesInCone{angle=120;range=20;rotation=0;limit=1;sort=NEAREST}
   - delay 5
