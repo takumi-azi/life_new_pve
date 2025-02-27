@@ -752,10 +752,10 @@ raimei_zankyou2:
   - aura{d=199;oT=raimei_zankyou2_0;i=1;auraname=raimei_zankyou2} @self
 raimei_zankyou2_0:
   Skills:
-  - particles{c=#F4FA58;hS=0.1;vS=0.1;a=5;sfo=-1;y=1} @self{sideOffset=1}
-  - particles{c=#A9F5F2;hS=0.05;vS=0.05;a=2;sfo=-1;y=1} @self{sideOffset=1}
-  - particles{c=#F4FA58;hS=0.1;vS=0.1;a=5;sfo=-1;y=1} @self{sideOffset=-1}
-  - particles{c=#A9F5F2;hS=0.05;vS=0.05;a=2;sfo=-1;y=1} @self{sideOffset=-1}
+  - particles{c=#F4FA58;hS=0.1;vS=0.1;a=5;sfo=-1;y=1} @self{so=1}
+  - particles{c=#A9F5F2;hS=0.05;vS=0.05;a=2;sfo=-1;y=1} @self{so=1}
+  - particles{c=#F4FA58;hS=0.1;vS=0.1;a=5;sfo=-1;y=1} @self{so=-1}
+  - particles{c=#A9F5F2;hS=0.05;vS=0.05;a=2;sfo=-1;y=1} @self{so=-1}
   - skill{s=raimei_zankyou2_1}
 raimei_zankyou2_1:
   Cooldown: 1
