@@ -67,3 +67,21 @@ PVE_Weapon_houki_bakuen_takumi3s:
   Skills:
   - skill{s=houki_bakuen_kaihou} @self ~onUse
   - skill{s=houki_bakuen_seisei} @self ~onSwing
+
+PVE_Weapon_houki_zyukai_takumi3s:
+  Id: iron_sword
+  Display: '&c&l宝器解放[火走]:宝器生成[炎舞]'
+  Lore:
+  - '&8&l自然属性main武器'
+  - '左クリックで宝器をふやす。'
+  - '右クリックで前方にダッシュ攻撃をする。'
+  - 'その後、宝器を自分の位置に対して飛ばす。'
+  - 'この攻撃が当たった時自身にクリティカルダメージバフ'
+  Options:
+    Unbreakable: true
+  Attributes:
+    MainHand:
+     Damage: +0
+  Skills:
+  - skill{s=houki_bakuen_kaihou} @self ~onUse
+  - skill{s=houki_bakuen_seisei} @self ~onSwing

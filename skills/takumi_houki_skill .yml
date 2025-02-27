@@ -282,7 +282,7 @@ houki_kaihou_bakuen:
   - endprojectile{}
   - projectile{fo=true;v=20;hp=false;sE=true;hnp=true;sfo=0;syo=0;oT=houki_kaihou_bakuen_ot;mr=30;
                bullet=DISPLAY;sfo=0;fo=true;tyo=1;syo=0;model=0;mat=IRON_SWORD;scale=1,1,1;i=1;
-               tx=0;tz=0;pitch=1.57;roll=0.785;oH=houki_kaihou_bakuen_oh} @self
+               tx=0;tz=0;pitch=1.57;roll=0.785;oH=houki_kaihou_bakuen_oh;YOffset=-1} @self
 houki_kaihou_bakuen_ot:
   Skills:
   - particle{p=flame;a=1}
