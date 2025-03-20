@@ -1,0 +1,30 @@
+test_s0_keikenti_1:
+  Id: book
+  Display: '&6&lテスト経験値付与。1'
+  Lore:
+  - 'テスト経験値付与。'
+  NBT:
+  components:
+    minecraft:custom_data:
+      PublicBukkitValues:
+        rcdamagecore:exp: 1
+test_s0_keikenti_10:
+  Id: book
+  Display: '&6&lテスト経験値付与。10'
+  Lore:
+  - 'テスト経験値付与。'
+  NBT:
+  components:
+    minecraft:custom_data:
+      PublicBukkitValues:
+        rcdamagecore:exp: 10
+test_s0_keikenti_100:
+  Id: book
+  Display: '&6&lテスト経験値付与。100'
+  Lore:
+  - 'テスト経験値付与。'
+  NBT:
+  components:
+    minecraft:custom_data:
+      PublicBukkitValues:
+        rcdamagecore:exp: 100

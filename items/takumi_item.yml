@@ -155,21 +155,6 @@ PVE_Weapon_syadenfuroize_takumi3s:
      Damage: +0
   Skills:
 
-main_s0_firstkill_takumi3s:
-  Id: iron_sword
-  Display: '&6&lファースト・キル'
-  Lore:
-  - '&8&l無属性main武器'
-  - '左クリックで4段階の切り付け攻撃をする。'
-  - '体力が減るほど威力が上がる。'
-  Options:
-    Unbreakable: true
-  Attributes:
-    MainHand:
-     Damage: +0
-  Skills:
-  - skill{s=firstkill} @self ~onSwing
-
 main_s0_raitui:
   Id: iron_sword
   Display: '&6&l(+)雷槌(-)'
@@ -189,12 +174,15 @@ main_s0_raitui:
     MainHand:
      Damage: +0
   Skills:
+  - skill{s=raitui_swing} @self ~onSwing
+  - skill{s=raitui_use} @self ~onUse
 
 sub_s0_raimei_zankyou:
   Id: bow
   Display: '&e&o雷鳴の残響'
   Model: 0
   Lore:
+  - '&8&l雷属性sub武器'
   - "&7&l響く"
   Skills:
   - skill{s=cancelevent;sync=true} @self ~onShoot
@@ -202,3 +190,17 @@ sub_s0_raimei_zankyou:
   - skill{s=raimei_zankyou2} @self ~onShoot
   Options:
     Unbreakable: true
+
+main_s0_ikazuti_ryouga:
+  Id: iron_sword
+  Display: '&e&oイカズチヲ凌駕スル意志ノ刃'
+  Model: 0
+  Lore:
+  - '&8&l雷属性main武器'
+  - "&7&l右クリックで三連続でバックステップしながら斬撃を飛ばす。"
+  - "&7&l左クリックで前方にダッシュして、振り下ろす。"
+  Options:
+    Unbreakable: true
+  Skills:
+  - skill{s=ikazuti_ryouga_use} @self ~onUse
+  - skill{s=ikazuti_ryouga_sw} @self ~onSwing

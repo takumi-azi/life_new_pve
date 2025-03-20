@@ -653,68 +653,37 @@ taifuu_raizin5:
   - potion{t=SLOW_FALLING;d=10;l=1} @self
   - potion{t=INCREASE_DAMAGE;d=21;l=0} @self
 
-firstkill:
+raitui_swing:
   Conditions:
-  - wearing{s=HAND;m=main_s0_firstkill_takumi3s} true
+  - wearing{s=HAND;m=main_s0_raitui} true
   Skills:
-  - skill{s=firstkill1} @self
-  - skill{s=firstkill2} @self
-  - skill{s=firstkill3} @self
-  - skill{s=firstkill4} @self
-firstkill1:
+  - skill{s=raitui_swing_kama} @self
+  - skill{s=raitui_swing_hanma} @self
+raitui_swing_kama:
   Conditions:
-  - hasaura{aura=firstkill_2danme} false
-  - hasaura{aura=firstkill_3danme} false
-  - hasaura{aura=firstkill_4danme} false
-  - hasaura{aura=firstkill_ct} false
+  - hastag{tag=raitui_hanma} false
   Skills:
-  - aura{auraname=firstkill_2danme;d=40} @self
-  - aura{auraname=firstkill_ct;d=10} @self
-  - slash{y=1;w=2;h=2;mpd=true;a=80;radius=1;roll=-20;fo=1;duration=10;
-      oP=[ - particles{p=crit;a=1} ];
-      oH=[ - damage{a=4} ]
-      } @self
-firstkill2:
+raitui_swing_hanma:
   Conditions:
-  - hasaura{aura=firstkill_2danme} true
-  - hasaura{aura=firstkill_3danme} false
-  - hasaura{aura=firstkill_4danme} false
-  - hasaura{aura=firstkill_ct} false
+  - hastag{tag=raitui_hanma} true
   Skills:
-  - auraremove{aura=firstkill_2danme} @self
-  - aura{auraname=firstkill_3danme;d=40} @self
-  - aura{auraname=firstkill_ct;d=10} @self
-  - slash{y=1;w=2;h=2;mpd=true;a=80;radius=1;roll=120;fo=1;duration=10;
-      oP=[ - particles{p=crit;a=1} ];
-      oH=[ - damage{a=3} ]
-      } @self
-firstkill3:
+
+raitui_use:
+  Cooldown: 5
   Conditions:
-  - hasaura{aura=firstkill_2danme} false
-  - hasaura{aura=firstkill_3danme} true
-  - hasaura{aura=firstkill_4danme} false
-  - hasaura{aura=firstkill_ct} false
+  - wearing{s=HAND;m=main_s0_raitui} true
   Skills:
-  - auraremove{aura=firstkill_3danme} @self
-  - aura{auraname=firstkill_4danme;d=40} @self
-  - aura{auraname=firstkill_ct;d=10} @self
-  - slash{y=1;w=2;h=2;mpd=true;a=80;radius=1;roll=50;fo=1;duration=10;
-      oP=[ - particles{p=crit;a=1} ];
-      oH=[ - damage{a=3} ]
-      } @self
-firstkill4:
+  - setSlotModel{m=1;slot=HAND} @self ?!hastag{tag=raitui_hanma}
+  - setSlotModel{m=2;slot=HAND} @self ?hastag{tag=raitui_hanma}
+  - skill{s=raitui_use_1}
+raitui_use_1:
   Conditions:
-  - hasaura{aura=firstkill_2danme} false
-  - hasaura{aura=firstkill_3danme} false
-  - hasaura{aura=firstkill_4danme} true
-  - hasaura{aura=firstkill_ct} false
+  - hastag{tag=raitui_hanma} castinstead raitui_use_2
   Skills:
-  - auraremove{aura=firstkill_4danme} @self
-  - aura{auraname=firstkill_ct;d=30} @self
-  - slash{y=1;w=2;h=2;mpd=true;a=80;radius=1;roll=50;fo=1;duration=10;
-      oP=[ - particles{p=crit;a=1} ];
-      oH=[ - damage{a=3} ]
-      } @self
+  - addtag{raitui_hanma} @self
+raitui_use_2:
+  Skills:
+  - removetag{raitui_hanma} @self
 
 raimei_zankyou1:
   Conditions:
@@ -774,3 +743,45 @@ raimei_zankyou2_2:
 raimei_zankyou2_3:
   Skills:
   - damage{a=2;pi=true;type=zinrai} @EntitiesNearOrigin{r=3;limit=1;sort=NEAREST}
+
+ikazuti_ryouga_sw:
+  Cooldown: 6
+  Conditions:
+  - onground{} true
+  - wearing{s=HAND;m=main_s0_ikazuti_ryouga} true
+  Skills:
+  - leap{v=1000;repeat=5;repeatInterval=1} @forward{f=-5;y=-6}
+  - delay 6
+  - slash{y=1;w=2;h=2;mpd=true;a=80;radius=1;roll=-20;fo=1;duration=10;
+      oP=[ - particles{p=crit;a=1} ];
+      oH=[ - damage{a=4;pi=true;type=none} ]
+      } @self
+ikazuti_ryouga_use:
+  Cooldown: 4.5
+  Conditions:
+  - onground{} true
+  - wearing{s=HAND;m=main_s0_ikazuti_ryouga} true
+  Skills:
+  - slash{y=1;w=2;h=2;mpd=true;a=80;radius=1;roll=-20;fo=1;duration=10;
+      oP=[ - particles{p=crit;a=1} ];
+      oH=[ - damage{a=4;pi=true;type=none} ]
+      } @self
+  - delay 5
+  - projectile{}
+  - leap{v=1000;repeat=3;repeatInterval=1} @forward{f=-5;y=-6}
+  - delay 7
+  - slash{y=1;w=2;h=2;mpd=true;a=80;radius=1;roll=-20;fo=1;duration=10;
+      oP=[ - particles{p=crit;a=1} ];
+      oH=[ - damage{a=4;pi=true;type=none} ]
+      } @self
+  - delay 5
+  - projectile{}
+  - leap{v=1000;repeat=3;repeatInterval=1} @forward{f=-5;y=-6}
+  - delay 7
+  - slash{y=1;w=2;h=2;mpd=true;a=80;radius=1;roll=-20;fo=1;duration=10;
+      oP=[ - particles{p=crit;a=1} ];
+      oH=[ - damage{a=4;pi=true;type=none} ]
+      } @self
+  - delay 5
+  - projectile{}
+  - leap{v=1000;repeat=1;repeatInterval=1} @forward{f=-5;y=-6}

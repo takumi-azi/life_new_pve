@@ -1,0 +1,25 @@
+sub_s0_elements_none:
+  Id: iron_sword
+  Model: 0
+  Display: 'エレメント=フォース'
+  Lore:
+  - 'それは定義されていない。'
+  - '右クリックで、周囲に無属性ダメージと、'
+  - '自身に無属性バフを10秒間付与する。'
+  Options:
+    Unbreakable: true
+  Skills:
+  - skill{s=elements_none} @self ~onUse
+
+sub_s0_elements_flame:
+  Id: iron_sword
+  Model: 0
+  Display: 'エレメント=フレイム'
+  Lore:
+  - '燃え続ける。'
+  - '右クリックで、周囲に炎属性ダメージと、'
+  - '自身に炎属性バフを10秒間付与する。'
+  Options:
+    Unbreakable: true
+  Skills:
+  - skill{s=elements_flame} @self ~onUse

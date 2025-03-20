@@ -1,0 +1,64 @@
+main_s0_firstkill_takumi3s:
+  Id: iron_sword
+  Display: '&6&lファースト・キル'
+  Lore:
+  - '&8&l無属性main武器'
+  - '左クリックで4段階の切り付け攻撃をする。'
+  - '体力が減るほど威力が上がる。'
+  NBT:
+  components:
+    minecraft:custom_data:
+      PublicBukkitValues:
+        rcdamagecore:max_level: 100
+  Options:
+    Unbreakable: true
+  Attributes:
+    MainHand:
+     Damage: +0
+  Skills:
+  - skill{s=firstkill} @self ~onSwing
+
+main_s0_firstcontact_takumi3s:
+  Id: iron_sword
+  Display: '&6&lファースト・コンタクト'
+  Lore:
+  - '&8&l無属性main武器'
+  - '左クリックで矢を飛ばす。威力は低い。'
+  - '右クリックは弓と同一の挙動。'
+  Options:
+    Unbreakable: true
+  Attributes:
+    MainHand:
+     Damage: +0
+  Skills:
+  - skill{s=firstcontact} @self ~onSwing
+  - skill{s=firstcontact} @self ~onShoot
+
+main_s0_firstcall_takumi3s:
+  Id: iron_sword
+  Display: '&6&lファースト・コール'
+  Lore:
+  - '&8&l無属性sub武器'
+  - '右クリックで少し貯めて、無属性バフと'
+  - '会心率バフと会心ダメージバフを得る。'
+  Options:
+    Unbreakable: true
+  Attributes:
+    MainHand:
+     Damage: +0
+  Skills:
+
+main_s0_firstdeath_takumi3s:
+  Id: iron_sword
+  Display: '&6&lファースト・デス'
+  Lore:
+  - '&8&l無属性sub武器'
+  - '右クリックで周囲に大ダメージ。'
+  - '少し後隙がある。'
+  Options:
+    Unbreakable: true
+  Attributes:
+    MainHand:
+     Damage: +0
+  Skills:
+

@@ -52,7 +52,7 @@ PVE_Weapon_houki_usen_takumi3s:
 
 PVE_Weapon_houki_bakuen_takumi3s:
   Id: iron_sword
-  Display: '&c&l宝器解放[火走]:宝器生成[炎舞]'
+  Display: '&c&l宝器生成[炎舞]:宝器解放[火走]'
   Lore:
   - '&8&l炎属性main武器'
   - '左クリックで3段階の切り付け攻撃。'
@@ -70,18 +70,37 @@ PVE_Weapon_houki_bakuen_takumi3s:
 
 PVE_Weapon_houki_zyukai_takumi3s:
   Id: iron_sword
-  Display: '&c&l宝器解放[火走]:宝器生成[炎舞]'
+  Display: '&a&l宝器生成[樹海]:宝器解放[風域]'
   Lore:
   - '&8&l自然属性main武器'
-  - '左クリックで宝器をふやす。'
-  - '右クリックで前方にダッシュ攻撃をする。'
-  - 'その後、宝器を自分の位置に対して飛ばす。'
-  - 'この攻撃が当たった時自身にクリティカルダメージバフ'
+  - '左クリックで特殊な宝器を出す。この宝器は周囲に'
+  - '回復と自然属性バフを配る。また、消費しても消えずに、定期的に'
+  - '再起動する。また、定期的に周囲に宝器を出す。'
+  - '右クリックで宝器を消費してその周囲に上昇気流を作る。'
+  - '上昇気流は会心ダメージバフを付与し、上にジャンプする。'
   Options:
     Unbreakable: true
   Attributes:
     MainHand:
      Damage: +0
   Skills:
-  - skill{s=houki_bakuen_kaihou} @self ~onUse
-  - skill{s=houki_bakuen_seisei} @self ~onSwing
+  - skill{s=houki_zyukai_kaihou} @self ~onUse
+  - skill{s=houki_zyukai_seisei} @self ~onSwing
+
+PVE_Weapon_houki_raitui_takumi3s:
+  Id: iron_sword
+  Display: '&c&l宝器生成[雷追]:宝器解放[雷陣]'
+  Lore:
+  - '&8&l雷属性main武器'
+  - '左クリックで動く雲を作り、その雲が定期的に宝器を作る。'
+  - '右クリックで宝器を消費してその周辺に陣地を作る。'
+  - '陣地の範囲内では、しばらく視点方向に動く状況を得る。'
+  - 'また、会心ダメージバフと雷属性バフを得る。'
+  Options:
+    Unbreakable: true
+  Attributes:
+    MainHand:
+     Damage: +0
+  Skills:
+  - skill{s=houki_raitui_kaihou} @self ~onUse
+  - skill{s=houki_raitui_seisei} @self ~onSwing
