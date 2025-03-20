@@ -53,13 +53,11 @@ s0_zako_zombie_zenei:
   Health: 80
   Damage: 1
   AIGoalSelectors:
-    - clear
     - randomlookaround
     - gotospawnlocation
     - float
     - meleeattack
   AITargetSelectors:
-    - clear
     - OtherFactionMonsters
     - players
     - attacker
