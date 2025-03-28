@@ -185,6 +185,6 @@ zombie_bite:
   - particleline{c=#FF0000;a=1;syo=0.2;repeat=9;repeatInterval=2} @forward{f=5;sideoffset=-5;y=0.1}
   - particles{c=#FF0000;a=5;hS=0.5;vS=0;repeat=9;repeatInterval=2} @forward{f=2;y=0.1}
   - particles{c=#FF0000;a=5;hS=0.5;vS=0;repeat=9;repeatInterval=2} @forward{f=4;y=0.1}
-  - particlering{r=5;c=#FF0000} ＠self
+  - particlering{r=5;c=#FF0000;points=20} @self
   - delay 20
   - damage{a=10} @EIC{r=5;a=90}

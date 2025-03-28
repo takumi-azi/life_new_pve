@@ -137,7 +137,7 @@ PVE_Weapon_taifuu_raizin_takumi3s:
 
 PVE_Weapon_syadenfuroize_takumi3s:
   Id: iron_sword
-  Display: '&4&lノブレス&0&l・&4&lオブリージュ'
+  Display: '&4&lシャーデンフロイゼの花弁'
   Lore:
   - '&8&l炎属性main武器'
   - '左クリック'
@@ -154,6 +154,7 @@ PVE_Weapon_syadenfuroize_takumi3s:
     MainHand:
      Damage: +0
   Skills:
+  - skill{s=syadenfuroize} @self ~onSwing
 
 main_s0_raitui:
   Id: iron_sword

@@ -308,11 +308,11 @@ kuraisisu_sankutyuari_swing1:
   Conditions:
   - hasaura{aura=sankutyuari_2danme} false
   - hasaura{aura=sankutyuari_3danme} false
-  - hasaura{aura=kuraisisu_sankutyuari_ct} false
+  - rcct{} false
   Skills:
   - aura{auraname=sankutyuari_2danme;d=40} @self
-  - aura{auraname=kuraisisu_sankutyuari_ct;d=10} @self ?!hasaura{aura=kuraisisu_sankutyuari_kyouka}
-  - aura{auraname=kuraisisu_sankutyuari_ct;d=5} @self ?hasaura{aura=kuraisisu_sankutyuari_kyouka}
+  - rcct{d=10} @self ?!hasaura{aura=kuraisisu_sankutyuari_kyouka}
+  - rcct{d=5} @self ?hasaura{aura=kuraisisu_sankutyuari_kyouka}
   - slash{y=1;w=4;h=4;mpd=true;a=120;radius=1;roll=-20;fo=1;duration=10;
       oP=[ - particles{p=end_rod;a=1} ];
       oH=[ - damage{a=4} ]
@@ -321,12 +321,12 @@ kuraisisu_sankutyuari_swing2:
   Conditions:
   - hasaura{aura=sankutyuari_2danme} true
   - hasaura{aura=sankutyuari_3danme} false
-  - hasaura{aura=kuraisisu_sankutyuari_ct} false
+  - rcct{} false
   Skills:
   - auraremove{aura=sankutyuari_2danme} @self
   - aura{auraname=sankutyuari_3danme;d=40} @self
-  - aura{auraname=kuraisisu_sankutyuari_ct;d=10} @self ?!hasaura{aura=kuraisisu_sankutyuari_kyouka}
-  - aura{auraname=kuraisisu_sankutyuari_ct;d=5} @self ?hasaura{aura=kuraisisu_sankutyuari_kyouka}
+  - rcct{d=10} @self ?!hasaura{aura=kuraisisu_sankutyuari_kyouka}
+  - rcct{d=5} @self ?hasaura{aura=kuraisisu_sankutyuari_kyouka}
   - slash{y=1;w=4;h=4;mpd=true;a=80;radius=1;roll=120;fo=1;duration=10;
       oP=[ - particles{p=end_rod;a=1} ];
       oH=[ - damage{a=3} ]
@@ -335,11 +335,11 @@ kuraisisu_sankutyuari_swing3:
   Conditions:
   - hasaura{aura=sankutyuari_2danme} false
   - hasaura{aura=sankutyuari_3danme} true
-  - hasaura{aura=kuraisisu_sankutyuari_ct} false
+  - rcct{} false
   Skills:
   - auraremove{aura=sankutyuari_3danme} @self
-  - aura{auraname=kuraisisu_sankutyuari_ct;d=80} @self ?!hasaura{aura=kuraisisu_sankutyuari_kyouka}
-  - aura{auraname=kuraisisu_sankutyuari_ct;d=10} @self ?hasaura{aura=kuraisisu_sankutyuari_kyouka}
+  - rcct{d=80} @self ?!hasaura{aura=kuraisisu_sankutyuari_kyouka}
+  - rcct{d=10} @self ?hasaura{aura=kuraisisu_sankutyuari_kyouka}
   - slash{y=1;w=4;h=4;mpd=true;a=280;radius=1;roll=0;fo=1;duration=20;
       oP=[ - particles{p=end_rod;a=1} ];
       oH=[ - damage{a=5}
@@ -370,8 +370,10 @@ kuraisisu_sankutyuari_swing_nb:
 kuraisisu_sankutyuari_buff:
   Cooldown: 10
   Conditions:
+  - rcct{} false
   - wearing{s=HAND;m=PVE_Weapon_kuraisisu_of_sankutyuari_takumi3s} true
   Skills:
+  - rcct{d=30} @self
   - Velocity{m=SET;x=0;y=1.4;z=0} @self @self ?!onground{}
   - Velocity{m=SET;x=0;y=2;z=0} @self @self ?onground{}
   - potion{type=STRENGTH;d=160;l=1} @self
