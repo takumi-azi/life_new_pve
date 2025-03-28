@@ -308,7 +308,6 @@ kuraisisu_sankutyuari_swing1:
   Conditions:
   - hasaura{aura=sankutyuari_2danme} false
   - hasaura{aura=sankutyuari_3danme} false
-  - rcct{} false
   Skills:
   - aura{auraname=sankutyuari_2danme;d=40} @self
   - rcct{d=10} @self ?!hasaura{aura=kuraisisu_sankutyuari_kyouka}
@@ -321,7 +320,6 @@ kuraisisu_sankutyuari_swing2:
   Conditions:
   - hasaura{aura=sankutyuari_2danme} true
   - hasaura{aura=sankutyuari_3danme} false
-  - rcct{} false
   Skills:
   - auraremove{aura=sankutyuari_2danme} @self
   - aura{auraname=sankutyuari_3danme;d=40} @self
@@ -335,7 +333,6 @@ kuraisisu_sankutyuari_swing3:
   Conditions:
   - hasaura{aura=sankutyuari_2danme} false
   - hasaura{aura=sankutyuari_3danme} true
-  - rcct{} false
   Skills:
   - auraremove{aura=sankutyuari_3danme} @self
   - rcct{d=80} @self ?!hasaura{aura=kuraisisu_sankutyuari_kyouka}
@@ -370,7 +367,7 @@ kuraisisu_sankutyuari_swing_nb:
 kuraisisu_sankutyuari_buff:
   Cooldown: 10
   Conditions:
-  - rcct{} false
+  - rcct{} true
   - wearing{s=HAND;m=PVE_Weapon_kuraisisu_of_sankutyuari_takumi3s} true
   Skills:
   - rcct{d=30} @self
