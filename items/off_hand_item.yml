@@ -9,8 +9,8 @@ offhand_s0_critburst_takumi3s:
     Unbreakable: true
   Attributes:
     offHand:
-    MovementSpeed: 10%
-    KnockbackResistance: 0.1
+      MovementSpeed: 10%
+      KnockbackResistance: 0.1
   Skills:
   - skill{s=offhand_cancelevent} @self ~onPressF ?wearing{s=OFFHAND;m=offhand_s0_critburst_takumi3s} true
   - skill{s=critburst_f} @self ~onPressF
@@ -27,7 +27,7 @@ offhand_s0_burningrage_takumi3s:
     Unbreakable: true
   Attributes:
     offHand:
-    KnockbackResistance: 0.2
+      KnockbackResistance: 0.2
   Skills:
 
 offhand_s0_windmaker_takumi3s:
@@ -41,7 +41,7 @@ offhand_s0_windmaker_takumi3s:
     Unbreakable: true
   Attributes:
     offHand:
-    MovementSpeed: 20%
+      MovementSpeed: 20%
   Skills:
 
 offhand_s0_lightningescape_takumi3s:
@@ -55,7 +55,7 @@ offhand_s0_lightningescape_takumi3s:
     Unbreakable: true
   Attributes:
     offHand:
-    MovementSpeed: 20%
+      MovementSpeed: 20%
   Skills:
 
 offhand_s0_bubbledrive_takumi3s:
@@ -69,5 +69,5 @@ offhand_s0_bubbledrive_takumi3s:
     Unbreakable: true
   Attributes:
     offHand:
-    KnockbackResistance: 0.2
+      KnockbackResistance: 0.2
   Skills:
