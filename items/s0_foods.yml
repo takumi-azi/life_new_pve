@@ -41,7 +41,7 @@ food_s0_plain-sandwich_takumi3s:
   Skills:
   - rcct{d=4} @self ~onDamaged
   - potion{type=regeneration;d=120;l=0} @self ~onEat ?wearing{s=HAND;m=food_s0_plain-sandwich_takumi3s} true
-  - rcbuff{type=none;d=100;a=30} @self ~onEat ?wearing{s=HAND;m=food_s0_plain-sandwich_takumi3s} true
+  - rcbuff{type=none;d=100;a=30;cooldown=100} @self ~onEat ?wearing{s=HAND;m=food_s0_plain-sandwich_takumi3s} true
 
 food_s0_harbor-sandwich_takumi3s:
   id: bread
@@ -53,7 +53,7 @@ food_s0_harbor-sandwich_takumi3s:
   Skills:
   - rcct{d=4} @self ~onDamaged
   - potion{type=regeneration;d=60;l=1} @self ~onEat ?wearing{s=HAND;m=food_s0_harbor-sandwich_takumi3s} true
-  - rcbuff{type=water;d=100;a=30} @self ~onEat ?wearing{s=HAND;m=food_s0_harbor-sandwich_takumi3s} true
+  - rcbuff{type=water;d=100;a=30;cooldown=100} @self ~onEat ?wearing{s=HAND;m=food_s0_harbor-sandwich_takumi3s} true
 
 food_s0_spice-sandwich_takumi3s:
   id: bread
@@ -65,7 +65,7 @@ food_s0_spice-sandwich_takumi3s:
   Skills:
   - rcct{d=4} @self ~onDamaged
   - feed{amount=2} @self ~onEat ?wearing{s=HAND;m=food_s0_spice-sandwich_takumi3s} true
-  - rcbuff{type=flame;d=100;a=30} @self ~onEat ?wearing{s=HAND;m=food_s0_spice-sandwich_takumi3s} true
+  - rcbuff{type=flame;d=100;a=30;cooldown=100} @self ~onEat ?wearing{s=HAND;m=food_s0_spice-sandwich_takumi3s} true
 
 food_s0_vegetable-sandwich_takumi3s:
   id: bread
@@ -77,7 +77,7 @@ food_s0_vegetable-sandwich_takumi3s:
   Skills:
   - rcct{d=4} @self ~onDamaged
   - heal{amount=2} @self ~onEat ?wearing{s=HAND;m=food_s0_vegetable-sandwich_takumi3s} true
-  - rcbuff{type=nature;d=100;a=30} @self ~onEat ?wearing{s=HAND;m=food_s0_vegetable-sandwich_takumi3s} true
+  - rcbuff{type=nature;d=100;a=30;cooldown=100} @self ~onEat ?wearing{s=HAND;m=food_s0_vegetable-sandwich_takumi3s} true
 
 food_s0_fruity-sandwich_takumi3s:
   id: bread
@@ -89,4 +89,4 @@ food_s0_fruity-sandwich_takumi3s:
   Skills:
   - rcct{d=4} @self ~onDamaged
   - potion{type=regeneration;d=40;l=2} @self ~onEat ?wearing{s=HAND;m=food_s0_fruity-sandwich_takumi3s} true
-  - rcbuff{type=lightning;d=100;a=30} @self ~onEat ?wearing{s=HAND;m=food_s0_fruity-sandwich_takumi3s} true
+  - rcbuff{type=lightning;d=100;a=30;cooldown=100} @self ~onEat ?wearing{s=HAND;m=food_s0_fruity-sandwich_takumi3s} true
