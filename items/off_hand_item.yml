@@ -58,7 +58,7 @@ offhand_s0_lightningescape_takumi3s:
     MovementSpeed: 20%
   Skills:
 
-offhand_s0_critburst_takumi3s:
+offhand_s0_bubbledrive_takumi3s:
   Id: iron_sword
   Display: '&6&lバブルドライブ'
   Lore:
