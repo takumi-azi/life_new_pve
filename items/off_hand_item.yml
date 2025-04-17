@@ -12,6 +12,9 @@ offhand_s0_critburst_takumi3s:
     MovementSpeed: 10%
     KnockbackResistance: 0.1
   Skills:
+  - skill{s=offhand_cancelevent} @self ~onPressF ?wearing{s=OFFHAND;m=offhand_s0_critburst_takumi3s} true
+  - skill{s=critburst_f} @self ~onPressF
+  - skill{s=critburst_oa} @self ~onAttack
 
 offhand_s0_burningrage_takumi3s:
   Id: iron_sword

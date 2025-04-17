@@ -1,1 +1,18 @@
-critburst:
+offhand_cancelevent:
+  Skills:
+  - cancelevent
+
+critburst_f:
+  Cooldown: 10
+  Conditions:
+  - wearing{s=OFFHAND;m=offhand_s0_critburst_takumi3s} true
+  Skills:
+  - rcbuff{type=critdmg;a=300;d=160} @self
+  - rcbuff{type=none;a=300;d=160} @self
+  - particles{p=crit;a=20;s=1} @self
+
+critburst_oa:
+  Conditions:
+  - wearing{s=OFFHAND;m=offhand_s0_critburst_takumi3s} true
+  Skills:
+  - rcbuff{type=critper;a=50;d=60} @self
