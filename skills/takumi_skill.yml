@@ -766,10 +766,12 @@ ikazuti_ryouga_use:
   Skills:
   - slash{y=1;w=2;h=2;mpd=true;a=80;radius=1;roll=-20;fo=1;duration=10;
       oP=[ - particles{p=crit;a=1} ];
-      oH=[ - damage{a=4;pi=true;type=none} ]
+      oH=[ - damage{a=4;pi=true;type=yellow} ]
       } @self
   - delay 5
-  - projectile{}
+  - projectile{v=18;d=50;vr=3;hr=3;hnp=true;hp=false;sE=false
+      oh=[ - damage{a=5;pi=true;type=yellow} ]
+      oT=[ - particlesphere{p=enchanted_hit;r=2;a=20}]} @targetLocation
   - leap{v=1000;repeat=3;repeatInterval=1} @forward{f=-5;y=-6}
   - delay 7
   - slash{y=1;w=2;h=2;mpd=true;a=80;radius=1;roll=-20;fo=1;duration=10;
@@ -777,7 +779,9 @@ ikazuti_ryouga_use:
       oH=[ - damage{a=4;pi=true;type=none} ]
       } @self
   - delay 5
-  - projectile{}
+  - projectile{v=18;d=50;vr=3;hr=3;hnp=true;hp=false;sE=false
+      oh=[ - damage{a=5;pi=true;type=yellow} ]
+      oT=[ - particlesphere{p=enchanted_hit;r=2;a=20}]} @targetLocation
   - leap{v=1000;repeat=3;repeatInterval=1} @forward{f=-5;y=-6}
   - delay 7
   - slash{y=1;w=2;h=2;mpd=true;a=80;radius=1;roll=-20;fo=1;duration=10;
@@ -785,5 +789,7 @@ ikazuti_ryouga_use:
       oH=[ - damage{a=4;pi=true;type=none} ]
       } @self
   - delay 5
-  - projectile{}
+  - projectile{v=18;d=50;vr=3;hr=3;hnp=true;hp=false;sE=false
+      oh=[ - damage{a=5;pi=true;type=yellow} ]
+      oT=[ - particlesphere{p=enchanted_hit;r=2;a=20}]} @targetLocation
   - leap{v=1000;repeat=1;repeatInterval=1} @forward{f=-5;y=-6}

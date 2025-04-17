@@ -1,0 +1,70 @@
+offhand_s0_critburst_takumi3s:
+  Id: iron_sword
+  Display: '&6&lクリティカルバースト'
+  Lore:
+  - '&8&l無属性用offhand武器'
+  - 'Fキーを押すと会心ダメージと無属性ダメージがしばらくアップする。'
+  - '攻撃を当てるたびに会心確率バフを得る。'
+  Options:
+    Unbreakable: true
+  Attributes:
+    offHand:
+    MovementSpeed: 10%
+    KnockbackResistance: 0.1
+  Skills:
+
+offhand_s0_burningrage_takumi3s:
+  Id: iron_sword
+  Display: '&6&lバーニングレイジ'
+  Lore:
+  - '&8&l炎属性用offhand武器'
+  - 'Fキーを押したときに、体力が半分以下であれば非会心ダメージが上がる。'
+  - 'ダメージを受けるたびに炎属性バフ。'
+  Options:
+    Unbreakable: true
+  Attributes:
+    offHand:
+    KnockbackResistance: 0.2
+  Skills:
+
+offhand_s0_windmaker_takumi3s:
+  Id: iron_sword
+  Display: '&6&lウィンドメーカー'
+  Lore:
+  - '&8&l風属性用offhand武器'
+  - 'Fキーを空中で使うと急降下し、会心確率バフを得る、'
+  - '落下ダメージを受けたときに自然属性ダメージバフを得る。'
+  Options:
+    Unbreakable: true
+  Attributes:
+    offHand:
+    MovementSpeed: 20%
+  Skills:
+
+offhand_s0_lightningescape_takumi3s:
+  Id: iron_sword
+  Display: '&6&lライトニングエスケープ'
+  Lore:
+  - '&8&l無属性用offhand武器'
+  - 'Fキーを押したときに移動している方向に移動し、短期間の耐性効果と会心ダメージバフを得る。'
+  - '耐性効果を持っているときに被弾すると雷属性バフと移動速度バフを得る。'
+  Options:
+    Unbreakable: true
+  Attributes:
+    offHand:
+    MovementSpeed: 20%
+  Skills:
+
+offhand_s0_critburst_takumi3s:
+  Id: iron_sword
+  Display: '&6&lバブルドライブ'
+  Lore:
+  - '&8&l無属性用offhand武器'
+  - 'Fキーを押したときに自分自身と周囲のプレイヤーに耐性効果と持続回復を付与する。'
+  - '体力が最大のときに攻撃すると、4秒間水属性バフを得る(CT2)。'
+  Options:
+    Unbreakable: true
+  Attributes:
+    offHand:
+    KnockbackResistance: 0.2
+  Skills:

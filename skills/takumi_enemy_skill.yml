@@ -1,172 +1,3 @@
-enemy_madan_loop_ot:
-  Skills:
-  - skill{s=madan_loop_ot_near} @target
-  - skill{s=madan_loop_ot_notnear} @target
-madan_loop_ot_near:
-  TargetConditions:
-  - distance{d=<10} false
-  Skills:
-  - randomskill{s=enemy_madan_straight,enemy_madan_circle_missile,enemy_madan_multi_missile,enemy_madan_multi_meteor}
-madan_loop_ot_notnear:
-  TargetConditions:
-  - distance{d=<10} true
-  Skills:
-  - randomskill{s=enemy_madan_straight,enemy_madan_meteor,enemy_madan_multishot}
-
-enemy_madan_straight:
-  Cooldown: 2
-  Conditions:
-  - hasaura{aura=cooldown} false
-  Skills:
-  - aura{auraname=cooldown;d=30} @self
-  - potion{type=SLOW;d=20;l=6} @self
-  - particles{p=endrod;a=10;vS=0.2;vS=0.2;repeat=3;repeatInterval=2} @forward{f=1;y=1}
-  - totem{oT=enemy_madan_straight_ot;i=1;d=14;oE=enemy_madan_straight_oe} @targetLocation
-enemy_madan_straight_ot:
-  Skills:
-  - particles{c=#FF0000;a=6;hS=0.1;vS=1}
-  - particleline{c=#FF0000;a=1;size=0.5;db=0.2}
-enemy_madan_straight_oe:
-  Skills:
-  - projectile{v=20;ot=enemy_madan_straight_p_ot;oh=enemy_madan_straight_p_oh;mr=40} @origin
-enemy_madan_straight_p_ot:
-  Skills:
-  - particles{c=#7777FF;a=3;hS=0.1;vS=0.1}
-enemy_madan_straight_p_oh:
-  Skills:
-  - damage{a=8;type=none;pi=true}
-
-enemy_madan_circle_missile:
-  Cooldown: 9
-  Conditions:
-  - hasaura{aura=cooldown} false
-  Skills:
-  - aura{auraname=cooldown;d=60} @self
-  - potion{type=SLOW;d=30;l=6} @self
-  - delay 20
-  - missile{in=60;oE=enemy_madan_circle_missile_oe;ot=enemy_madan_straight_p_ot;i=1;
-            oS=[ - particles{p=endrod;a=10;hS=0.2;vS=0.2} @origin
-                 - projectilevelocity{mode=SET;vz=0;vx=1;vy=0.4;r=false}
-            ];mr=30;v=6} @target
-  - missile{in=60;oE=enemy_madan_circle_missile_oe;ot=enemy_madan_straight_p_ot;i=1;
-            oS=[ - particles{p=endrod;a=10;hS=0.2;vS=0.2} @origin
-                 - projectilevelocity{mode=SET;vz=1;vx=1;vy=0.4;r=false}
-            ];mr=30;v=6} @target
-  - missile{in=60;oE=enemy_madan_circle_missile_oe;ot=enemy_madan_straight_p_ot;i=1;
-            oS=[ - particles{p=endrod;a=10;hS=0.2;vS=0.2} @origin
-                 - projectilevelocity{mode=SET;vz=1;vx=0;vy=0.4;r=false}
-            ];mr=30;v=6} @target
-  - missile{in=60;oE=enemy_madan_circle_missile_oe;ot=enemy_madan_straight_p_ot;i=1;
-            oS=[ - particles{p=endrod;a=10;hS=0.2;vS=0.2} @origin
-                 - projectilevelocity{mode=SET;vz=0;vx=-1;vy=0.4;r=false}
-            ];mr=30;v=6} @target
-  - missile{in=60;oE=enemy_madan_circle_missile_oe;ot=enemy_madan_straight_p_ot;i=1;
-            oS=[ - particles{p=endrod;a=10;hS=0.2;vS=0.2} @origin
-                 - projectilevelocity{mode=SET;vz=-1;vx=-1;vy=0.4;r=false}
-            ];mr=30;v=6} @target
-  - missile{in=60;oE=enemy_madan_circle_missile_oe;ot=enemy_madan_straight_p_ot;i=1;
-            oS=[ - particles{p=endrod;a=10;hS=0.2;vS=0.2} @origin
-                 - projectilevelocity{mode=SET;vz=-1;vx=0;vy=0.4;r=false}
-            ];mr=30;v=6} @target
-  - missile{in=60;oE=enemy_madan_circle_missile_oe;ot=enemy_madan_straight_p_ot;i=1;
-            oS=[ - particles{p=endrod;a=10;hS=0.2;vS=0.2} @origin
-                 - projectilevelocity{mode=SET;vz=-1;vx=1;vy=0.4;r=false}
-            ];mr=30;v=6} @target
-  - missile{in=60;oE=enemy_madan_circle_missile_oe;ot=enemy_madan_straight_p_ot;i=1;
-            oS=[ - particles{p=endrod;a=10;hS=0.2;vS=0.2} @origin
-                 - projectilevelocity{mode=SET;vz=1;vx=-1;vy=0.4;r=false}
-            ];mr=30;v=6} @target
-enemy_madan_circle_missile_oe:
-  Skills:
-  - damage{a=4;type=none;pi=true} @ENO{r=3}
-  - particles{c=#7777FF;a=20;hS=0.5;vS=0.5}
-
-enemy_madan_multi_missile:
-  Conditions:
-  - hasaura{aura=cooldown} false
-  Cooldown: 6
-  Skills:
-  - aura{auraname=cooldown;d=20} @self
-  - potion{type=SLOW;d=10;l=6} @self
-  - delay 5
-  - missile{in=40;oE=enemy_madan_circle_missile_oe;ot=enemy_madan_straight_p_ot;
-            oS=[ - particles{p=endrod;a=10;hS=0.2;vS=0.2} @origin
-                 - projectilevelocity{mode=SET;vz=1;vx=1;vy=0;r=false}
-            ];mr=20;v=7} @target
-  - missile{in=40;oE=enemy_madan_circle_missile_oe;ot=enemy_madan_straight_p_ot;
-            oS=[ - particles{p=endrod;a=10;hS=0.2;vS=0.2} @origin
-                 - projectilevelocity{mode=SET;vz=1;vx=0;vy=0;r=false}
-            ];mr=20;v=7} @target
-  - missile{in=40;oE=enemy_madan_circle_missile_oe;ot=enemy_madan_straight_p_ot;
-            oS=[ - particles{p=endrod;a=10;hS=0.2;vS=0.2} @origin
-                 - projectilevelocity{mode=SET;vz=1;vx=-1;vy=0;r=false}
-            ];mr=20;v=7} @target
-  - delay 10
-  - leap{v=200;repeat=4;repeatInterval=1} @target{oy=-5}
-
-enemy_madan_multi_meteor:
-  Conditions:
-  - hasaura{aura=cooldown} false
-  Cooldown: 4
-  Skills:
-  - aura{auraname=cooldown;d=50} @self
-  - missile{in=10;oE=enemy_madan_circle_missile_oe;ot=enemy_madan_straight_p_ot;i=1;
-            oS=[ - particles{p=endrod;a=10;hS=0.2;vS=0.2} @origin
-                 - projectilevelocity{mode=SET;vz=0;vx=0;vy=30;r=false}
-            ];mr=40;v=20;repeat=4;repeatInterval=10;g=2} @target
-
-enemy_madan_meteor:
-  Conditions:
-  - hasaura{aura=cooldown} false
-  Skills:
-  - aura{auraname=cooldown;d=20} @self
-  - totem{ot=enemy_madan_meteor_ot;oE=enemy_madan_meteor_oe;d=20;i=4;oy=1} @target
-enemy_madan_meteor_ot:
-  Skills:
-  - particlering{r=3;c=#7777FF;points=10}
-enemy_madan_meteor_oe:
-  Skills:
-  - particleline{db=0.2;c=#7777FF;origin=@selflocation{y=5};fo=true}
-  - damage{a=10;type=none;pi=true} @ENO{r=5}
-  - particles{p=end_rod;s=0.2;a=15} 
-  - particlesphere{p=end_rod;a=1;points=40;r=3} 
-
-enemy_madan_multishot:
-  Conditions:
-  - hasaura{aura=cooldown} false
-  Skills:
-  - aura{auraname=cooldown;d=30} @self
-  - totem{ot=enemy_madan_multishot_ot;oE=enemy_madan_multishot_oe;d=20;i=3;oy=1;origin=@target} @RandomLocationsNearOrigin{a=5;r=3}
-  - delay 21
-  - leap{v=-100;repeat=39;repeatInterval=1} @target{oy=5}
-enemy_madan_multishot_ot:
-  Skills:
-  - particles{c=#FF0000;a=3;hS=0.2;vS=0.2}
-  - particleline{c=#FF0000;a=1;size=0.5;db=0.2}
-enemy_madan_multishot_oe:
-  Skills:
-  - projectile{v=20;ot=enemy_madan_straight_p_ot;oh=enemy_madan_multishot_p_oh;mr=10} @origin
-enemy_madan_multishot_p_oh:
-  Skills:
-  - damage{a=2;pi=true;type=none}
-  - sudoskill{s=enemy_madan_multishot_p_oh_sudo}
-enemy_madan_multishot_p_oh_sudo:
-  Skills:
-  - leap{v=300} @trigger{y=-2}
-
-enemy_madan_rensya:
-  Conditions:
-  - hasaura{aura=cooldown} false
-  Coondown: 10
-  Skills:
-  - aura{auraname=cooldown;d=50} @self
-  - totem{oT=enemy_madan_sphere_ot;oE=enemy_madan_sphere_oe;d=40;i=2} @targetLocation
-
-enemy_madan_loop_oe:
-  Skills:
-  - remove{} @self
-
-
 zombie_zenei_loop_oe:
   Skills:
   - remove{} @self
@@ -176,15 +7,46 @@ zombie_zenei_loop_ot:
   - randomskill{skills=zombie_bite,zombie_pull,zombie_zenei_jump,zombie_zenei_guard} @self
 
 zombie_bite:
+  Cooldown: 4
   Conditions:
   - hasaura{aura=cooldown} false
   Skills:
   - aura{auraname=cooldown;d=60} @self
-  - potion{type=SLOW;d=20;l=5} @self
-  - particleline{c=#FF0000;a=1;syo=0.2;repeat=9;repeatInterval=2} @forward{f=5;sideoffset=5;y=0.1}
-  - particleline{c=#FF0000;a=1;syo=0.2;repeat=9;repeatInterval=2} @forward{f=5;sideoffset=-5;y=0.1}
-  - particles{c=#FF0000;a=5;hS=0.5;vS=0;repeat=9;repeatInterval=2} @forward{f=2;y=0.1}
-  - particles{c=#FF0000;a=5;hS=0.5;vS=0;repeat=9;repeatInterval=2} @forward{f=4;y=0.1}
-  - particlering{r=5;c=#FF0000;points=20} @self
+  - potion{type=SLOW;d=30;l=5} @self
+  - particlering{c=#FF0000;a=1;points=20;r=5;repeat=19;repeatInterval=1} @self
   - delay 20
-  - damage{a=10} @EIC{r=5;a=90}
+  - leap{v=100} @target{y=1}
+  - delay 3
+  - damage{a=12;pi=true;type=none} @PIR{r=2}
+  - sudoskill{s=zombie_bite_sudo;target=@self} @PIR{r=2}
+zombie_bite_sudo:
+  Skills:
+  - heal{a=5}
+
+zombie_pull:
+  Conditions:
+  - hasaura{aura=cooldown} false
+  Skills:
+  - aura{auraname=cooldown;d=60} @self
+
+zombie_zenei_jump:
+  Conditions:
+  - hasaura{aura=cooldown} false
+  Skills:
+  - aura{auraname=cooldown;d=60} @self
+
+zombie_zenei_guard:
+  Conditions:
+  - hasaura{aura=cooldown} false
+  Skills:
+  - aura{auraname=cooldown;d=60} @self
+
+
+
+zombie_king_loop_oe:
+  Skills:
+  - remove{} @self
+
+zombie_king_loop_ot:
+  Skills:
+  - randomskill{skills=} @self

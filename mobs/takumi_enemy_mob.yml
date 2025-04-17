@@ -1,57 +1,9 @@
-PVE_enemy_madan_takumi3s:
-  Type: zombie
-  Display: '&7&l魔弾の使い手 &f&lLv.<mob.level>'
-  Health: 10000
-  Damage: 0
-  Modules:
-    ImmunityTable: true
-  AIGoalSelectors:
-    - clear
-    - meleeattack
-    - float
-    - gotospawnlocation
-    - randomlookaround
-  AITargetSelectors:
-    - clear
-    - attacker
-    - players
-    - OtherFactionMonsters
-  DamageModifiers:
-    - ENTITY_ATTACK 1
-    - none 1
-    - green 1
-    - yellow 1
-    - blue 1
-    - red 1
-  Equipment:
-    - iron_block head
-    - book hand
-    - stick offhand
-  LevelModifiers:
-    Damage: 3
-    Health: 10
-    Armor: 3
-    AttackSpeed: 0.1
-    KnockbackResistance: 0.1
-    MovementSpeed: 0.1
-  KillMessages:
-    - "<target.name>は圧倒的な弾幕によりハチの巣にされた。"
-  Options:
-    NoDamageTicks: 0
-    MovementSpeed: 0.1
-    KnockbackResistance: 0.7
-    PreventMobKillDrops: true
-    PreventOtherDrops: true
-    PreventSunburn: true
-  Skills:
-  - aura{auraname=skillloop;oT=enemy_madan_loop_ot;i=1;oE=enemy_madan_loop_oe;d=1200} @self ~onDamaged
-  - aura{auraname=skillloop;oT=enemy_madan_loop_ot;i=1;oE=enemy_madan_loop_oe;d=1200} @self ~onEnterCombat
-
 s0_zako_zombie_zenei:
   Type: zombie
   Display: '&2&l前衛ゾンビ &f&lLv.<mob.level>'
   Health: 80
   Damage: 1
+  Faction: enemy
   AIGoalSelectors:
     - clear
     - randomlookaround
@@ -86,5 +38,46 @@ s0_zako_zombie_zenei:
   Skills:
   - aura{auraname=skillloop;oT=zombie_zenei_loop_ot;i=2;oE=zombie_zenei_loop_oe;d=800} @self ~onDamaged
   - aura{auraname=skillloop;oT=zombie_zenei_loop_ot;i=2;oE=zombie_zenei_loop_oe;d=800} @self ~onEnterCombat
+
+s0_boss_zombie_king:
+  Type: zombie
+  Display: '&2&l腐食の王 ゾンビ &f&lLv.<mob.level>'
+  Health: 240
+  Damage: 1
+  Faction: enemy
+  AIGoalSelectors:
+    - clear
+    - randomlookaround
+    - gotospawnlocation
+    - float
+    - meleeattack
+  AITargetSelectors:
+    - clear
+    - OtherFactionMonsters
+    - players
+    - attacker
+  DamageModifiers:
+    - ENTITY_ATTACK 1
+    - none 1
+    - green 1
+    - yellow 1
+    - blue 1
+    - red 1
+  LevelModifiers:
+    Damage: 3
+    Health: 30
+    Armor: 3
+  KillMessages:
+    - "&2<target.name>はゾンビの王にひれ伏した。"
+  Options:
+    NoDamageTicks: 0
+    MovementSpeed: 0.3
+    KnockbackResistance: 0.7
+    PreventMobKillDrops: true
+    PreventOtherDrops: true
+    PreventSunburn: true
+  Skills:
+  - aura{auraname=skillloop;oT=zombie_king_loop_ot;i=2;oE=zombie_king_loop_oe;d=800} @self ~onDamaged
+  - aura{auraname=skillloop;oT=zombie_king_loop_ot;i=2;oE=zombie_king_loop_oe;d=800} @self ~onEnterCombat
 
 
