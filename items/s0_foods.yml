@@ -10,7 +10,7 @@ food_s0_km10_takumi3s:
   - potion{type=regeneration;d=120;l=0} @self ~onEat ?wearing{s=HAND;m=food_s0_km10_takumi3s} true
 
 food_s0_IN10s_takumi3s:
-  Id: driedkelp
+  Id: Driedkelp
   Display: '&f携帯簡易食料 IN10s'
   Lore:
   - '&fギルド認可の携帯栄養食'
@@ -80,7 +80,7 @@ food_s0_vegetable-sandwich_takumi3s:
   - rcbuff{type=nature;d=100;a=30;cooldown=100} @self ~onEat ?wearing{s=HAND;m=food_s0_vegetable-sandwich_takumi3s} true
 
 food_s0_fruity-sandwich_takumi3s:
-  Id: driedkelp
+  Id: Dried_kelp
   Display: '&fフルーティサンドウィッチ'
   Lore:
   - '&f柑橘系の果実と豚肉、野菜が挟まったサンドイッチ。'
