@@ -63,10 +63,10 @@ forcemaker_01_loop_oe:
 
 forcemaker_01_loop_ot:
   Skills:
-  - skill{skills=forcemaker_01_invisiblemine} @self
+  - skill{skill=forcemaker_01_invisiblemine} @self
 forcemaker_01_t_loop_ot:
   Skills:
-  - skill{skills=forcemaker_01_fire_command} @self
+  - skill{skill=forcemaker_01_fire_command} @self
 
 forcemaker_01_invisiblemine:
   Cooldown: 20
