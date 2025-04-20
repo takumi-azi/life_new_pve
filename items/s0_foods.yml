@@ -88,5 +88,5 @@ food_s0_fruity-sandwich_takumi3s:
   - '&f雷属性バフを得る。'
   Skills:
   - rcct{d=4} @self ~onDamaged
-  - feed{amount=5;cooldown=100} @self ~onEat ?wearing{s=HAND;m=food_s0_fruity-sandwich_takumi3s} true
+  - feed{amount=4;cooldown=50} @self ~onEat ?wearing{s=HAND;m=food_s0_fruity-sandwich_takumi3s} true
   - rcbuff{type=lightning;d=100;a=30;cooldown=100} @self ~onEat ?wearing{s=HAND;m=food_s0_fruity-sandwich_takumi3s} true

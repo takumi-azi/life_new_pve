@@ -81,3 +81,79 @@ s0_boss_zombie_king:
   - aura{auraname=skillloop;oT=zombie_king_loop_ot;i=2;oE=zombie_king_loop_oe;d=800} @self ~onEnterCombat
 
 
+s0_boss_forcemaker_01:
+  Type: zombie
+  Display: 'fm01- GLIMPSE &f&lLv.<mob.level>'
+  Health: 480
+  Damage: 1
+  Faction: enemy
+  AIGoalSelectors:
+    - clear
+    - randomlookaround
+    - gotospawnlocation
+    - float
+    - meleeattack
+  AITargetSelectors:
+    - clear
+    - OtherFactionMonsters
+    - attacker
+    - players
+  DamageModifiers:
+    - ENTITY_ATTACK 0.8
+    - none 0.8
+    - nature 1
+    - lightning 1.2
+    - water 1
+    - flame 1.2
+  LevelModifiers:
+    Damage: 3
+    Health: 60
+    Armor: 3
+  KillMessages:
+    - "&c&M<target.name>"
+  Options:
+    NoDamageTicks: 0
+    MovementSpeed: 0.1
+    KnockbackResistance: 1
+    PreventMobKillDrops: true
+    PreventOtherDrops: true
+    PreventSunburn: true
+  Skills:
+  - aura{auraname=skillloop;oT=forcemaker_01_loop_ot;i=2;oE=forcemaker_01_loop_oe;d=800} @self ~onDamaged
+  - aura{auraname=skillloop;oT=forcemaker_01_loop_ot;i=2;oE=forcemaker_01_loop_oe;d=800} @self ~onEnterCombat
+  - skill{s=t1_respawn} @self ~onsignal:t1_respawn
+
+s0_boss_forcemaker_01_t1:
+  Type: bat
+  Display: 'fm01-GLIMPSE`s-TURRET'
+  Health: 4
+  Damage: 1
+  Faction: enemy
+  AIGoalSelectors:
+    - clear
+  AITargetSelectors:
+    - clear
+  DamageModifiers:
+    - ENTITY_ATTACK 0.8
+    - none 0.8
+    - nature 1
+    - lightning 1.2
+    - water 1
+    - flame 1.2
+  LevelModifiers:
+    Damage: 3
+    Health: 0.5
+    Armor: 3
+  KillMessages:
+    - "&c&M<target.name>"
+  Options:
+    NoDamageTicks: 0
+    MovementSpeed: 0.1
+    KnockbackResistance: 1
+    PreventMobKillDrops: true
+    PreventOtherDrops: true
+    PreventSunburn: true
+  Skills:
+  - teleportto{} @location{loc=<caster.var.tl_x>,<caster.var.tl_y>,<caster.var.tl_z>}
+  - signal{s=t1_respawn} @parent
+
