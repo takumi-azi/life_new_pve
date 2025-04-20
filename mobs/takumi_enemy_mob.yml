@@ -157,6 +157,6 @@ s0_boss_forcemaker_01_t1:
     PreventOtherDrops: true
     PreventSunburn: true
   Skills:
-  - teleportto{loc=<caster.var.tl_x>,<caster.var.tl_y>,<caster.var.tl_z>} @self
-  - signal{s=t1_respawn} @parent
+  - teleportto{loc=<caster.var.tl_x>,<caster.var.tl_y>,<caster.var.tl_z>} @self ~ontimer:1
+  - signal{s=t1_respawn} @parent ~onDeath
 
