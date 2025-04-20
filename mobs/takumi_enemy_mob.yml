@@ -120,8 +120,8 @@ s0_boss_forcemaker_01:
     PreventSunburn: true
   Skills:
   - summon{type=s0_boss_forcemaker_01_t1} @self ~onSpawn
-  - aura{auraname=skillloop;oT=forcemaker_01_t_loop_ot;i=2;oE=forcemaker_01_loop_oe;d=800} @self ~onDamaged
-  - aura{auraname=skillloop;oT=forcemaker_01_t_loop_ot;i=2;oE=forcemaker_01_loop_oe;d=800} @self ~onEnterCombat
+  - aura{auraname=skillloop_t;oT=forcemaker_01_t_loop_ot;i=2;oE=forcemaker_01_loop_oe;d=800} @self ~onDamaged
+  - aura{auraname=skillloop_t;oT=forcemaker_01_t_loop_ot;i=2;oE=forcemaker_01_loop_oe;d=800} @self ~onEnterCombat
   - aura{auraname=skillloop;oT=forcemaker_01_loop_ot;i=2;oE=forcemaker_01_loop_oe;d=800} @self ~onDamaged
   - aura{auraname=skillloop;oT=forcemaker_01_loop_ot;i=2;oE=forcemaker_01_loop_oe;d=800} @self ~onEnterCombat
   - skill{s=t1_respawn} @self ~onsignal:t1_respawn
