@@ -68,7 +68,7 @@ zombie_zenei_guard:
   - aura{auraname=cooldown;d=60} @self
   - potion{type=SLOW;d=30;l=5} @self
   - potion{type=RESISTANCE;d=30;l=2} @self
-  - particlering{p=crit;a=1;points=10;r=1;repeat=19;repeatInterval=1} @self
+  - particlering{p=crit;a=1;points=10;r=1;repeat=19;repeatInterval=1;y=1} @self
   - particlering{c=#FF0000;a=1;points=20;r=4;repeat=19;repeatInterval=1} @self
   - delay 20
   - damage{a=8;pi=true;type=none} @EIR{r=4}
