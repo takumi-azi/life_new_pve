@@ -7,7 +7,7 @@ zombie_zenei_loop_ot:
   - randomskill{skills=zombie_bite,zombie_pull,zombie_zenei_jump,zombie_zenei_guard} @self
 
 zombie_bite:
-  Cooldown: 4
+  Cooldown: 6
   Conditions:
   - hasaura{aura=cooldown} false
   Skills:
@@ -24,6 +24,7 @@ zombie_bite_sudo:
   - heal{a=5}
 
 zombie_pull:
+  Cooldown: 6
   Conditions:
   - hasaura{aura=cooldown} false
   Skills:
@@ -38,28 +39,36 @@ zombie_pull_oe:
   - pull{v=4} @ENO{r=5}
 
 zombie_zenei_jump:
+  Cooldown: 6
   TargetConditions:
   - onground{} true
   Conditions:
   - hasaura{aura=cooldown} false
   Skills:
-  - aura{auraname=cooldown;d=60} @self
-  - potion{type=SLOW;d=30;l=2} @self
-  - totem{ot=zombie_pull_ot;oe=zombie_zenei_jump_oe;d=30} @targetLocation
+  - aura{auraname=cooldown;d=80} @self
+  - potion{type=SLOW;d=20;l=2} @self
+  - totem{ot=zombie_zenei_jump_ot;oe=zombie_zenei_jump_oe;d=20} @targetLocation
+zombie_zenei_jump_ot:
+  Skills:
+  - particlering{c=#FF0000;a=1;points=20;r=3}
 zombie_zenei_jump_oe:
   Skills:
-  - teleport{} @origin{y=4}
-  - jump{v=-20} @self
+  - teleport{} @origin{y=8}
+  - delay 2
+  - jump{v=-2} @self
   - delay 6
-  - damage{a=8;pi=true;type=none} @EIR{r=5}
+  - damage{a=8;pi=true;type=none} @EIR{r=3}
+  - potion{type=SLOW;d=52;l=3} @self
 
 zombie_zenei_guard:
+  Cooldown: 6
   Conditions:
   - hasaura{aura=cooldown} false
   Skills:
   - aura{auraname=cooldown;d=60} @self
   - potion{type=SLOW;d=30;l=5} @self
   - potion{type=RESISTANCE;d=30;l=2} @self
+  - particlering{p=crit;a=1;points=10;r=1;repeat=19;repeatInterval=1} @self
   - particlering{c=#FF0000;a=1;points=20;r=4;repeat=19;repeatInterval=1} @self
   - delay 20
   - damage{a=8;pi=true;type=none} @EIR{r=4}
