@@ -32,12 +32,12 @@ zombie_pull:
   - totem{ot=zombie_pull_ot;oe=zombie_pull_oe;d=30} @targetLocation
 zombie_pull_ot:
   Skills:
-  - particlering{c=#FF0000;a=1;points=20;r=5}
-  - particles{p=soul;a=20;hS=4;vS=1}
+  - particlering{c=#FF0000;a=1;points=20;r=4}
+  - particles{p=soul;a=10;hS=2;vS=1}
 zombie_pull_oe:
   Skills:
-  - damage{a=8;pi=true;type=none} @ENO{r=5}
-  - pull{v=8} @ENO{r=5}
+  - damage{a=8;pi=true;type=none} @ENO{r=4}
+  - pull{v=8} @ENO{r=4}
 
 zombie_zenei_jump:
   Cooldown: 6
@@ -89,9 +89,9 @@ zombie_touseki_straight:
   - hasaura{aura=cooldown} false
   Skills:
   - aura{auraname=cooldown;d=60} @self
-  - leap{v=-200} @target{y=-3}
-  - delay 10
-  - potion{type=SLOW;d=30;l=5} @self
+  - leap{v=-300;repeat=10;repeatInterval=1} @target{y=2}
+  - delay 14
+  - potion{type=SLOW;d=40;l=5} @self
   - projectile{BulletType=BLOCK;mat=STONE;v=10;
                oh=[
                  - damage{a=5;type=none;pi=true}
@@ -103,10 +103,10 @@ zombie_touseki_3way:
   - hasaura{aura=cooldown} false
   Skills:
   - aura{auraname=cooldown;d=60} @self
-  - leap{v=-200} @target{y=-3}
-  - delay 10
-  - potion{type=SLOW;d=30;l=5} @self
-  - projectile{BulletType=BLOCK;mat=STONE;v=20;g=1;
+  - leap{v=-300;repeat=5;repeatInterval=1} @target{y=2}
+  - delay 14
+  - potion{type=SLOW;d=40;l=5} @self
+  - projectile{BulletType=BLOCK;mat=STONE;v=20;g=2;
                oh=[
                  - damage{a=5;type=none;pi=true}
                ];ac=0.9;vO=0.2;hR=2;vR=2;d=40} @target
