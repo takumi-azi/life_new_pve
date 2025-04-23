@@ -90,9 +90,9 @@ zombie_touseki_straight:
   Skills:
   - aura{auraname=cooldown;d=60} @self
   - leap{v=-300;repeat=5;repeatInterval=1} @target{y=2}
-  - delay 6
-  - particleline{c=#FF0000;db=0.3;repeat=4;repeatInterval=1} @target
-  - delay 10
+  - delay 8
+  - particleline{c=#FF0000;db=0.5;size=0.5;repeat=4;repeatInterval=2;syo=1} @target{y=1}
+  - delay 8
   - potion{type=SLOW;d=40;l=5} @self
   - projectile{BulletType=BLOCK;mat=STONE;v=13;
                oh=[
@@ -106,11 +106,11 @@ zombie_touseki_3way:
   Skills:
   - aura{auraname=cooldown;d=60} @self
   - leap{v=-300;repeat=2;repeatInterval=1} @target{y=2}
-  - delay 3
-  - particleline{c=#FF0000;db=0.3;repeat=4;repeatInterval=1} @target
-  - delay 10
+  - delay 5
+  - particleline{c=#FF0000;db=0.5;size=0.5;repeat=4;repeatInterval=2;syo=1} @target{y=1}
+  - delay 8
   - potion{type=SLOW;d=40;l=5} @self
-  - projectile{BulletType=BLOCK;mat=STONE;v=10;g=3;
+  - projectile{BulletType=BLOCK;mat=STONE;v=15;g=2.4;
                oh=[
                  - damage{a=4;type=none;pi=true}
                ];ac=0.7;vO=0.6;hR=2;vR=2;d=40;repeat=2;repeatInterval=10} @target
