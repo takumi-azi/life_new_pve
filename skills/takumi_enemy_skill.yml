@@ -129,16 +129,15 @@ zombie_ansatu_toumei:
   Conditions:
   - hasaura{aura=cooldown} false
   Skills:
-  - aura{auraname=cooldown;d=30} @self
+  - aura{auraname=cooldown;d=50} @self
   - potion{type=SLOW;d=30;l=5} @self
   - delay 10
   - aura{auraname=zombie_ansatu_toumei;ot=zombie_ansatu_toumei_ot;d=120;i=5} @self
 zombie_ansatu_toumei_ot:
   Skills:
-  - potion{type=INVISIBLE;l=1;d=6}
+  - potion{type=INVISIBLE;l=1;d=7}
   - particles{c=#000000;a=3;size=0.7;hS=0.2;vS=0} @self
-  - potion{type=STRENGTH;d=6;l=0} @self
-  - potion{type=SPEED;d=6;l=0} @self
+  - potion{type=SPEED;d=7;l=0} @self
 
 zombie_ansatu_tossin:
   Conditions:

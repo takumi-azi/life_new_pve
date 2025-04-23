@@ -110,7 +110,7 @@ s0_zako_zombie_ansatu:
     - "&2<target.name>はゾンビに食われた。"
   Options:
     NoDamageTicks: 0
-    MovementSpeed: 0.4
+    MovementSpeed: 0.3
     KnockbackResistance: 0.7
     PreventOtherDrops: true
     PreventSunburn: true
