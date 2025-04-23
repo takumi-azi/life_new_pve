@@ -24,11 +24,11 @@ zombie_bite_sudo:
   - heal{a=5}
 
 zombie_pull:
-  Cooldown: 6
+  Cooldown: 12
   Conditions:
   - hasaura{aura=cooldown} false
   Skills:
-  - aura{auraname=cooldown;d=60} @self
+  - aura{auraname=cooldown;d=120} @self
   - totem{ot=zombie_pull_ot;oe=zombie_pull_oe;d=30} @targetLocation
 zombie_pull_ot:
   Skills:
@@ -37,7 +37,7 @@ zombie_pull_ot:
 zombie_pull_oe:
   Skills:
   - damage{a=8;pi=true;type=none} @ENO{r=4}
-  - pull{v=3} @ENO{r=4}
+  - pull{v=5} @ENO{r=4}
 
 zombie_zenei_jump:
   Cooldown: 6
@@ -66,7 +66,7 @@ zombie_zenei_guard:
   Conditions:
   - hasaura{aura=cooldown} false
   Skills:
-  - aura{auraname=cooldown;d=60} @self
+  - aura{auraname=cooldown;d=80} @self
   - potion{type=SLOW;d=30;l=5} @self
   - potion{type=RESISTANCE;d=30;l=2} @self
   - particlering{p=crit;a=1;points=10;r=1;repeat=19;repeatInterval=1;y=0.5} @self
@@ -88,7 +88,7 @@ zombie_touseki_straight:
   Conditions:
   - hasaura{aura=cooldown} false
   Skills:
-  - aura{auraname=cooldown;d=60} @self
+  - aura{auraname=cooldown;d=90} @self
   - leap{v=-300;repeat=5;repeatInterval=1} @target{y=2}
   - delay 8
   - particleline{c=#FF0000;db=0.5;size=0.5;repeat=4;repeatInterval=2;syo=1} @target{y=1}
@@ -104,7 +104,7 @@ zombie_touseki_3way:
   Conditions:
   - hasaura{aura=cooldown} false
   Skills:
-  - aura{auraname=cooldown;d=60} @self
+  - aura{auraname=cooldown;d=90} @self
   - leap{v=-300;repeat=2;repeatInterval=1} @target{y=2}
   - delay 5
   - particleline{c=#FF0000;db=0.5;size=0.5;repeat=4;repeatInterval=2;syo=1} @target{y=1}
