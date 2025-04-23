@@ -37,7 +37,6 @@ zombie_pull_ot:
 zombie_pull_oe:
   Skills:
   - damage{a=8;pi=true;type=none} @ENO{r=4}
-  - jump{v=1} @ENO{r=4}
   - pull{v=3} @ENO{r=4}
 
 zombie_zenei_jump:
@@ -93,9 +92,9 @@ zombie_touseki_straight:
   - leap{v=-300;repeat=6;repeatInterval=1} @target{y=2}
   - delay 16
   - potion{type=SLOW;d=40;l=5} @self
-  - projectile{BulletType=BLOCK;mat=STONE;v=10;
+  - projectile{BulletType=BLOCK;mat=STONE;v=13;
                oh=[
-                 - damage{a=5;type=none;pi=true}
+                 - damage{a=4;type=none;pi=true}
                ];hR=2;vR=2;d=40} @target
 
 zombie_touseki_3way:
@@ -107,10 +106,10 @@ zombie_touseki_3way:
   - leap{v=-300;repeat=3;repeatInterval=1} @target{y=2}
   - delay 10
   - potion{type=SLOW;d=40;l=5} @self
-  - projectile{BulletType=BLOCK;mat=STONE;v=20;g=2;
+  - projectile{BulletType=BLOCK;mat=STONE;v=10;g=2;
                oh=[
-                 - damage{a=5;type=none;pi=true}
-               ];ac=0.9;vO=0.2;hR=2;vR=2;d=40;repeat=3;repeatInterval=10} @target
+                 - damage{a=4;type=none;pi=true}
+               ];ac=0.9;vO=0.3;hR=2;vR=2;d=40;repeat=2;repeatInterval=10} @target
 
 
 zombie_king_loop_oe:
