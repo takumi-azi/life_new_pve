@@ -89,7 +89,7 @@ zombie_touseki_straight:
   - hasaura{aura=cooldown} false
   Skills:
   - aura{auraname=cooldown;d=90} @self
-  - leap{v=-300;repeat=5;repeatInterval=1} @target{y=2}
+  - leap{v=-200;repeat=4;repeatInterval=1} @target{y=2}
   - delay 8
   - particleline{c=#FF0000;db=0.5;size=0.5;repeat=4;repeatInterval=2;syo=1} @target{y=1}
   - delay 8
@@ -105,7 +105,7 @@ zombie_touseki_3way:
   - hasaura{aura=cooldown} false
   Skills:
   - aura{auraname=cooldown;d=90} @self
-  - leap{v=-300;repeat=2;repeatInterval=1} @target{y=2}
+  - leap{v=-200;repeat=1;repeatInterval=1} @target{y=2}
   - delay 5
   - particleline{c=#FF0000;db=0.5;size=0.5;repeat=4;repeatInterval=2;syo=1} @target{y=1}
   - delay 8
