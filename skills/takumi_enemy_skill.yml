@@ -37,7 +37,8 @@ zombie_pull_ot:
 zombie_pull_oe:
   Skills:
   - damage{a=8;pi=true;type=none} @ENO{r=4}
-  - pull{v=5} @ENO{r=4}
+  - jump{v=1} @ENO{r=4}
+  - pull{v=3} @ENO{r=4}
 
 zombie_zenei_jump:
   Cooldown: 6
