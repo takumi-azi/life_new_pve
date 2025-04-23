@@ -97,7 +97,7 @@ zombie_touseki_straight:
   - projectile{BulletType=BLOCK;mat=STONE;v=13;
                oh=[
                  - damage{a=4;type=none;pi=true}
-               ];hR=2;vR=2;d=40} @target
+               ];hR=1;vR=1;d=40} @target
 
 zombie_touseki_3way:
   Cooldown: 6
@@ -113,7 +113,7 @@ zombie_touseki_3way:
   - projectile{BulletType=BLOCK;mat=STONE;v=15;g=2.4;
                oh=[
                  - damage{a=4;type=none;pi=true}
-               ];ac=0.7;vO=0.6;hR=2;vR=2;d=40;repeat=2;repeatInterval=10} @target
+               ];ac=0.7;vO=0.6;hR=1;vR=1;d=40;repeat=2;repeatInterval=10} @target
 
 
 zombie_king_loop_oe:
