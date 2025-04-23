@@ -33,11 +33,50 @@ s0_zako_zombie_zenei:
     MovementSpeed: 0.25
     KnockbackResistance: 0.7
     PreventMobKillDrops: true
-    PreventOtherDrops: true
     PreventSunburn: true
   Skills:
   - aura{auraname=skillloop;oT=zombie_zenei_loop_ot;i=2;oE=zombie_zenei_loop_oe;d=800} @self ~onDamaged
   - aura{auraname=skillloop;oT=zombie_zenei_loop_ot;i=2;oE=zombie_zenei_loop_oe;d=800} @self ~onEnterCombat
+
+s0_zako_zombie_touseki:
+  Type: zombie
+  Display: '&2&l投石ゾンビ &f&lLv.<mob.level>'
+  Health: 80
+  Damage: 1
+  Faction: enemy
+  AIGoalSelectors:
+    - clear
+    - randomlookaround
+    - gotospawnlocation
+    - float
+    - meleeattack
+  AITargetSelectors:
+    - clear
+    - OtherFactionMonsters
+    - players
+    - attacker
+  DamageModifiers:
+    - ENTITY_ATTACK 1
+    - none 1
+    - green 1
+    - yellow 1
+    - blue 1
+    - red 1
+  LevelModifiers:
+    Damage: 3
+    Health: 10
+    Armor: 3
+  KillMessages:
+    - "&2<target.name>はゾンビに食われた。"
+  Options:
+    NoDamageTicks: 0
+    MovementSpeed: 0.25
+    KnockbackResistance: 0.7
+    PreventMobKillDrops: true
+    PreventSunburn: true
+  Skills:
+  - aura{auraname=skillloop;oT=zombie_touseki_loop_ot;i=2;oE=zombie_touseki_loop_oe;d=800} @self ~onDamaged
+  - aura{auraname=skillloop;oT=zombie_touseki_loop_ot;i=2;oE=zombie_touseki_loop_oe;d=800} @self ~onEnterCombat
 
 s0_boss_zombie_king:
   Type: zombie
@@ -74,7 +113,6 @@ s0_boss_zombie_king:
     MovementSpeed: 0.3
     KnockbackResistance: 0.7
     PreventMobKillDrops: true
-    PreventOtherDrops: true
     PreventSunburn: true
   Skills:
   - aura{auraname=skillloop;oT=zombie_king_loop_ot;i=2;oE=zombie_king_loop_oe;d=800} @self ~onDamaged

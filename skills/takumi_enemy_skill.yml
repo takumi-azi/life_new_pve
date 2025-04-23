@@ -33,6 +33,7 @@ zombie_pull:
 zombie_pull_ot:
   Skills:
   - particlering{c=#FF0000;a=1;points=20;r=5}
+  - particles{p=soul;a=20;hS=4;vS=1}
 zombie_pull_oe:
   Skills:
   - damage{a=8;pi=true;type=none} @ENO{r=5}
@@ -73,6 +74,42 @@ zombie_zenei_guard:
   - delay 20
   - damage{a=8;pi=true;type=none} @EIR{r=4}
   - pull{v=-4} @EIR{r=4}
+
+zombie_touseki_loop_oe:
+  Skills:
+  - remove{} @self
+
+zombie_touseki_loop_ot:
+  Skills:
+  - randomskill{skills=zombie_bite,zombie_pull,zombie_touseki_straight,zombie_touseki_3way} @self
+
+zombie_touseki_straight:
+  Cooldown: 6
+  Conditions:
+  - hasaura{aura=cooldown} false
+  Skills:
+  - aura{auraname=cooldown;d=60} @self
+  - leap{v=-200} @target{y=-3}
+  - delay 10
+  - potion{type=SLOW;d=30;l=5} @self
+  - projectile{BulletType=BLOCK;mat=STONE;v=20;
+               oh=[
+                 - damage{a=5;type=none;pi=true}
+               ];hR=2;vR=2;d=40}
+
+zombie_touseki_3way:
+  Cooldown: 6
+  Conditions:
+  - hasaura{aura=cooldown} false
+  Skills:
+  - aura{auraname=cooldown;d=60} @self
+  - leap{v=-200} @target{y=-3}
+  - delay 10
+  - potion{type=SLOW;d=30;l=5} @self
+  - projectile{BulletType=BLOCK;mat=STONE;v=20;g=1;
+               oh=[
+                 - damage{a=5;type=none;pi=true}
+               ];ac=0.9;vO=1;hR=2;vR=2;d=40} @target
 
 
 zombie_king_loop_oe:
