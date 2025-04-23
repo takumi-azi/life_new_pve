@@ -1,7 +1,7 @@
 s0_zako_zombie_zenei:
   Type: zombie
   Display: '&2&l前衛ゾンビ &f&lLv.<mob.level>'
-  Health: 80
+  Health: 100
   Damage: 1
   Faction: enemy
   AIGoalSelectors:
@@ -23,9 +23,9 @@ s0_zako_zombie_zenei:
     - blue 1
     - red 1
   LevelModifiers:
-    Damage: 3
+    Damage: 1
     Health: 10
-    Armor: 3
+    Armor: 1
   KillMessages:
     - "&2<target.name>はゾンビに食われた。"
   Options:
@@ -63,9 +63,9 @@ s0_zako_zombie_touseki:
     - blue 1
     - red 1
   LevelModifiers:
-    Damage: 3
-    Health: 10
-    Armor: 3
+    Damage: 1
+    Health: 8
+    Armor: 1
   KillMessages:
     - "&2<target.name>はゾンビに食われた。"
   Options:
@@ -77,6 +77,47 @@ s0_zako_zombie_touseki:
   Skills:
   - aura{auraname=skillloop;oT=zombie_touseki_loop_ot;i=2;oE=zombie_touseki_loop_oe;d=800} @self ~onDamaged
   - aura{auraname=skillloop;oT=zombie_touseki_loop_ot;i=2;oE=zombie_touseki_loop_oe;d=800} @self ~onEnterCombat
+
+s0_zako_zombie_ansatu:
+  Type: zombie
+  Display: '&2&l暗殺ゾンビ &f&lLv.<mob.level>'
+  Health: 60
+  Damage: 1
+  Faction: enemy
+  AIGoalSelectors:
+    - clear
+    - randomlookaround
+    - gotospawnlocation
+    - float
+    - meleeattack
+  AITargetSelectors:
+    - clear
+    - OtherFactionMonsters
+    - players
+    - attacker
+  DamageModifiers:
+    - ENTITY_ATTACK 1
+    - none 1
+    - green 1
+    - yellow 1
+    - blue 1
+    - red 1
+  LevelModifiers:
+    Damage: 1
+    Health: 6
+    Armor: 1
+  KillMessages:
+    - "&2<target.name>はゾンビに食われた。"
+  Options:
+    NoDamageTicks: 0
+    MovementSpeed: 0.4
+    KnockbackResistance: 0.7
+    PreventOtherDrops: true
+    PreventSunburn: true
+  Skills:
+  - auraremove{aura=zombie_ansatu_toumei} @self
+  - aura{auraname=skillloop;oT=zombie_ansatu_loop_ot;i=2;oE=zombie_ansatu_loop_oe;d=800} @self ~onDamaged
+  - aura{auraname=skillloop;oT=zombie_ansatu_loop_ot;i=2;oE=zombie_ansatu_loop_oe;d=800} @self ~onEnterCombat
 
 s0_boss_zombie_king:
   Type: zombie
@@ -103,9 +144,9 @@ s0_boss_zombie_king:
     - blue 1
     - red 1
   LevelModifiers:
-    Damage: 3
+    Damage: 1
     Health: 30
-    Armor: 3
+    Armor: 1
   KillMessages:
     - "&2<target.name>はゾンビの王にひれ伏した。"
   Options:
@@ -144,9 +185,9 @@ s0_boss_forcemaker_01:
     - water 1
     - flame 1.2
   LevelModifiers:
-    Damage: 3
+    Damage: 1
     Health: 60
-    Armor: 3
+    Armor: 1
   KillMessages:
     - "&c&M<target.name>"
   Options:
@@ -182,9 +223,9 @@ s0_boss_forcemaker_01_t1:
     - water 1
     - flame 1.2
   LevelModifiers:
-    Damage: 3
+    Damage: 1
     Health: 0.5
-    Armor: 3
+    Armor: 1
   KillMessages:
     - "&c&M<target.name>"
   Options:
