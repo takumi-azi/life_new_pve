@@ -6,7 +6,6 @@ food_s0_km10_takumi3s:
   - '&f量産に特化されているためとても安いが'
   - '&fあまりおいしくない。'
   Skills:
-  - rcct{d=4} @self ~onDamaged
   - potion{type=regeneration;d=120;l=0} @self ~onEat ?wearing{s=HAND;m=food_s0_km10_takumi3s} true
 
 food_s0_IN10s_takumi3s:
@@ -17,7 +16,6 @@ food_s0_IN10s_takumi3s:
   - '&f一口で食べきることができる。'
   - '&f時間がないときに最適。'
   Skills:
-  - rcct{d=2} @self ~onDamaged
   - feed{amount=2} @self ~onEat ?wearing{s=HAND;m=food_s0_IN10s_takumi3s} true
 
 food_s0_kebabu_takumi3s:
@@ -27,7 +25,6 @@ food_s0_kebabu_takumi3s:
   - '&fガツンと食えるギルド名物。'
   - '&fでっかいお肉は力をつけるぞ。'
   Skills:
-  - rcct{d=10} @self ~onDamaged
   - potion{type=strength;d=100;l=0} @self ~onEat ?wearing{s=HAND;m=food_s0_kebabu_takumi3s} true
   - potion{type=regeneration;d=120;l=0} @self ~onEat ?wearing{s=HAND;m=food_s0_kebabu_takumi3s} true
 
@@ -39,7 +36,6 @@ food_s0_plain-sandwich_takumi3s:
   - '&f新鮮な野菜とハムが最高。'
   - '&f無属性バフを得る。'
   Skills:
-  - rcct{d=4} @self ~onDamaged
   - potion{type=regeneration;d=120;l=0} @self ~onEat ?wearing{s=HAND;m=food_s0_plain-sandwich_takumi3s} true
   - rcbuff{type=none;d=100;a=30;cooldown=100} @self ~onEat ?wearing{s=HAND;m=food_s0_plain-sandwich_takumi3s} true
 
@@ -51,7 +47,6 @@ food_s0_harbor-sandwich_takumi3s:
   - '&f漁師メシとして定着している。'
   - '&f水属性バフを得る。'
   Skills:
-  - rcct{d=4} @self ~onDamaged
   - potion{type=regeneration;d=60;l=1} @self ~onEat ?wearing{s=HAND;m=food_s0_harbor-sandwich_takumi3s} true
   - rcbuff{type=water;d=100;a=30;cooldown=100} @self ~onEat ?wearing{s=HAND;m=food_s0_harbor-sandwich_takumi3s} true
 
@@ -63,7 +58,6 @@ food_s0_spice-sandwich_takumi3s:
   - '&f異国から輸入したスパイスが効いてやみつき。'
   - '&f炎属性バフを得る。'
   Skills:
-  - rcct{d=4} @self ~onDamaged
   - feed{amount=2} @self ~onEat ?wearing{s=HAND;m=food_s0_spice-sandwich_takumi3s} true
   - rcbuff{type=flame;d=100;a=30;cooldown=100} @self ~onEat ?wearing{s=HAND;m=food_s0_spice-sandwich_takumi3s} true
 
@@ -75,7 +69,6 @@ food_s0_vegetable-sandwich_takumi3s:
   - '&fあふれんばかりの野菜をシンプルな味付けで。'
   - '&f自然属性バフを得る。'
   Skills:
-  - rcct{d=4} @self ~onDamaged
   - heal{amount=2} @self ~onEat ?wearing{s=HAND;m=food_s0_vegetable-sandwich_takumi3s} true
   - rcbuff{type=nature;d=100;a=30;cooldown=100} @self ~onEat ?wearing{s=HAND;m=food_s0_vegetable-sandwich_takumi3s} true
 
@@ -87,6 +80,5 @@ food_s0_fruity-sandwich_takumi3s:
   - '&f甘味、塩味、酸味、苦味、香りのバランスがツウ好みの味。'
   - '&f雷属性バフを得る。'
   Skills:
-  - rcct{d=4} @self ~onDamaged
-  - feed{amount=4;cooldown=50} @self ~onEat ?wearing{s=HAND;m=food_s0_fruity-sandwich_takumi3s} true
+  - feed{amount=4;cooldown=2.5} @self ~onEat ?wearing{s=HAND;m=food_s0_fruity-sandwich_takumi3s} true
   - rcbuff{type=lightning;d=100;a=30;cooldown=100} @self ~onEat ?wearing{s=HAND;m=food_s0_fruity-sandwich_takumi3s} true
