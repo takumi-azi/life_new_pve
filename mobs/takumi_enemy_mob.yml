@@ -80,7 +80,7 @@ s0_zako_zombie_touseki:
 
 s0_boss_zombie_king:
   Type: zombie
-  Display: '&2&l腐食の王 ゾンビ &f&lLv.<mob.level>'
+  Display: '&2&l腐食の王 &f&lLv.<mob.level>'
   Health: 240
   Damage: 1
   Faction: enemy
