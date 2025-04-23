@@ -32,7 +32,7 @@ s0_zako_zombie_zenei:
     NoDamageTicks: 0
     MovementSpeed: 0.25
     KnockbackResistance: 0.7
-    PreventMobKillDrops: true
+    PreventOtherDrops: true
     PreventSunburn: true
   Skills:
   - aura{auraname=skillloop;oT=zombie_zenei_loop_ot;i=2;oE=zombie_zenei_loop_oe;d=800} @self ~onDamaged
@@ -72,7 +72,7 @@ s0_zako_zombie_touseki:
     NoDamageTicks: 0
     MovementSpeed: 0.25
     KnockbackResistance: 0.7
-    PreventMobKillDrops: true
+    PreventOtherDrops: true
     PreventSunburn: true
   Skills:
   - aura{auraname=skillloop;oT=zombie_touseki_loop_ot;i=2;oE=zombie_touseki_loop_oe;d=800} @self ~onDamaged
@@ -112,7 +112,7 @@ s0_boss_zombie_king:
     NoDamageTicks: 0
     MovementSpeed: 0.3
     KnockbackResistance: 0.7
-    PreventMobKillDrops: true
+    PreventOtherDrops: true
     PreventSunburn: true
   Skills:
   - aura{auraname=skillloop;oT=zombie_king_loop_ot;i=2;oE=zombie_king_loop_oe;d=800} @self ~onDamaged
