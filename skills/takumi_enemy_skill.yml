@@ -92,10 +92,10 @@ zombie_touseki_straight:
   - leap{v=-200} @target{y=-3}
   - delay 10
   - potion{type=SLOW;d=30;l=5} @self
-  - projectile{BulletType=BLOCK;mat=STONE;v=20;
+  - projectile{BulletType=BLOCK;mat=STONE;v=10;
                oh=[
                  - damage{a=5;type=none;pi=true}
-               ];hR=2;vR=2;d=40}
+               ];hR=2;vR=2;d=40} @target
 
 zombie_touseki_3way:
   Cooldown: 6
@@ -109,7 +109,7 @@ zombie_touseki_3way:
   - projectile{BulletType=BLOCK;mat=STONE;v=20;g=1;
                oh=[
                  - damage{a=5;type=none;pi=true}
-               ];ac=0.9;vO=1;hR=2;vR=2;d=40} @target
+               ];ac=0.9;vO=0.2;hR=2;vR=2;d=40} @target
 
 
 zombie_king_loop_oe:
