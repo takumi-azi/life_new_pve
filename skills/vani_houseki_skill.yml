@@ -13,7 +13,7 @@ caveboss_red_mine:
   Skills:
   - totem{d=200;i=1;hR=0.5;vR=0.5;oT=[ - particles{c=#ff0000;a=1}];
           oH=[ - damage{a=20;pi=true}
-               - particles{p=explosion_huge} @origin];c=1} @origin
+               - particles{p=explosion_huge} @origin];c=1;y=0} @origin
 caveboss_blue:
   Skills:
   - equip{item=lapise_ore HEAD} @self
@@ -33,12 +33,12 @@ caveboss_yellow:
   - equip{item=stone HEAD} @self
 caveboss_yellow_p:
   Skills:
-  - projectile{g=1;v=0;fo=true;oH=[ - damage{a=10;pi=true}];oT=[ - particles{c=#AAAA00}]} @target
+  - projectile{g=0.05;v=0;fo=true;oH=[ - damage{a=10;pi=true}];oT=[ - particles{c=#AAAA00}];syo=1;sb=false} @target
 caveboss_green:
   Skills:
   - equip{item=emerald_ore HEAD} @self
   - delay 20
-  - projectile{g=0.2;v=18;bullettype=block;mat=emerald_block;oH=[ - damage{a=10;pi=true}];oT=[ - particles{c=#88FF88}]} @target
+  - projectile{g=0.2;v=16;bullettype=block;mat=emerald_block;oH=[ - damage{a=10;pi=true}];oT=[ - particles{c=#88FF88}]} @target
   - delay 20
   - equip{item=stone HEAD} @self
 caveboss_black:
@@ -51,6 +51,7 @@ caveboss_black:
   - jump{v=-3}
   - delay 3
   - damage{a=25;pi=true} @EIR{r=7}
+  - particles{p=explosion_huge} @origin
   - delay 14
   - equip{item=stone HEAD} @self
 caveboss_iron:
@@ -80,7 +81,7 @@ caveboss_diamond:
   - potion{type=SPEED;l=6;d=20} @self
   - delay 20
   - damage{a=6;ia=true} @EIR{r=4}
-  - particlering{r=5;p=blockcrack;mat=diamond_block} @self
+  - particlering{r=5;p=blockcrack;mat=diamond_block;points=20;a=1} @self
   - potion{type=SPEED;l=0;d=160} @self
   - delay 10
   - equip{item=stone HEAD} @self
