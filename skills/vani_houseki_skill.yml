@@ -18,7 +18,7 @@ caveboss_blue:
   - equip{item=lapise_ore HEAD} @self
   - delay 20
   - orbital{r=3;v=10;d=200;sB=false;
-    oT=[ - particles{p=blockcrack;m=lapis_block;a=3;hS=0.1;vS=0}];
+    oT=[ - particles{p=blockcrack;m=lapis_block;a=3;hS=0.1;vS=0} @origin ];
     oH=[ - damage{a=13;pi=true}];
     } @self
   - delay 20
@@ -31,12 +31,13 @@ caveboss_yellow:
   - delay 20
   - equip{item=stone HEAD} @self
 caveboss_yellow_p:
+  Skills:
   - projectile{g=5;v=0;fo=true;oH=[ - damage{a=10;pi=true}];oT=[ - particles{c=#AAAA00}]} @target
 caveboss_green:
   Skills:
   - equip{item=emerald_ore HEAD} @self
   - delay 20
-  - projectile{g=1;v=10;bullettype=block;mat=emerald_block;oH=[ - damage{a=10;pi=true}];oT=[ - particles{c=#AAAA00}]} @target
+  - projectile{g=0.2;v=18;bullettype=block;mat=emerald_block;oH=[ - damage{a=10;pi=true}];oT=[ - particles{c=#88FF88}]} @target
   - delay 20
   - equip{item=stone HEAD} @self
 caveboss_black:
@@ -64,6 +65,8 @@ caveboss_iron_ot:
 caveboss_iron_od:
   TriggerConditions:
   - distance{d=>10} true
+  Conditions:
+  - hasaura{aura=caveboss_iron} true
   Skills:
   - cancelevent
   - damage{a=2;ia=true} @trigger
