@@ -43,12 +43,13 @@ caveboss_green:
 caveboss_black:
   Skills:
   - equip{item=coal_ore HEAD} @self
+  - potion{type=SLOW;d=20;l=5}
   - delay 20
   - jump{v=2}
   - delay 3
   - jump{v=-3}
   - delay 3
-  - damage{a=25;pi=true} @EIR{r=5}
+  - damage{a=25;pi=true} @EIR{r=7}
   - delay 14
   - equip{item=stone HEAD} @self
 caveboss_iron:

@@ -17,6 +17,8 @@ caveboss:
   Equipment:
   - houseki_hand HAND
   - houseki_hand OFFHAND
+  - iron_chestplate chest
+  - stone HEAD
   Options:
     NoDamageTicks: 1
     MovementSpeed: 0.2
