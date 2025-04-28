@@ -26,7 +26,9 @@ caveboss:
     PreventOtherDrops: true
     PreventSunburn: true
     Invisible: true
+    Silent: true
   Skills:
+  - sound{s=entity.vex.ambient;v=1.5;p=1} @self ~onDamaged
   - skill{s=caveboss_iron_od} @self ~onDamaged
   - aura{auraname=skillloop;oT=caveboss_loop_ot;i=2;d=800} @self ~onDamaged
   - aura{auraname=skillloop;oT=caveboss_loop_ot;i=2;d=800} @self ~onEnterCombat
