@@ -7,27 +7,34 @@ caveboss_red:
   Skills:
   - equip{item=redstone_ore HEAD} @self
   - delay 20
-  - sound{s=block.redstone_torch.burnout;v=1;p=1} @self
+  - sound{s=block.stone.place;v=1;p=1} @self
   - totem{d=20;i=1;oT=[ - particles{c=#000000;a=1}];oE=caveboss_red_mine} @RandomLocationsNearCaster{a=12;r=10}
   - delay 20
   - equip{item=stone HEAD} @self
 
 caveboss_red_mine:
   Skills:
-  - totem{d=300;i=1;hR=0.5;vR=0.5;oT=[ - particles{c=#ff0000;a=1}];
-          oH=[ - damage{a=10;pi=true}
-               - particles{p=explosion_huge} @origin
-               - sound{s=entity.generic.explode;v=1;p=1} @origin];c=1;yo=0} @origin
+  - totem{d=300;i=1;hR=0.5;vR=0.5;
+      oT=[ - particles{c=#ff0000;a=2}
+           - particles{p=crit;a=5}
+           - sound{s=entity.generic.explode;v=1;p=1} @origin];
+      oH=[ - damage{a=10;pi=true}
+           - potion{type=POISON;d=100;l=1}
+           - particles{p=explosion_huge}
+           - sound{s=entity.generic.explode;v=2;p=1} @origin];
+      c=1;yo=0} @origin
 
 caveboss_blue:
   Skills:
   - equip{item=lapis_ore HEAD} @self
   - delay 20
-  - sound{s=block.amethyst_block.chime;v=1;p=2} @self
+  - sound{s=block.amethyst_block.place;v=1;p=1} @self
   - orbital{r=2;v=10;d=200;sB=false;
-    oT=[ - particles{p=blockcrack;m=lapis_block;a=3;hS=0.1;vS=0} @origin ];
-    oH=[ - damage{a=10}];y=1
-    } @self
+    oT=[ - particles{p=blockcrack;m=lapis_block;a=5;hS=0.1;vS=0} @origin
+         - sound{s=block.glass.break;v=0.5;p=2} @origin];
+    oH=[ - damage{a=10}
+         - particles{p=spell_mob;a=3;c=#0000FF}];
+    y=1} @self
   - delay 20
   - equip{item=stone HEAD} @self
 
@@ -35,37 +42,44 @@ caveboss_yellow:
   Skills:
   - equip{item=gold_ore HEAD} @self
   - delay 20
-  - sound{s=block.note_block.pling;v=1;p=1.5;repeat=4;repeatInterval=10} @self
   - totem{d=1;oE=caveboss_yellow_p;repeat=4;repeatInterval=10} @target
   - delay 40
   - equip{item=stone HEAD} @self
 
 caveboss_yellow_p:
   Skills:
-  - projectile{g=3;v=0.01;fo=true;oH=[ - damage{a=10;pi=true}];oT=[ - particles{c=#AAAA00}];syo=6;sb=false} @target
+  - projectile{g=3;v=0.01;fo=true;
+      oH=[ - damage{a=10;pi=true}
+           - potion{type=WEAKNESS;d=80;l=1}];
+      oT=[ - particles{c=#AAAA00}
+           - sound{s=entity.arrow.hit_player;v=0.5;p=1}];
+      syo=6;sb=false} @target
 
 caveboss_green:
   Skills:
   - equip{item=emerald_ore HEAD} @self
   - delay 20
-  - sound{s=entity.witch.throw;v=1;p=1} @self
-  - projectile{g=0.3;v=16;bullettype=block;mat=emerald_block;oH=[ - damage{a=10;pi=true}];oT=[ - particles{c=#88FF88}]} @target
+  - sound{s=entity.enderman.teleport;v=1;p=1} @self
+  - projectile{g=0.3;v=16;bullettype=block;mat=emerald_block;
+      oH=[ - damage{a=10;pi=true}
+           - potion{type=SLOW;d=40;l=1}];
+      oT=[ - particles{c=#88FF88}
+           - particles{p=happy_villager;a=2}]} @target
   - delay 20
   - equip{item=stone HEAD} @self
 
 caveboss_black:
   Skills:
   - equip{item=coal_ore HEAD} @self
-  - potion{type=SLOW;d=20;l=5}
+  - potion{type=SLOW;d=20;l=3}
   - delay 20
-  - sound{s=entity.zombie.attack_iron_door;v=1;p=0.8} @self
   - jump{v=1}
   - delay 10
   - jump{v=-3}
   - delay 5
   - damage{a=25;pi=true} @EIR{r=7}
-  - particles{p=explosion_huge} @origin
-  - sound{s=entity.generic.explode;v=1;p=1} @origin
+  - particles{p=explosion_huge;a=5;hS=0.5;vS=0} @origin
+  - sound{s=entity.wither.break_block;v=1;p=0.8} @origin
   - delay 10
   - equip{item=stone HEAD} @self
 
@@ -73,15 +87,15 @@ caveboss_iron:
   Skills:
   - equip{item=iron_ore HEAD} @self
   - delay 20
-  - sound{s=block.anvil.place;v=1;p=0.8} @self
   - aura{auraname=caveboss_iron;d=200;i=2;ot=caveboss_iron_ot}
   - delay 20
   - equip{item=stone HEAD} @self
 
 caveboss_iron_ot:
   Skills:
-  - particlering{r=10;p=blockcrack;m=iron_block;a=1;points=20;y=1}
-  - particlering{r=10.5;c=#FF8888;m=iron_block;a=1;points=20;y=1}
+  - particlering{r=10;p=blockcrack;mat=iron_block;a=2;points=30;y=1}
+  - particlering{r=10.5;c=#FF8888;mat=iron_block;a=2;points=30;y=1}
+  - sound{s=block.anvil.place;v=1;p=1} @self
 
 caveboss_iron_od:
   TriggerConditions:
@@ -91,17 +105,18 @@ caveboss_iron_od:
   Skills:
   - cancelevent
   - damage{a=2;ia=true} @trigger
+  - sound{s=entity.zombie.attack_iron_door;v=1;p=1} @trigger
 
 caveboss_diamond:
   Skills:
   - equip{item=diamond_ore HEAD} @self
   - potion{type=SLOW;d=20;l=1}
   - delay 20
-  - sound{s=block.glass.break;v=1;p=1} @self
   - potion{type=SPEED;l=8;d=20} @self
   - delay 20
   - damage{a=6;ia=true} @EIR{r=4}
-  - particlering{r=5;p=blockcrack;m=diamond_block;points=20;a=1} @self
+  - particlering{r=5;p=blockcrack;mat=diamond_block;points=30;a=2} @self
+  - sound{s=entity.player.levelup;v=1.5;p=2} @self
   - potion{type=SPEED;l=0;d=160} @self
   - delay 10
   - equip{item=stone HEAD} @self
