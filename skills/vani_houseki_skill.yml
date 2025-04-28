@@ -6,13 +6,13 @@ caveboss_red:
   Skills:
   - equip{item=redstone_ore HEAD} @self
   - delay 20
-  - totem{d=20;i=1;oT=[ - particles{c=#000000;a=1}];oE=caveboss_red_mine} @RandomLocationsNearCaster{a=5;r=10}
+  - totem{d=20;i=1;oT=[ - particles{c=#000000;a=1}];oE=caveboss_red_mine} @RandomLocationsNearCaster{a=12;r=10}
   - delay 20
   - equip{item=stone HEAD} @self
 caveboss_red_mine:
   Skills:
-  - totem{d=200;i=1;hR=0.5;vR=0.5;oT=[ - particles{c=#ff0000;a=1}];
-          oH=[ - damage{a=20;pi=true}
+  - totem{d=300;i=1;hR=0.5;vR=0.5;oT=[ - particles{c=#ff0000;a=1}];
+          oH=[ - damage{a=10;pi=true}
                - particles{p=explosion_huge} @origin];c=1;yo=0} @origin
 caveboss_blue:
   Skills:
@@ -33,7 +33,7 @@ caveboss_yellow:
   - equip{item=stone HEAD} @self
 caveboss_yellow_p:
   Skills:
-  - projectile{g=0.05;v=0.01;fo=true;oH=[ - damage{a=10;pi=true}];oT=[ - particles{c=#AAAA00}];syo=6;sb=false} @target
+  - projectile{g=3;v=0.01;fo=true;oH=[ - damage{a=10;pi=true}];oT=[ - particles{c=#AAAA00}];syo=6;sb=false} @target
 caveboss_green:
   Skills:
   - equip{item=emerald_ore HEAD} @self
@@ -46,13 +46,13 @@ caveboss_black:
   - equip{item=coal_ore HEAD} @self
   - potion{type=SLOW;d=20;l=5}
   - delay 20
-  - jump{v=2}
-  - delay 3
+  - jump{v=1}
+  - delay 10
   - jump{v=-3}
-  - delay 3
+  - delay 5
   - damage{a=25;pi=true} @EIR{r=7}
   - particles{p=explosion_huge} @origin
-  - delay 14
+  - delay 10
   - equip{item=stone HEAD} @self
 caveboss_iron:
   Skills:
