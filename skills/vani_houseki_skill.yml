@@ -6,7 +6,7 @@ caveboss_red:
   Skills:
   - equip{item=redstone_ore HEAD} @self
   - delay 20
-  - totem{d=200;i=1;oT=[ - particles{c=#ff0000;a=1}];onEnd=caveboss_red_mine} @RandomLocationsNearCaster{a=5;r=10}
+  - totem{d=200;i=1;oT=[ - particles{c=#000000;a=1}];onEnd=caveboss_red_mine} @RandomLocationsNearCaster{a=5;r=10}
   - delay 20
   - equip{item=stone HEAD} @self
 caveboss_red_mine:
