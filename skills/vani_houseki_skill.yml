@@ -1,0 +1,80 @@
+caveboss_loop_ot:
+  Cooldown: 5
+  Skills:
+  - randomskill{s=caveboss_red,caveboss_blue,caveboss_iron,caveboss_black,caveboss_green,caveboss_yellow,caveboss_diamond}
+caveboss_red:
+  Skills:
+  - equip{item=redstone_ore HEAD} @self
+  - delay 20
+  - totem{d=200;i=1;oT=[ - particles{c=#ff0000;a=1}];onEnd=caveboss_red_mine} @RandomLocationsNearCaster{a=5;r=10}
+  - delay 20
+  - equip{item=stone HEAD} @self
+caveboss_red_mine:
+  - totem{d=200;i=1;hR=0.5;vR=0.5;oT=[ - particles{c=#ff0000;a=1}];
+          oH=[ - damage{a=20;pi=true}
+               - particles{p=explosion_huge} @origin];c=1} @origin
+caveboss_blue:
+  Skills:
+  - equip{item=lapise_ore HEAD} @self
+  - delay 20
+  - orbital{r=3;v=10;d=200;sB=false;
+    oT=[ - particles{p=blockcrack;m=lapis_block;a=3;hS=0.1;vS=0}];
+    oH=[ - damage{a=13;pi=true}];
+    } @self
+  - delay 20
+  - equip{item=stone HEAD} @self
+caveboss_yellow:
+  Skills:
+  - equip{item=gold_ore HEAD} @self
+  - delay 20
+  - totem{d=1;oE=caveboss_yellow_p;y=3;repeat=4;repeatInterval=4} @target
+  - delay 20
+  - equip{item=stone HEAD} @self
+caveboss_yellow_p:
+  - projectile{g=5;v=0;fo=true;oH=[ - damage{a=10;pi=true}];oT=[ - particles{c=#AAAA00}]} @target
+caveboss_green:
+  Skills:
+  - equip{item=emerald_ore HEAD} @self
+  - delay 20
+  - projectile{g=1;v=10;bullettype=block;mat=emerald_block;oH=[ - damage{a=10;pi=true}];oT=[ - particles{c=#AAAA00}]} @target
+  - delay 20
+  - equip{item=stone HEAD} @self
+caveboss_black:
+  Skills:
+  - equip{item=coal_ore HEAD} @self
+  - delay 20
+  - jump{v=2}
+  - delay 3
+  - jump{v=-3}
+  - delay 3
+  - damage{a=25;pi=true} @EIR{r=5}
+  - delay 14
+  - equip{item=stone HEAD} @self
+caveboss_iron:
+  Skills:
+  - equip{item=iron_ore HEAD} @self
+  - delay 20
+  - aura{auraname=caveboss_iron;d=200;i=2;ot=caveboss_iron_ot}
+  - delay 20
+  - equip{item=stone HEAD} @self
+caveboss_iron_ot:
+  Skills:
+  - particlering{r=10;p=blockcrack;mat=iron_block;a=1;points=20;y=1}
+  - particlering{r=10.5;c=#FF8888;mat=iron_block;a=1;points=20;y=1}
+caveboss_iron_od:
+  TriggerConditions:
+  - distance{d=>10} true
+  Skills:
+  - cancelevent
+  - damage{a=2;ia=true} @trigger
+caveboss_diamond:
+  Skills:
+  - equip{item=diamond_ore HEAD} @self
+  - delay 20
+  - potion{type=SPEED;l=2;d=20} @self
+  - delay 20
+  - damage{a=5;ia=true} @EIR{r=5}
+  - particlering{r=5;p=blockcrack;mat=diamond_block}
+  - potion{type=SPEED;l=0;d=160} @self
+  - delay 10
+  - equip{item=stone HEAD} @self

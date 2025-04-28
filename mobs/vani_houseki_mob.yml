@@ -1,0 +1,30 @@
+caveboss:
+  Type: zombie
+  Display: '&8&lケイブゴースト'
+  Health: 200
+  Damage: 20
+  Faction: undead
+  AIGoalSelectors:
+    - clear
+    - randomlookaround
+    - gotospawnlocation
+    - meleeattack
+  AITargetSelectors:
+    - clear
+    - players
+  KillMessages:
+    - "&c<target.name>は鉱石にされてしまった。"
+  Equipment:
+  - houseki_hand HAND
+  - houseki_hand OFFHAND
+  Options:
+    NoDamageTicks: 1
+    MovementSpeed: 0.2
+    KnockbackResistance: 0.7
+    PreventOtherDrops: true
+    PreventSunburn: true
+    Invisible: true
+  Skills:
+  - skill{s=caveboss_iron_od} @self ~onDamaged
+  - aura{auraname=skillloop;oT=caveboss_loop_ot;i=2;d=800} @self ~onDamaged
+  - aura{auraname=skillloop;oT=caveboss_loop_ot;i=2;d=800} @self ~onEnterCombat

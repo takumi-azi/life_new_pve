@@ -9,7 +9,7 @@ food_s0_km10_takumi3s:
   - potion{type=regeneration;d=120;l=0} @self ~onEat ?wearing{s=HAND;m=food_s0_km10_takumi3s} true
 
 food_s0_IN10s_takumi3s:
-  Id: Driedkelp
+  Id: Dried_kelp
   Display: '&f携帯簡易食料 IN10s'
   Lore:
   - '&fギルド認可の携帯栄養食'
