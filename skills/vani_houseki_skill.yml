@@ -28,17 +28,17 @@ caveboss_yellow:
   Skills:
   - equip{item=gold_ore HEAD} @self
   - delay 20
-  - totem{d=1;oE=caveboss_yellow_p;y=4;repeat=4;repeatInterval=4} @target
-  - delay 20
+  - totem{d=1;oE=caveboss_yellow_p;y=5;repeat=4;repeatInterval=10} @target
+  - delay 40
   - equip{item=stone HEAD} @self
 caveboss_yellow_p:
   Skills:
-  - projectile{g=0.05;v=0;fo=true;oH=[ - damage{a=10;pi=true}];oT=[ - particles{c=#AAAA00}];syo=1;sb=false} @target
+  - projectile{g=0.05;v=0.01;fo=true;oH=[ - damage{a=10;pi=true}];oT=[ - particles{c=#AAAA00}];syo=1;sb=false} @target
 caveboss_green:
   Skills:
   - equip{item=emerald_ore HEAD} @self
   - delay 20
-  - projectile{g=0.2;v=16;bullettype=block;mat=emerald_block;oH=[ - damage{a=10;pi=true}];oT=[ - particles{c=#88FF88}]} @target
+  - projectile{g=0.3;v=16;bullettype=block;mat=emerald_block;oH=[ - damage{a=10;pi=true}];oT=[ - particles{c=#88FF88}]} @target
   - delay 20
   - equip{item=stone HEAD} @self
 caveboss_black:
