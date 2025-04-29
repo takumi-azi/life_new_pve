@@ -806,7 +806,7 @@ hiraisin_use:
   - rcct{d=40} @self
   - projectile{v=20;sE=false;hp=false;hnp=true;d=200;repeat=3;repeatInterval=10;
                ot=[ - particles{p=enchanted_hit;amount=4;hs=0.1;vS=0.1
-                    - particles{color=255,255,0;size=0.5;amount=1}}];
+                    - particles{color=#FFFF00;size=0.5;amount=1}}];
                oh=[ - damage{a=4;pi=true;type=yellow}];
                oE=hiraisin_use_totem} @targetLocation
   - sound{s=entity.trident.throw;v=1.0;p=1.0;repeat=3;repeatInterval=10} @self
@@ -819,8 +819,8 @@ hiraisin_use_totem_ot:
   Skills:
   - damage{a=5} @ENO{r=5}
   - sound{s=entity.lightning_bolt.thunder;v=0.5;p=1.2}
-  - particleline{color=255,255,150;size=0.8;fromOrigin=true;syo=10;db=1;zigzag=true;zigzagRadius=0.2} @origin
-  - particleline{color=255,255,0;size=0.8;fromOrigin=true;syo=10;db=1;zigzag=true;zigzagRadius=0.4} @origin
+  - particleline{color=#FFFF99;size=0.8;fromOrigin=true;syo=10;db=1;zigzag=true;zigzagRadius=0.2} @origin
+  - particleline{color=#FFFF00;size=0.8;fromOrigin=true;syo=10;db=1;zigzag=true;zigzagRadius=0.4} @origin
   - particleline{p=enchanted_hit;fromOrigin=true;syo=10;db=1;zigzag=true;zigzagRadius=0.8} @origin
 hiraisin_swing:
   Cooldown: 0.5
@@ -845,7 +845,7 @@ hiraisin_swing_tui:
   - rcbuff{type=crit_dmg;a=20;d=120}
   - projectile{v=20;sE=false;hp=false;hnp=true;d=100;syo=3;
                ot=[ - particles{p=enchantHit;amount=4;hs=0.1;vS=0.1
-                    - particles{color=255,255,0;size=0.5;amount=1}}];
+                    - particles{color=#FFFF00;size=0.5;amount=1}}];
                oh=[ - damage{a=4;pi=true;type=yellow}]
                } @forward{f=5}
   - sound{s=entity.trident.throw;v=1.0;p=1.0} @self
