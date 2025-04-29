@@ -793,3 +793,59 @@ ikazuti_ryouga_use:
       oh=[ - damage{a=5;pi=true;type=yellow} ]
       oT=[ - particlesphere{p=enchanted_hit;r=2;a=20}]} @targetLocation
   - leap{v=1000;repeat=1;repeatInterval=1} @forward{f=-5;y=-6}
+
+
+hiraisin_use:
+  Cooldown: 12
+  Conditions:
+  - wearing{s=HAND;m=main_s0_hiraisin} true
+  - rcct{} false
+  - hasMana{a=>200} true
+  Skills:
+  - modifyMana{a=-200} @self
+  - rcct{d=40} @self
+  - projectile{v=20;sE=false;hp=false;hnp=true;d=200;repeat=3;repeatInterval=10;
+               ot=[ - particles{p=enchantHit;amount=4;hs=0.1;vS=0.1
+                    - particles{p=dust;color=255,255,0;size=0.5;amount=1}}];
+               oh=[ - damage{a=4;pi=true;type=yellow}];
+               oE=hiraisin_use_totem} @targetLocation
+  - sound{s=entity.trident.throw;v=1.0;p=1.0;repeat=3;repeatInterval=10} @self
+hiraisin_use_totem:
+  Skills:
+  - totem{ot=hiraisin_use_totem_ot;d=200;i=1;oy=0;bulletType=BLOCK;material=lightning_rod} @origin
+hiraisin_use_totem_ot:
+  Conditions:
+  - hasaura{aura=hiraisin_swing} true
+  Skills:
+  - damage{a=5} @ENO{r=5}
+  - sound{s=entity.lightning_bolt.thunder;v=0.5;p=1.2}
+  - line{p=dust;color=255,255,150;size=0.8;fromOrigin=true;syo=10;db=1;zigzag=true;zigzagRadius=0.2} @origin
+  - line{p=dust;color=255,255,0;size=0.8;fromOrigin=true;syo=10;db=1;zigzag=true;zigzagRadius=0.4} @origin
+  - line{p=enchantHit;fromOrigin=true;syo=10;db=1;zigzag=true;zigzagRadius=0.8} @origin
+hiraisin_swing:
+  Cooldown: 0.5
+  Conditions:
+  - wearing{s=HAND;m=main_s0_hiraisin} true
+  - rcct{} false
+  - hasMana{a=>10} true
+  Skills:
+  - modifyMana{a=-10} @self
+  - rcct{d=10} @self
+  - projectile{v=10;ot=1;d=7;hp=false;hnp=true;
+               ot=[ - particles{p=enchantHit;amount=2}];
+               oh=[ - damage{a=4;pi=true;type=yellow}];
+               } @targetLocation
+  - sound{s=entity.arrow.hit;v=1;p=1.2} @self
+  - skill{s=hiraisin_swing_tui} @self
+  - delay 2
+  - aura{auraname=hiraisin_swing;d=1} @self
+hiraisin_swing_tui:
+  Cooldown: 3
+  Skills:
+  - rcbuff{type=crit_dmg;a=20;d=120}
+  - projectile{v=20;sE=false;hp=false;hnp=true;d=100;syo=3;
+               ot=[ - particles{p=enchantHit;amount=4;hs=0.1;vS=0.1
+                    - particles{p=dust;color=255,255,0;size=0.5;amount=1}}];
+               oh=[ - damage{a=4;pi=true;type=yellow}]
+               } @forward{f=5}
+  - sound{s=entity.trident.throw;v=1.0;p=1.0} @self

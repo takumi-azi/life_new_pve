@@ -205,3 +205,18 @@ main_s0_ikazuti_ryouga:
   Skills:
   - skill{s=ikazuti_ryouga_use} @self ~onUse
   - skill{s=ikazuti_ryouga_sw} @self ~onSwing
+
+main_s0_hiraisin:
+  Id: iron_sword
+  Display: '&e&o大地を縫合するイカズチの針'
+  Model: 0
+  Lore:
+  - '&6&l雷属性main武器'
+  - "&e右クリックで4発針を飛ばす。着弾点に針を設置する。"
+  - "&e左クリックで刺突攻撃。3秒おきに追撃と会心ダメージバフ。"
+  - "&eまた、針の位置に雷を落とす。"
+  Options:
+    Unbreakable: true
+  Skills:
+  - skill{s=hiraisin_use} @self ~onUse
+  - skill{s=hiraisin_swing} @self ~onSwing
