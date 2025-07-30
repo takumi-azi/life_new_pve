@@ -220,3 +220,4 @@ main_s0_hiraisin:
   Skills:
   - skill{s=hiraisin_use} @self ~onUse
   - skill{s=hiraisin_swing} @self ~onSwing
+

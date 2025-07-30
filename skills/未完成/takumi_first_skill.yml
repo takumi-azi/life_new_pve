@@ -1,7 +1,7 @@
 
 firstkill:
   Conditions:
-  - wearing{s=HAND;m=main_s0_firstkill_takumi3s} true
+  - wearing{s=HAND;m=main_s0_firstkill} true
   Skills:
   - skill{s=firstkill1} @self
   - skill{s=firstkill2} @self
@@ -16,7 +16,7 @@ firstkill1:
   Skills:
   - aura{auraname=firstkill_2danme;d=40} @self
   - aura{auraname=firstkill_ct;d=10} @self
-  - slash{y=1;w=2;h=2;mpd=true;a=80;radius=1;roll=-20;fo=1;duration=10;
+  - slash{y=1;w=2;h=3;mpd=true;a=120;radius=1;roll=-20;fo=1;duration=8;
       oP=[ - particles{p=crit;a=1} ];
       oH=[ - damage{a=4;pi=true;type=none} ]
       } @self

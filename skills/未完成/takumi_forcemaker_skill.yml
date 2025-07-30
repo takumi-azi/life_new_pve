@@ -1,0 +1,67 @@
+
+t1_respawn:
+  Skills:
+  - delay 80
+  - summon{type=s0_boss_forcemaker_01_t1} @self
+ 
+forcemaker_01_loop_oe:
+  Skills:
+  - remove{} @self
+
+forcemaker_01_loop_ot:
+  Skills:
+  - skill{skill=forcemaker_01_invisiblemine} @self
+forcemaker_01_t_loop_ot:
+  Skills:
+  - skill{skill=forcemaker_01_fire_command} @self
+
+forcemaker_01_invisiblemine:
+  Cooldown: 20
+  Conditions:
+  - hasaura{aura=cooldown} false
+  Skills:
+  - aura{auraname=cooldown;d=60} @self
+  - jump{v=20}
+  - delay 2
+  - Velocity{m=SET;x=0;y=0;z=0} @self
+  - delay 2
+  - jump{v=-20}
+  - delay 2
+  - Velocity{m=SET;x=0;y=0;z=0} @self
+  - damage{a=10;pi=true;type=none} @PIR{r=5}
+  - totem{oE=01_invisiblemine_1;ot=01_invisiblemine_2;d=20} @RLNC{a=6;r=30}
+01_invisiblemine_1:
+  Skills:
+  - totem{oH=01_invisiblemine_4;d=800;oT=01_invisiblemine_3;c=1}
+01_invisiblemine_2:
+  Skills:
+  - particles{f=#FF0000;a=10}
+01_invisiblemine_3:
+  Skills:
+  - particles{f=#FF2222;a=2;vd=1}
+01_invisiblemine_4:
+  Skills:
+  - particlesphere{f=#FF0000;a=60;vd=2;hS=2;vS=2;r=4} @origin
+  - delay 20
+  - damage{a=20;pi=true;type=none} @ENO{r=4}
+  - particles{p=largeexplosion} @origin
+
+
+
+forcemaker_01_fire_command:
+  Cooldown: 4
+  Conditions:
+  - hasaura{aura=fmt_cooldown} false
+  Skills:
+  - aura{auraname=fmt_cooldown;d=80} @self
+  - setvariable{var=skill.tl_x;value=<target.l.x>+2} @self
+  - setvariable{var=skill.tl_y;value=<target.l.y>+2} @self
+  - setvariable{var=skill.tl_z;value=<target.l.z>} @self
+  - sudoskill{s=forcemaker_01_fire_command_t1} @children
+forcemaker_01_fire_command_t1:
+  Conditions:
+  - mythicmobtype{t=s0_boss_forcemaker_01_t1} true
+  Skills:
+  - setvariable{var=caster.tl_x;value=<skill.var.tl_x>} @self
+  - setvariable{var=caster.tl_y;value=<skill.var.tl_y>} @self
+  - setvariable{var=caster.tl_z;value=<skill.var.tl_z>} @self
