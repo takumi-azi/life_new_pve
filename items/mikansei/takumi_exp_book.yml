@@ -4,24 +4,21 @@ test_s0_keikenti_1:
   Lore:
   - 'テスト経験値付与。'
   NBT:
-    minecraft:custom_data:
-      PublicBukkitValues:
-        rcpve:exp_amount: "int/1"
+    PublicBukkitValues:
+      rcpve:exp_amount: "int/1"
 test_s0_keikenti_10:
   Id: book
   Display: '&6&lテスト経験値付与。10'
   Lore:
   - 'テスト経験値付与。'
   NBT:
-    minecraft:custom_data:
-      PublicBukkitValues:
-        rcpve:exp_amount: "int/10"
+    PublicBukkitValues:
+      rcpve:exp_amount: "int/10"
 test_s0_keikenti_100:
   Id: book
   Display: '&6&lテスト経験値付与。100'
   Lore:
   - 'テスト経験値付与。'
   NBT:
-    minecraft:custom_data:
-      PublicBukkitValues:
-        rcpve:exp_amount: "int/100"
+    PublicBukkitValues:
+      rcpve:exp_amount: "int/100"

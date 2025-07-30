@@ -7,9 +7,8 @@ main_s0_firstkill:
   - '体力が減るほど威力が上がる。'
   Mode: 1
   NBT:
-    minecraft:custom_data:
-      PublicBukkitValues:
-        rcpve:max_level: "int/10000"
+    PublicBukkitValues:
+      rcpve:max_level: "int/10000"
   Options:
     Unbreakable: true
   Attributes:
@@ -27,9 +26,8 @@ main_s0_firstcontact:
   - '右クリックは弓と同一の挙動。'
   Mode: 2
   NBT:
-    minecraft:custom_data:
-      PublicBukkitValues:
-        rcpve:max_level: "int/10000"
+    PublicBukkitValues:
+      rcpve:max_level: "int/10000"
   Options:
     Unbreakable: true
   Attributes:
@@ -48,9 +46,8 @@ main_s0_firstcall:
   - '会心率バフと会心ダメージバフを得る。'
   Mode: 3
   NBT:
-    minecraft:custom_data:
-      PublicBukkitValues:
-        rcpve:max_level: "int/10000"
+    PublicBukkitValues:
+      rcpve:max_level: "int/10000"
   Options:
     Unbreakable: true
   Attributes:
@@ -67,9 +64,8 @@ main_s0_firstdeath:
   - '少し後隙がある。'
   Mode: 4
   NBT:
-    minecraft:custom_data:
-      PublicBukkitValues:
-        rcpve:max_level: "int/10000"
+    PublicBukkitValues:
+      rcpve:max_level: "int/10000"
   Options:
     Unbreakable: true
   Attributes:
