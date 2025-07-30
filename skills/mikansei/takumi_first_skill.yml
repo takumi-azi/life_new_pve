@@ -57,7 +57,7 @@ firstkill4:
   Skills:
   - auraremove{aura=firstkill_4danme} @self
   - aura{auraname=firstkill_ct;d=30} @self
-  - slash{y=1;w=3;h=2;mpd=true;a=300;radius=1;roll=0;fo=1;duration=12;
+  - slash{y=1;w=3;h=2;mpd=true;a=300;radius=1;roll=180;fo=1;duration=12;
       oP=[ - particles{p=crit;a=1} ];
       oH=[ - damage{a=3;pi=true;type=none} ]
       } @self
