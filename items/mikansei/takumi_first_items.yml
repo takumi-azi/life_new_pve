@@ -9,8 +9,7 @@ main_s0_firstkill:
   NBT:
     minecraft:custom_data:
       PublicBukkitValues:
-        rcpve:exp_amount: "1/10000"
-        rcpve:max_level: "1/10000"
+        rcpve:max_level: "int/10000"
   Options:
     Unbreakable: true
   Attributes:
@@ -20,7 +19,7 @@ main_s0_firstkill:
   - skill{s=firstkill;level=<rcbuff.level>} @self ~onSwing
 
 main_s0_firstcontact:
-  Id: iron_sword
+  Id: bow
   Display: '&6&lファースト・コンタクト'
   Lore:
   - '&8&l無属性main武器'
@@ -30,8 +29,7 @@ main_s0_firstcontact:
   NBT:
     minecraft:custom_data:
       PublicBukkitValues:
-        rcpve:exp_amount: "1/10000"
-        rcpve:max_level: "1/10000"
+        rcpve:max_level: "int/10000"
   Options:
     Unbreakable: true
   Attributes:
@@ -52,8 +50,7 @@ main_s0_firstcall:
   NBT:
     minecraft:custom_data:
       PublicBukkitValues:
-        rcpve:exp_amount: "1/10000"
-        rcpve:max_level: "1/10000"
+        rcpve:max_level: "int/10000"
   Options:
     Unbreakable: true
   Attributes:
@@ -72,8 +69,7 @@ main_s0_firstdeath:
   NBT:
     minecraft:custom_data:
       PublicBukkitValues:
-        rcpve:exp_amount: "1/10000"
-        rcpve:max_level: "1/10000"
+        rcpve:max_level: "int/10000"
   Options:
     Unbreakable: true
   Attributes:
