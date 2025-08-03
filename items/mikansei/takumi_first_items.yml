@@ -34,8 +34,9 @@ main_s0_firstcontact:
     MainHand:
      Damage: +0
   Skills:
-  - skill{s=firstcontact} @self ~onSwing
-  - skill{s=firstcontact} @self ~onShoot
+  - skill{s=firstcontact_sw;level=<rcbuff.level>} @self ~onSwing
+  - skill{s=firstcontact_sh;level=<rcbuff.level>} @self ~onShoot
+  - skill{s=cancelevent} @self ~onShoot
 
 main_s0_firstcall:
   Id: iron_sword

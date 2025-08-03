@@ -63,7 +63,19 @@ firstkill4:
       } @self
 
 
-firstcontact:
+firstcontact_sw:
   Conditions:
   - wearing{s=HAND;m=main_s0_firstcontact} true
   Skills:
+  - shoot{type=arrow;v=0.4;d=0;oh=firstcontact_sw_oh;mr=6} @forward{f=5;y=1}
+firstcontact_sw_oh:
+  Skills:
+  - damage{a=1*<rcbuff.gray>*<skill.level>;pi=true;type=gray}
+firstcontact_sh:
+  Conditions:
+  - wearing{s=HAND;m=main_s0_firstcontact} true
+  Skills:
+  - shoot{type=arrow;v=1;d=0;oh=firstcontact_sh_oh;mr=30} @forward{f=5;y=1}
+firstcontact_sh_oh:
+  Skills:
+  - damage{a=6*<rcbuff.gray>*<skill.level>;pi=true;type=gray}
