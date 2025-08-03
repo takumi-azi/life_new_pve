@@ -12,10 +12,10 @@ firstkill1:
   - hasaura{aura=firstkill_2danme} false
   - hasaura{aura=firstkill_3danme} false
   - hasaura{aura=firstkill_4danme} false
-  - hasaura{aura=firstkill_ct} false
+  - rcct{} false
   Skills:
   - aura{auraname=firstkill_2danme;d=40} @self
-  - aura{auraname=firstkill_ct;d=10} @self
+  - rcct{d=10} @self
   - slash{y=1;w=3;h=2;mpd=true;a=120;radius=1;roll=-20;fo=1;duration=8;
       oP=[ - particles{p=crit;a=1} ];
       oH=[ - damage{a=3*<rcbuff.gray>*<skill.level>*(1+(<caster.mhp>-<caster.hp>)/100);pi=true;type=gray} ]
@@ -29,7 +29,7 @@ firstkill2:
   Skills:
   - auraremove{aura=firstkill_2danme} @self
   - aura{auraname=firstkill_3danme;d=40} @self
-  - aura{auraname=firstkill_ct;d=10} @self
+  - rcct{d=10} @self
   - slash{y=1;w=3;h=2;mpd=true;a=120;radius=1;roll=120;fo=1;duration=8;
       oP=[ - particles{p=crit;a=1} ];
       oH=[ - damage{a=2*<rcbuff.gray>*<skill.level>*(1+(<caster.mhp>-<caster.hp>)/100);pi=true;type=gray} ]
@@ -43,7 +43,7 @@ firstkill3:
   Skills:
   - auraremove{aura=firstkill_3danme} @self
   - aura{auraname=firstkill_4danme;d=40} @self
-  - aura{auraname=firstkill_ct;d=10} @self
+  - rcct{d=10} @self
   - slash{y=1;w=3;h=2;mpd=true;a=120;radius=1;roll=-50;fo=1;duration=8;
       oP=[ - particles{p=crit;a=1} ];
       oH=[ - damage{a=4*<rcbuff.gray>*<skill.level>*(1+(<caster.mhp>-<caster.hp>)/100);pi=true;type=gray} ]
@@ -56,7 +56,7 @@ firstkill4:
   - hasaura{aura=firstkill_ct} false
   Skills:
   - auraremove{aura=firstkill_4danme} @self
-  - aura{auraname=firstkill_ct;d=30} @self
+  - rcct{d=30} @self
   - slash{y=1;w=3;h=2;mpd=true;a=300;radius=1;roll=180;fo=1;duration=12;
       oP=[ - particles{p=crit;a=1} ];
       oH=[ - damage{a=5*<rcbuff.gray>*<skill.level>*(1+(<caster.mhp>-<caster.hp>)/100);pi=true;type=gray} ]
@@ -66,7 +66,10 @@ firstkill4:
 firstcontact_sw:
   Conditions:
   - wearing{s=HAND;m=main_s0_firstcontact} true
+  - rcct{} false
   Skills:
+  - rcct{d=2} @self
+  - delay 2
   - shoot{type=arrow;v=0.4;d=0;oh=firstcontact_sw_oh;mr=6} @forward{f=5;y=1}
 firstcontact_sw_oh:
   Skills:
@@ -74,7 +77,10 @@ firstcontact_sw_oh:
 firstcontact_sh:
   Conditions:
   - wearing{s=HAND;m=main_s0_firstcontact} true
+  - rcct{} false
   Skills:
+  - rcct{d=10} @self
+  - delay 2
   - shoot{type=arrow;v=1;d=0;oh=firstcontact_sh_oh;mr=30} @forward{f=5;y=1}
 firstcontact_sh_oh:
   Skills:
