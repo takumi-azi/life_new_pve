@@ -1,0 +1,15 @@
+gatya_kyoutuu_single:
+  Skills:
+  - particlering{r=4;p=end_rod;s=1;a=1;poitns=5;d=true} @self
+gatya_kyoutuu_single_rare:
+  Skills:
+  - particlering{r=4;p=end_rod;s=1;a=1;poitns=5;d=true} @self
+  - delay 2
+  - particlering{r=4;p=end_rod;s=1;a=1;poitns=10;d=true} @self
+gatya_kyoutuu_single_sugoi:
+  Skills:
+  - particlering{r=4;p=end_rod;s=1;a=1;poitns=5;d=true} @self
+  - delay 2
+  - particlering{r=4;p=end_rod;s=1;a=1;poitns=10;d=true} @self
+  - delay 2
+  - particlering{r=4;p=end_rod;s=1;a=1;poitns=20;d=true} @self
