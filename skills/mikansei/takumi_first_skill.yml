@@ -68,7 +68,7 @@ firstcontact_sw:
   - wearing{s=HAND;m=main_s0_firstcontact} true
   - rcct{} false
   Skills:
-  - rcct{d=2} @self
+  - rcct{d=5} @self
   - delay 2
   - shoot{type=arrow;v=0.4;d=0;oh=firstcontact_sw_oh;mr=6} @forward{f=5;y=1}
 firstcontact_sw_oh:
