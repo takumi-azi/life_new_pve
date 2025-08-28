@@ -70,7 +70,8 @@ firstcontact_sw:
   Skills:
   - rcct{d=5} @self
   - delay 2
-  - shoot{type=arrow;v=0.4;d=0.1;oh=firstcontact_sw_oh;mr=6} @forward{f=5;y=1}
+  - message{m="skill:<skill.level> rcbuff:<rcbuff.level>"} @self
+  - shoot{type=arrow;v=0.4;d=0;oh=firstcontact_sw_oh;mr=6} @forward{f=5;y=1}
 firstcontact_sw_oh:
   Skills:
   - damage{a="<rcbuff.gray>*<skill.level>";pi=true;type=gray}
@@ -81,7 +82,8 @@ firstcontact_sh:
   Skills:
   - rcct{d=10} @self
   - delay 2
-  - shoot{type=arrow;v=1;d=0.1;oh=firstcontact_sh_oh;mr=30} @forward{f=5;y=1}
+  - message{m="skill:<skill.level> rcbuff:<rcbuff.level>"} @self
+  - shoot{type=arrow;v=1;d=0;oh=firstcontact_sh_oh;mr=30} @forward{f=5;y=1}
 firstcontact_sh_oh:
   Skills:
   - damage{a="6*<rcbuff.gray>*<skill.level>";pi=true;type=gray}
