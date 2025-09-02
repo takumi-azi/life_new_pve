@@ -19,5 +19,5 @@ npc_quest:
   Skills:
   - message{m="星と深淵を目指せ! ギルドです。"} @trigger ~onInteract
   - message{m="クエスト画面を開きますね。"} @trigger ~onInteract
-  - sudoskill{s=[
-                - commnad{c="quem debug2";asOP=true;asCaster=true} @self ]} @trigger ~onInteract
+  - look{} @trigger ~onInteract
+  - sudoskill{s=open_quest_gui} @trigger ~onInteract
