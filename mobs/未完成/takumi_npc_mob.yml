@@ -1,0 +1,23 @@
+npc_quest:
+  Type: villager
+  Display: 'クエスト画面を開く'
+  Health: 999999
+  Damage: 1
+  Faction: npc
+  AIGoalSelectors:
+    - clear
+    - donothing
+  AITargetSelectors:
+    - clear
+  Options:
+    NoDamageTicks: 0
+    MovementSpeed: 0
+    KnockbackResistance: 1
+    PreventMobKillDrops: true
+    PreventOtherDrops: true
+    PreventSunburn: true
+  Skills:
+  - message{m="星と深淵を目指せ! ギルドです。"} @trigger ~onInteract
+  - message{m="クエスト画面を開きますね。"} @trigger ~onInteract
+  - sudoskill{s=[
+                - commnad{c="quem debug2";asOP=true;asCaster=true} @self ]} @trigger ~onInteract
