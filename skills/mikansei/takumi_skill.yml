@@ -864,14 +864,14 @@ TBBBBBB_sw_near:
   Skills:
   - modifyMana{a=-10} @trigger
   - rcct{d=20} @trigger
-  - pull{v=-5}
-TBBBBBB_sw_near:
+  - pull{v=-5} @trigger
+TBBBBBB_sw_far:
   Conditions:
   - rcct{} false
   Skills:
   - modifyMana{a=-10} @trigger
   - rcct{d=20} @trigger
-  - pull{v=5}
+  - pull{v=5} @trigger
 
 TBBBBBB_sh:
   Cooldown: 0.5
