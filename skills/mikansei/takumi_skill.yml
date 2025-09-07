@@ -849,3 +849,41 @@ hiraisin_swing_tui:
                oh=[ - damage{a=4;pi=true;type=yellow}]
                } @forward{f=5}
   - sound{s=entity.trident.throw;v=1.0;p=1.0} @self
+
+TBBBBBB_sw:
+  Cooldown: 0.5
+  Conditions:
+  - wearing{s=HAND;m=main_s0_TBBBBBB} true
+  - hasMana{a=>10} true
+  Skills:
+  - sudoskill{s=TBBBBBB_sw_near} @EIR{r=4}
+  - sudoskill{s=TBBBBBB_sw_far} @EIR{r=12}
+TBBBBBB_sw_near:
+  Conditions:
+  - rcct{} false
+  Skills:
+  - modifyMana{a=-10} @trigger
+  - rcct{d=20} @trigger
+  - pull{v=-5}
+TBBBBBB_sw_near:
+  Conditions:
+  - rcct{} false
+  Skills:
+  - modifyMana{a=-10} @trigger
+  - rcct{d=20} @trigger
+  - pull{v=5}
+
+TBBBBBB_sh:
+  Cooldown: 0.5
+  Conditions:
+  - wearing{s=HAND;m=main_s0_TBBBBBB} true
+  - rcct{} false
+  - hasMana{a=>10} true
+  Skills:
+  - modifyMana{a=-30} @self
+  - rcct{d=10} @self
+  - projectile{v=20;sE=false;hp=false;hnp=true;d=200;
+               ot=[ - particles{p=enchanted_hit;amount=4;hs=0.1;vS=0.1}
+                    - particles{color=#FFFF00;size=0.5;amount=1}];
+               oh=[ - damage{a=4;pi=true;type=yellow}];
+               oE=hiraisin_use_totem} @targetLocation
