@@ -854,24 +854,37 @@ TBBBBBB_sw:
   Cooldown: 0.5
   Conditions:
   - wearing{s=HAND;m=main_s0_TBBBBBB} true
-  - hasMana{a=>10} true
   Skills:
   - sudoskill{s=TBBBBBB_sw_near} @EIR{r=4}
   - sudoskill{s=TBBBBBB_sw_far} @EIR{r=12}
 TBBBBBB_sw_near:
   Conditions:
   - rcct{} false
+  - hasMana{a=>20} true
   Skills:
-  - modifyMana{a=-10} @trigger
+  - modifyMana{a=-20} @trigger
   - rcct{d=20} @trigger
-  - pull{v=-5} @trigger
+  - sudoskill{s=TBBBBBB_sw_near_sudo;origin=@self} @trigger
+TBBBBBB_sw_near_sudo:
+  Skills:
+  - leap{v=-300} @origin
+  - potion{type=SLOW_FALLING;d=20;l=0} @self
+  - slash{y=1;w=4;h=4;mpd=true;a=120;radius=1;roll=-20;fo=1;duration=10;
+      oP=[ - particles{p=end_rod;a=1} ];
+      oH=[ - damage{a=10*<skill.level>} ]
+      } @selfLocation
 TBBBBBB_sw_far:
   Conditions:
   - rcct{} false
+  - hasMana{a=>20} true
   Skills:
-  - modifyMana{a=-10} @trigger
+  - modifyMana{a=-20} @trigger
   - rcct{d=20} @trigger
-  - pull{v=5} @trigger
+  - sudoskill{s=TBBBBBB_sw_far_sudo;origin=@self} @trigger
+TBBBBBB_sw_far_sudo:
+  Skills:
+  - leap{v=300} @origin
+  - potion{type=SLOW_FALLING;d=20;l=0} @self
 
 TBBBBBB_sh:
   Cooldown: 0.5
