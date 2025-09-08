@@ -906,8 +906,8 @@ TBBBBBB_sh:
   - projectile{v=20;sE=false;hp=false;hnp=true;d=30;
                ot=[ - particles{p=enchanted_hit;amount=4;hs=0.1;vS=0.1}];
                oh=[ - damage{a=4*<skill.level>;pi=true;type=blue}
-                    - aura{auraname=TB6_setuzoku;oT=TB6_setuzoku;i=2;d=200}
-                    - auraremove{auraname=TB6_setuzoku} @EIR{r=20}]} @targetLocation
+                    - auraremove{aura=TB6_setuzoku} @EIR{r=20}
+                    - aura{auraname=TB6_setuzoku;oT=TB6_setuzoku;i=2;d=200}]} @targetLocation
 TB6_setuzoku:
   Skills:
   - particleline{db=0.5;particle=crit;a=1} @trigger
