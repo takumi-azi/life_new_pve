@@ -74,4 +74,5 @@ main_s0_firstdeath:
     MainHand:
      Damage: +0
   Skills:
+  - skill{s=firstdeath;level=<rcbuff.level>} @self
 

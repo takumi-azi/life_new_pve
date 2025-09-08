@@ -106,3 +106,16 @@ firstcall:
   - delay 10
   - rcbuff{type=crit_dmg;a=20+0.2*<skill.level>;d=120}
   - rcbuff{type=crit_per;a=20+0.2*<skill.level>;d=120}
+
+firstdeath:
+  Cooldown: 10
+  Conditions:
+  - wearing{s=HAND;m=main_s0_firstcall} true
+  - rcct{} false
+  - hasMana{a=>30} true
+  Skills:
+  - modifyMana{a=-30} @self
+  - rcct{d=20} @self
+  - potion{type=SLOW;l=3;d=10} @self
+  - delay 2
+  - damage{a=16*<skill.level>;type=gray;pi=true} @EIR{r=6}
