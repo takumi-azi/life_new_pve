@@ -910,4 +910,4 @@ TBBBBBB_sh:
                     - auraremove{auraname=TB6_setuzoku} @EIR{r=20}]} @targetLocation
 TB6_setuzoku:
   Skills:
-  - particleline{db=0.5;particle=crit;a=1;audience=trigger} @trigger
+  - particleline{db=0.5;particle=crit;a=1} @trigger
