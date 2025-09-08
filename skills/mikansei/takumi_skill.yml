@@ -863,14 +863,14 @@ TBBBBBB_sw_near:
   - hasMana{a=>20} true
   Skills:
   - modifyMana{a=-20} @trigger
-  - rcct{d=20} @trigger
+  - rcct{d=5} @trigger
   - message{m="1"} @trigger
   - sudoskill{s=TBBBBBB_sw_near_sudo;origin=@self} @trigger
   - message{m="2"} @trigger
 TBBBBBB_sw_near_sudo:
   Skills:
   - message{m="3"} @trigger
-  - leap{v=-300} @origin
+  - leap{v=-300;origin=@origin{y=-3}} @origin
   - potion{type=SLOW_FALLING;d=20;l=0} @self
   - slash{y=1;w=4;h=4;mpd=true;a=120;radius=1;roll=-20;fo=1;duration=10;
       oP=[ - particles{p=end_rod;a=1} ];
@@ -882,11 +882,11 @@ TBBBBBB_sw_far:
   - hasMana{a=>20} true
   Skills:
   - modifyMana{a=-20} @trigger
-  - rcct{d=20} @trigger
+  - rcct{d=5} @trigger
   - sudoskill{s=TBBBBBB_sw_far_sudo;origin=@self} @trigger
 TBBBBBB_sw_far_sudo:
   Skills:
-  - leap{v=300} @origin
+  - leap{v=300;origin=@origin{y=3}} @origin
   - potion{type=SLOW_FALLING;d=20;l=0} @self
 
 TBBBBBB_sh:
