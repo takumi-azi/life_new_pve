@@ -110,7 +110,7 @@ firstcall:
 firstdeath:
   Cooldown: 10
   Conditions:
-  - wearing{s=HAND;m=main_s0_firstcall} true
+  - wearing{s=HAND;m=main_s0_firstdeath} true
   - rcct{} false
   - hasMana{a=>30} true
   Skills:
