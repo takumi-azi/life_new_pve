@@ -858,7 +858,7 @@ TBBBBBB_sw:
   - sudoskill{s=TBBBBBB_sw_near} @EIR{r=4}
   - sudoskill{s=TBBBBBB_sw_far} @EIR{r=12}
 TBBBBBB_sw_near:
-  Conditions:
+  TriggerConditions:
   - rcct{} false
   - hasMana{a=>20} true
   Skills:
@@ -877,7 +877,7 @@ TBBBBBB_sw_near_sudo:
       oH=[ - damage{a=10*<skill.level>} ]
       } @selfLocation
 TBBBBBB_sw_far:
-  Conditions:
+  TriggerConditions:
   - rcct{} false
   - hasMana{a=>20} true
   Skills:
