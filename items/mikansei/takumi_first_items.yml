@@ -44,7 +44,7 @@ main_s0_firstcall:
   Lore:
   - '&8&l無属性sub武器'
   - '右クリックで少し貯めて、無属性バフと'
-  - '会心率バフと会心ダメージバフを得る。'
+  - 'クリティカル率バフとクリティカルダメージバフを得る。'
   Mode: 3
   NBT:
     PublicBukkitValues:
@@ -55,6 +55,7 @@ main_s0_firstcall:
     MainHand:
      Damage: +0
   Skills:
+  - skill{s=firstcall;level=<rcbuff.level>} @self
 
 main_s0_firstdeath:
   Id: iron_sword

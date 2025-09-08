@@ -2,7 +2,9 @@
 firstkill:
   Conditions:
   - wearing{s=HAND;m=main_s0_firstkill} true
+  - hasMana{a=>5} true
   Skills:
+  - modifyMana{a=-5} @self
   - skill{s=firstkill1} @self
   - skill{s=firstkill2} @self
   - skill{s=firstkill3} @self
@@ -67,23 +69,40 @@ firstcontact_sw:
   Conditions:
   - wearing{s=HAND;m=main_s0_firstcontact} true
   - rcct{} false
+  - hasMana{a=>10} true
   Skills:
+  - modifyMana{a=-10} @self
   - rcct{d=5} @self
   - delay 2
   - message{m="skill:<skill.level> rcbuff:<rcbuff.level> gray:<rcbuff.gray>"} @self
   - shoot{type=arrow;v=0.4;d=0;oh=firstcontact_sw_oh;mr=6} @forward{f=5;y=1}
 firstcontact_sw_oh:
   Skills:
-  - damage{a="<rcbuff.gray>*<skill.level>";pi=true;type=gray}
+  - damage{a=1*<rcbuff.gray>*<skill.level>;pi=true;type=gray}
 firstcontact_sh:
   Conditions:
   - wearing{s=HAND;m=main_s0_firstcontact} true
   - rcct{} false
+  - hasMana{a=>10} true
   Skills:
+  - modifyMana{a=-10} @self
   - rcct{d=10} @self
   - delay 2
   - message{m="skill:<skill.level> rcbuff:<rcbuff.level> gray:<rcbuff.gray>"} @self
   - shoot{type=arrow;v=1;d=0;oh=firstcontact_sh_oh;mr=30} @forward{f=5;y=1}
 firstcontact_sh_oh:
   Skills:
-  - damage{a="6*<rcbuff.gray>*<skill.level>";pi=true;type=gray}
+  - damage{a=6*<rcbuff.gray>*<skill.level>;pi=true;type=gray}
+
+firstcall:
+  Cooldown: 10
+  Conditions:
+  - wearing{s=HAND;m=main_s0_firstcall} true
+  - rcct{} false
+  - hasMana{a=>30} true
+  Skills:
+  - modifyMana{a=-30} @self
+  - rcct{d=20} @self
+  - delay 10
+  - rcbuff{type=crit_dmg;a=20+0.2*<skill.level>;d=120}
+  - rcbuff{type=crit_per;a=20+0.2*<skill.level>;d=120}
