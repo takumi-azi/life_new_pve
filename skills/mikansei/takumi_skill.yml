@@ -861,6 +861,8 @@ TBBBBBB_sw_near:
   TriggerConditions:
   - rcct{} false
   - hasMana{a=>20} true
+  Conditions:
+  - hasaura{aura=TB6_setuzoku} true
   Skills:
   - modifyMana{a=-20} @trigger
   - rcct{d=5} @trigger
@@ -876,10 +878,13 @@ TBBBBBB_sw_near_sudo:
       oP=[ - particles{p=end_rod;a=1} ];
       oH=[ - damage{a=10*<skill.level>} ]
       } @selfLocation
+
 TBBBBBB_sw_far:
   TriggerConditions:
   - rcct{} false
   - hasMana{a=>20} true
+  Conditions:
+  - hasaura{aura=TB6_setuzoku} true
   Skills:
   - modifyMana{a=-20} @trigger
   - rcct{d=5} @trigger
@@ -897,9 +902,12 @@ TBBBBBB_sh:
   - hasMana{a=>10} true
   Skills:
   - modifyMana{a=-30} @self
-  - rcct{d=10} @self
-  - projectile{v=20;sE=false;hp=false;hnp=true;d=200;
-               ot=[ - particles{p=enchanted_hit;amount=4;hs=0.1;vS=0.1}
-                    - particles{color=#FFFF00;size=0.5;amount=1}];
-               oh=[ - damage{a=4;pi=true;type=yellow}];
-               oE=hiraisin_use_totem} @targetLocation
+  - rcct{d=5} @self
+  - projectile{v=20;sE=false;hp=false;hnp=true;d=30;
+               ot=[ - particles{p=enchanted_hit;amount=4;hs=0.1;vS=0.1}];
+               oh=[ - damage{a=4*<skill.level>;pi=true;type=blue}
+                    - aura{auraname=TB6_setuzoku;oT=TB6_setuzoku;i=2;d=200}
+                    - auraremove{auraname=TB6_setuzoku} @EIR{r=20}]} @targetLocation
+TB6_setuzoku:
+  Skills:
+  - particleline{db=0.5;particle=crit;a=1;audience=trigger} @trigger
