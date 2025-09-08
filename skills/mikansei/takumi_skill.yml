@@ -911,4 +911,5 @@ TBBBBBB_sh:
                     - aura{auraname=TB6_setuzoku;oT=TB6_setuzoku;i=2;d=200}]} @targetLocation
 TB6_setuzoku:
   Skills:
+  - message{m="aa"} @trigger
   - particleline{db=0.5;particle=crit;a=1} @trigger
