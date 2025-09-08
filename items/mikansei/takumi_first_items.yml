@@ -55,7 +55,7 @@ main_s0_firstcall:
     MainHand:
      Damage: +0
   Skills:
-  - skill{s=firstcall;level=<rcbuff.level>} @self
+  - skill{s=firstcall;level=<rcbuff.level>} @self ~onUse
 
 main_s0_firstdeath:
   Id: iron_sword
@@ -74,5 +74,5 @@ main_s0_firstdeath:
     MainHand:
      Damage: +0
   Skills:
-  - skill{s=firstdeath;level=<rcbuff.level>} @self
+  - skill{s=firstdeath;level=<rcbuff.level>} @self ~onUse
 
